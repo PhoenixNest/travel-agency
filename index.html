@@ -1,889 +1,2102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>2026 北京 7 天 6 晚深度文化出行指南 | 移动端与桌面端自适应版</title>
-  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>2026 北京 7 天 6 晚深度文化出行指南 | 移动端与桌面端自适应版</title>
+    <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap");
 
-    :root {
-      --primary-red: #c0392b;
-      --deep-red: #8e1c14;
-      --imperial-gold: #d4af37;
-      --light-gold: #fdf6e2;
-      --paper-bg: #faf7f2;
-    }
-
-    * {
-      -webkit-tap-highlight-color: transparent;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background-color: var(--paper-bg);
-      color: #2d3748;
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-
-    .font-serif-sc {
-      font-family: 'Noto Serif SC', "Songti SC", "SimSun", serif;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-    }
-
-    .glass-card-hover {
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    @media (hover: hover) {
-      .glass-card-hover:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 14px 28px -6px rgba(142, 28, 20, 0.12);
-        border-color: rgba(212, 175, 55, 0.5);
+      :root {
+        --primary-red: #c0392b;
+        --deep-red: #8e1c14;
+        --imperial-gold: #d4af37;
+        --light-gold: #fdf6e2;
+        --paper-bg: #faf7f2;
       }
-    }
 
-    .tab-active {
-      background: linear-gradient(135deg, #8e1c14 0%, #c0392b 100%) !important;
-      color: #ffffff !important;
-      border-color: #8e1c14 !important;
-      box-shadow: 0 4px 12px rgba(192, 57, 43, 0.35);
-    }
+      * {
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+      }
 
-    .badge-gold {
-      background: linear-gradient(135deg, #fbf2db 0%, #f4dfa6 100%);
-      color: #7d5a0f;
-      border: 1px solid #d4af37;
-    }
+      body {
+        font-family:
+          "Noto Sans SC",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "PingFang SC",
+          "Hiragino Sans GB",
+          "Microsoft YaHei",
+          sans-serif;
+        background-color: var(--paper-bg);
+        color: #2d3748;
+        padding-bottom: env(safe-area-inset-bottom);
+      }
 
-    .badge-red {
-      background: #fdf2f2;
-      color: #991b1b;
-      border: 1px solid #f87171;
-    }
+      .font-serif-sc {
+        font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+      }
 
-    .badge-green {
-      background: #f0fdf4;
-      color: #166534;
-      border: 1px solid #86efac;
-    }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+      }
 
-    /* Mobile Timeline Alignment */
-    .timeline-dot::before {
-      content: '';
-      position: absolute;
-      left: -21px;
-      top: 6px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #c0392b;
-      border: 2px solid #fdf6e2;
-      box-shadow: 0 0 0 2px #c0392b;
-    }
-    @media (min-width: 640px) {
+      .glass-card-hover {
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      @media (hover: hover) {
+        .glass-card-hover:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 14px 28px -6px rgba(142, 28, 20, 0.12);
+          border-color: rgba(212, 175, 55, 0.5);
+        }
+      }
+
+      .tab-active {
+        background: linear-gradient(
+          135deg,
+          #8e1c14 0%,
+          #c0392b 100%
+        ) !important;
+        color: #ffffff !important;
+        border-color: #8e1c14 !important;
+        box-shadow: 0 4px 12px rgba(192, 57, 43, 0.35);
+      }
+
+      .badge-gold {
+        background: linear-gradient(135deg, #fbf2db 0%, #f4dfa6 100%);
+        color: #7d5a0f;
+        border: 1px solid #d4af37;
+      }
+
+      .badge-red {
+        background: #fdf2f2;
+        color: #991b1b;
+        border: 1px solid #f87171;
+      }
+
+      .badge-green {
+        background: #f0fdf4;
+        color: #166534;
+        border: 1px solid #86efac;
+      }
+
+      /* Mobile Timeline Alignment */
       .timeline-dot::before {
-        left: -29px;
+        content: "";
+        position: absolute;
+        left: -21px;
         top: 6px;
-        width: 14px;
-        height: 14px;
-        border-width: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #c0392b;
+        border: 2px solid #fdf6e2;
+        box-shadow: 0 0 0 2px #c0392b;
       }
-    }
+      @media (min-width: 640px) {
+        .timeline-dot::before {
+          left: -29px;
+          top: 6px;
+          width: 14px;
+          height: 14px;
+          border-width: 3px;
+        }
+      }
 
-    /* Hide scrollbars while allowing swipe */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
+      /* Hide scrollbars while allowing swipe */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
 
-    /* Touch snap for tabs */
-    .snap-touch {
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-    .snap-item {
-      scroll-snap-align: center;
-    }
-  </style>
-</head>
-<body class="antialiased text-gray-800 pb-24 md:pb-12">
+      /* Touch snap for tabs */
+      .snap-touch {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .snap-item {
+        scroll-snap-align: center;
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 pb-24 md:pb-12">
+    <!-- TOP HERO BANNER -->
+    <header
+      class="relative overflow-hidden bg-gradient-to-b from-[#4a0e0a] via-[#7a1811] to-[#9c241a] text-white pt-8 pb-10 sm:py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-[#d4af37]"
+    >
+      <div
+        class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"
+      ></div>
 
-  <!-- TOP HERO BANNER -->
-  <header class="relative overflow-hidden bg-gradient-to-b from-[#4a0e0a] via-[#7a1811] to-[#9c241a] text-white pt-8 pb-10 sm:py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-[#d4af37]">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <!-- HEADER BADGE -->
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur border border-[#d4af37]/40 text-[11px] sm:text-xs text-[#f4dfa6] font-medium">
-          <svg class="w-3.5 h-3.5 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          华夏纵横文旅智库 · 官方定制
+      <div class="max-w-7xl mx-auto relative z-10">
+        <!-- HEADER BADGE -->
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <div
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur border border-[#d4af37]/40 text-[11px] sm:text-xs text-[#f4dfa6] font-medium"
+          >
+            <svg
+              class="w-3.5 h-3.5 text-[#d4af37]"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              ></path>
+            </svg>
+            华夏纵横文旅智库 · 官方定制
+          </div>
+          <span class="text-[10px] sm:text-xs text-amber-200/70 font-mono"
+            >2026 移动便携版</span
+          >
         </div>
-        <span class="text-[10px] sm:text-xs text-amber-200/70 font-mono">2026 移动便携版</span>
-      </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-8">
-          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black font-serif-sc tracking-tight text-white mb-3 leading-tight">
-            2026 北京 7 天 6 晚<br/>
-            <span class="text-[#f4dfa6]">深度文化与名胜出行计划</span>
-          </h1>
-          <p class="text-xs sm:text-base text-amber-100/90 leading-relaxed mb-4 font-light">
-            避开周一闭馆痛点 · 严控万元差旅预算 · 五大国家级专家智库联合护航
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-8">
+            <h1
+              class="text-2xl sm:text-4xl lg:text-5xl font-black font-serif-sc tracking-tight text-white mb-3 leading-tight"
+            >
+              2026 北京 7 天 6 晚<br />
+              <span class="text-[#f4dfa6]">深度文化与名胜出行计划</span>
+            </h1>
+            <p
+              class="text-xs sm:text-base text-amber-100/90 leading-relaxed mb-4 font-light"
+            >
+              避开周一闭馆痛点 · 严控万元差旅预算 · 五大国家级专家智库联合护航
+            </p>
+
+            <!-- MOBILE SPECS CHIPS -->
+            <div class="flex flex-col sm:flex-row flex-wrap gap-2 text-xs">
+              <div
+                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/35 border border-amber-300/30 text-amber-200"
+              >
+                <svg
+                  class="w-3.5 h-3.5 text-[#d4af37]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span>2026.09.05 - 09.11 (7天6晚)</span>
+              </div>
+              <div
+                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/35 border border-amber-300/30 text-amber-200"
+              >
+                <svg
+                  class="w-3.5 h-3.5 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  ></path>
+                </svg>
+                <span>去程：国航 CA8691 (广州 08:10 &rarr; 大兴 11:15)</span>
+              </div>
+              <div
+                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/35 border border-amber-300/30 text-yellow-300 font-bold"
+              >
+                <svg
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>差旅预算：&le; ¥10,000 元 (不含个人吃喝购物)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUICK METRICS ON MOBILE -->
+          <div class="lg:col-span-4 mt-2 lg:mt-0">
+            <div
+              class="bg-black/30 backdrop-blur-md rounded-xl p-3.5 sm:p-4 border border-[#d4af37]/40 shadow-lg"
+            >
+              <div class="grid grid-cols-4 lg:grid-cols-2 gap-2 text-center">
+                <div class="p-2 rounded-lg bg-white/5 border border-white/10">
+                  <div
+                    class="text-base sm:text-xl font-bold text-[#f4dfa6] font-serif-sc"
+                  >
+                    14处
+                  </div>
+                  <div class="text-[10px] text-amber-200/70">名胜地标</div>
+                </div>
+                <div class="p-2 rounded-lg bg-white/5 border border-white/10">
+                  <div
+                    class="text-base sm:text-xl font-bold text-emerald-300 font-serif-sc"
+                  >
+                    周一
+                  </div>
+                  <div class="text-[10px] text-amber-200/70">登长城避峰</div>
+                </div>
+                <div class="p-2 rounded-lg bg-white/5 border border-white/10">
+                  <div
+                    class="text-base sm:text-xl font-bold text-amber-300 font-serif-sc"
+                  >
+                    ¥1,851
+                  </div>
+                  <div class="text-[10px] text-amber-200/70">固定基准费</div>
+                </div>
+                <div class="p-2 rounded-lg bg-white/5 border border-white/10">
+                  <div
+                    class="text-base sm:text-xl font-bold text-cyan-300 font-serif-sc"
+                  >
+                    3档
+                  </div>
+                  <div class="text-[10px] text-amber-200/70">真实比价</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DESKTOP STICKY NAV -->
+    <nav
+      class="hidden md:block sticky top-0 z-40 bg-[#faf7f2]/95 backdrop-blur-md border-b border-[#e2d7c5] shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex items-center justify-between h-12 gap-6 text-sm font-medium"
+        >
+          <a
+            href="#itinerary"
+            class="px-3 py-1.5 rounded-lg text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors font-bold"
+            >1. 每日精细行程</a
+          >
+          <a
+            href="#tickets"
+            class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors"
+            >2. 门票与放票汇总</a
+          >
+          <a
+            href="#hotels"
+            class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors"
+            >3. 三大住宿比价</a
+          >
+          <a
+            href="#budget"
+            class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors"
+            >4. 1万元预算透视</a
+          >
+          <a
+            href="#crew"
+            class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors"
+            >5. 智库专家阵容</a
+          >
+          <a
+            href="#tips"
+            class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors"
+            >6. 9月出行锦囊</a
+          >
+          <a
+            href="#evidence"
+            class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors font-bold text-amber-900 bg-amber-100/60"
+            >7. 权威论证溯源</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN WRAPPER -->
+    <main
+      class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-10 sm:space-y-16"
+    >
+      <!-- SECTION 1: ITINERARY -->
+      <section id="itinerary" class="space-y-4 sm:space-y-6">
+        <div
+          class="flex flex-col sm:flex-row sm:items-end justify-between border-b-2 border-[#8e1c14]/20 pb-3 gap-1"
+        >
+          <div>
+            <span
+              class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded"
+              >Day-by-Day Timeline</span
+            >
+            <h2
+              class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1"
+            >
+              7 天 6 晚精细行程时刻表
+            </h2>
+          </div>
+          <p class="text-[11px] sm:text-xs text-gray-500">
+            左右滑动下方卡片即可切换日程 👆
           </p>
-
-          <!-- MOBILE SPECS CHIPS -->
-          <div class="flex flex-col sm:flex-row flex-wrap gap-2 text-xs">
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/35 border border-amber-300/30 text-amber-200">
-              <svg class="w-3.5 h-3.5 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-              <span>2026.09.05 - 09.11 (7天6晚)</span>
-            </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/35 border border-amber-300/30 text-amber-200">
-              <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-              <span>去程：国航 CA8691 (广州 08:10 &rarr; 大兴 11:15)</span>
-            </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/35 border border-amber-300/30 text-yellow-300 font-bold">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span>差旅预算：&le; ¥10,000 元 (不含个人吃喝购物)</span>
-            </div>
-          </div>
         </div>
 
-        <!-- QUICK METRICS ON MOBILE -->
-        <div class="lg:col-span-4 mt-2 lg:mt-0">
-          <div class="bg-black/30 backdrop-blur-md rounded-xl p-3.5 sm:p-4 border border-[#d4af37]/40 shadow-lg">
-            <div class="grid grid-cols-4 lg:grid-cols-2 gap-2 text-center">
-              <div class="p-2 rounded-lg bg-white/5 border border-white/10">
-                <div class="text-base sm:text-xl font-bold text-[#f4dfa6] font-serif-sc">14处</div>
-                <div class="text-[10px] text-amber-200/70">名胜地标</div>
+        <!-- THREE ROUTES SELECTION OVERVIEW -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div
+            class="p-3.5 rounded-xl bg-gradient-to-br from-amber-50 to-red-50/40 border-2 border-[#8e1c14]/40 shadow-xs space-y-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <span class="badge-red px-2 py-0.5 rounded text-[10px] font-bold"
+                >★ 路线一 (当前展示)</span
+              >
+              <span class="text-[10px] text-gray-500 font-bold">经典全景</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-900">
+              皇城中轴与六大世遗大观线
+            </h4>
+            <p class="text-[11px] text-gray-600 leading-snug">
+              天坛 $\to$ 国博/故宫 $\to$ 慕田峪长城 $\to$ 颐和园/圆明园 $\to$
+              恭王府/什刹海 $\to$ 雍和宫/国子监 $\to$ 北海。
+            </p>
+          </div>
+          <div
+            class="p-3.5 rounded-xl bg-white border border-amber-900/15 shadow-xs space-y-2 hover:border-amber-500 transition-colors"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="bg-amber-100 text-amber-900 px-2 py-0.5 rounded text-[10px] font-bold"
+                >路线二 (备选特推)</span
+              >
+              <span class="text-[10px] text-amber-700 font-bold">古建研学</span>
+            </div>
+            <h4 class="font-bold text-sm text-gray-900">
+              营造天工·大木作与石刻帝陵线
+            </h4>
+            <p class="text-[11px] text-gray-600 leading-snug">
+              智化寺明代转轮藏 $\to$ 故宫古建线 $\to$ 明长陵金丝楠殿/定陵玄宫
+              $\to$ 云居寺房山石经 $\to$ 法海寺明代壁画 $\to$ 先农坛一品藻井。
+            </p>
+            <div
+              class="border-t border-amber-100 pt-1.5 text-[10px] text-gray-500 space-y-0.5"
+            >
+              <div>
+                🏨 <strong>住宿标的</strong>：汉庭酒店(西直门新街口店)
+                6晚约¥1,680~1,920
               </div>
-              <div class="p-2 rounded-lg bg-white/5 border border-white/10">
-                <div class="text-base sm:text-xl font-bold text-emerald-300 font-serif-sc">周一</div>
-                <div class="text-[10px] text-amber-200/70">登长城避峰</div>
-              </div>
-              <div class="p-2 rounded-lg bg-white/5 border border-white/10">
-                <div class="text-base sm:text-xl font-bold text-amber-300 font-serif-sc">¥1,851</div>
-                <div class="text-[10px] text-amber-200/70">固定基准费</div>
-              </div>
-              <div class="p-2 rounded-lg bg-white/5 border border-white/10">
-                <div class="text-base sm:text-xl font-bold text-cyan-300 font-serif-sc">3档</div>
-                <div class="text-[10px] text-amber-200/70">真实比价</div>
+              <div>
+                🚄
+                <strong>交通特色</strong
+                >：19号线/昌平线直通十三陵，6号线直达模式口法海寺
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- DESKTOP STICKY NAV -->
-  <nav class="hidden md:block sticky top-0 z-40 bg-[#faf7f2]/95 backdrop-blur-md border-b border-[#e2d7c5] shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-12 gap-6 text-sm font-medium">
-        <a href="#itinerary" class="px-3 py-1.5 rounded-lg text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors font-bold">1. 每日精细行程</a>
-        <a href="#tickets" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors">2. 门票与放票汇总</a>
-        <a href="#hotels" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors">3. 三大住宿比价</a>
-        <a href="#budget" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors">4. 1万元预算透视</a>
-        <a href="#crew" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors">5. 智库专家阵容</a>
-        <a href="#tips" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-[#8e1c14] hover:bg-[#8e1c14]/10 transition-colors">6. 9月出行锦囊</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MAIN WRAPPER -->
-  <main class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-10 sm:space-y-16">
-
-    <!-- SECTION 1: ITINERARY -->
-    <section id="itinerary" class="space-y-4 sm:space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b-2 border-[#8e1c14]/20 pb-3 gap-1">
-        <div>
-          <span class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded">Day-by-Day Timeline</span>
-          <h2 class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1">7 天 6 晚精细行程时刻表</h2>
-        </div>
-        <p class="text-[11px] sm:text-xs text-gray-500">左右滑动下方卡片即可切换日程 👆</p>
-      </div>
-
-      <!-- DAY TABS (MOBILE SWIPEABLE SNAP CONTAINER) -->
-      <div class="flex gap-2 overflow-x-auto no-scrollbar snap-touch pb-2 -mx-3.5 px-3.5 sm:mx-0 sm:px-0" id="day-tabs">
-        <button onclick="switchDay(1)" id="btn-day-1" class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap tab-active border text-left sm:text-center">
-          Day 1 · 9.5 (六)<br><span class="text-[10px] font-normal opacity-90">天坛 · 前门大栅栏</span>
-        </button>
-        <button onclick="switchDay(2)" id="btn-day-2" class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center">
-          Day 2 · 9.6 (日)<br><span class="text-[10px] font-normal opacity-80">国博 · 故宫 · 景山</span>
-        </button>
-        <button onclick="switchDay(3)" id="btn-day-3" class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center">
-          Day 3 · 9.7 (一)<br><span class="text-[10px] font-normal text-emerald-700 font-bold">★ 慕田峪长城 · 鸟巢</span>
-        </button>
-        <button onclick="switchDay(4)" id="btn-day-4" class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center">
-          Day 4 · 9.8 (二)<br><span class="text-[10px] font-normal opacity-80">颐和园 · 圆明园</span>
-        </button>
-        <button onclick="switchDay(5)" id="btn-day-5" class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center">
-          Day 5 · 9.9 (三)<br><span class="text-[10px] font-normal opacity-80">恭王府 · 什刹海</span>
-        </button>
-        <button onclick="switchDay(6)" id="btn-day-6" class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center">
-          Day 6 · 9.10 (四)<br><span class="text-[10px] font-normal opacity-80">雍和宫 · 国子监</span>
-        </button>
-        <button onclick="switchDay(7)" id="btn-day-7" class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center">
-          Day 7 · 9.11 (五)<br><span class="text-[10px] font-normal opacity-80">北海白塔 · 烤鸭返程</span>
-        </button>
-      </div>
-
-      <!-- DYNAMIC DAY CARD CONTAINER -->
-      <div id="day-content" class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-sm border border-amber-900/10 transition-all">
-        <!-- Content injected by JS -->
-      </div>
-    </section>
-
-    <!-- SECTION 2: TICKETS & RESERVATIONS -->
-    <section id="tickets" class="space-y-4 sm:space-y-6">
-      <div class="border-b-2 border-[#8e1c14]/20 pb-3">
-        <span class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded">Reservation Matrix</span>
-        <h2 class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1">全网场馆与景点门票预约看板</h2>
-        <p class="text-xs text-gray-600 mt-0.5">提前放票周期、价格明细与周一闭馆规则汇总</p>
-      </div>
-
-      <!-- URGENT ALARM BOX -->
-      <div class="bg-gradient-to-r from-red-50 via-amber-50 to-orange-50 rounded-xl p-3.5 sm:p-5 border-l-4 border-[#c0392b] shadow-sm space-y-2">
-        <div class="flex items-center gap-2">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
-          </span>
-          <span class="font-bold text-[#8e1c14] text-xs sm:text-sm">手机抢票闹钟提醒（提前录入同行人身份证）：</span>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-gray-800">
-          <div class="bg-white/80 p-2 rounded border border-red-200">
-            <span class="font-bold text-red-700">8月29日 20:00</span>：故宫博物院 (提前7天抢)
-          </div>
-          <div class="bg-white/80 p-2 rounded border border-red-200">
-            <span class="font-bold text-red-700">8月30日 17:00</span>：中国国家博物馆 (提前7天抢)
-          </div>
-          <div class="bg-white/80 p-2 rounded border border-red-200">
-            <span class="font-bold text-red-700">8月30日 20:00</span>：恭王府 (提前10天抢)
-          </div>
-        </div>
-      </div>
-
-      <!-- RESPONSIVE TICKETS VIEW -->
-      <!-- MOBILE SWIPEABLE CARDS VIEW (Visible on mobile) -->
-      <div class="block lg:hidden space-y-3">
-        
-        <!-- Ticket Card 1: Forbidden City -->
-        <div class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5">
-          <div class="flex justify-between items-start">
-            <div class="font-bold text-sm text-gray-900 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-red-600"></span>故宫博物院
+          <div
+            class="p-3.5 rounded-xl bg-white border border-amber-900/15 shadow-xs space-y-2 hover:border-emerald-500 transition-colors"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded text-[10px] font-bold"
+                >路线三 (备选特推)</span
+              >
+              <span class="text-[10px] text-emerald-700 font-bold"
+                >山水科考</span
+              >
             </div>
-            <span class="badge-red px-2 py-0.5 rounded text-[11px] font-bold">提前7天 20:00</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">门票价格</span>
-            <span class="font-bold text-[#8e1c14]">¥60 (珍宝+10/钟表+10)</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">开放时间</span>
-            <span class="text-gray-700">08:30-17:00 (16:00止入)</span>
-          </div>
-          <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-            <span class="text-gray-500">预约平台</span>
-            <span class="text-blue-700 font-medium">小程序“故宫博物院” (周一闭馆)</span>
-          </div>
-        </div>
-
-        <!-- Ticket Card 2: National Museum -->
-        <div class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5">
-          <div class="flex justify-between items-start">
-            <div class="font-bold text-sm text-gray-900 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-red-600"></span>中国国家博物馆
+            <h4 class="font-bold text-sm text-gray-900">
+              燕山胜境·大峡谷与司马台星空线
+            </h4>
+            <p class="text-[11px] text-gray-600 leading-snug">
+              天坛声学 $\to$ 故宫水系 $\to$ 司马台长城落日与夜游 (宿古北水镇)
+              $\to$ 白河大峡谷断裂带 $\to$ 门头沟爨底下古村 $\to$ 潭柘寺。
+            </p>
+            <div
+              class="border-t border-emerald-100 pt-1.5 text-[10px] text-gray-500 space-y-0.5"
+            >
+              <div>
+                🏨
+                <strong>住宿标的</strong
+                >：市区5晚(汉庭东直门)+水镇1晚(如家精选)，总¥1,800
+              </div>
+              <div>
+                🚌
+                <strong>交通特色</strong
+                >：东直门专线直达古北水镇，892路专线深入太行爨底下
+              </div>
             </div>
-            <span class="badge-red px-2 py-0.5 rounded text-[11px] font-bold">提前7天 17:00</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">门票价格</span>
-            <span class="font-bold text-emerald-600">免费 (需预约)</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">开放时间</span>
-            <span class="text-gray-700">09:00-17:30 (16:30止入)</span>
-          </div>
-          <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-            <span class="text-gray-500">预约平台</span>
-            <span class="text-blue-700 font-medium">官网/小程序“国家博物馆” (周一闭馆)</span>
           </div>
         </div>
 
-        <!-- Ticket Card 3: Tiananmen -->
-        <div class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5">
-          <div class="flex justify-between items-start">
-            <div class="font-bold text-sm text-gray-900">天安门广场</div>
-            <span class="badge-gold px-2 py-0.5 rounded text-[11px]">提前1~7天 12:00</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">门票价格</span>
-            <span class="font-bold text-emerald-600">免费 (需预约)</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">开放时间</span>
-            <span class="text-gray-700">升旗前1h - 降旗后清场</span>
-          </div>
-          <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-            <span class="text-gray-500">预约平台</span>
-            <span class="text-blue-700 font-medium">小程序“天安门广场预约参观”</span>
-          </div>
+        <!-- DAY TABS (MOBILE SWIPEABLE SNAP CONTAINER) -->
+        <div
+          class="flex gap-2 overflow-x-auto no-scrollbar snap-touch pb-2 -mx-3.5 px-3.5 sm:mx-0 sm:px-0"
+          id="day-tabs"
+        >
+          <button
+            onclick="switchDay(1)"
+            id="btn-day-1"
+            class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap tab-active border text-left sm:text-center"
+          >
+            Day 1 · 9.5 (六)<br /><span
+              class="text-[10px] font-normal opacity-90"
+              >天坛 · 前门大栅栏</span
+            >
+          </button>
+          <button
+            onclick="switchDay(2)"
+            id="btn-day-2"
+            class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 2 · 9.6 (日)<br /><span
+              class="text-[10px] font-normal opacity-80"
+              >国博 · 故宫 · 景山</span
+            >
+          </button>
+          <button
+            onclick="switchDay(3)"
+            id="btn-day-3"
+            class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 3 · 9.7 (一)<br /><span
+              class="text-[10px] font-normal text-emerald-700 font-bold"
+              >★ 慕田峪长城 · 鸟巢</span
+            >
+          </button>
+          <button
+            onclick="switchDay(4)"
+            id="btn-day-4"
+            class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 4 · 9.8 (二)<br /><span
+              class="text-[10px] font-normal opacity-80"
+              >颐和园 · 圆明园</span
+            >
+          </button>
+          <button
+            onclick="switchDay(5)"
+            id="btn-day-5"
+            class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 5 · 9.9 (三)<br /><span
+              class="text-[10px] font-normal opacity-80"
+              >恭王府 · 什刹海</span
+            >
+          </button>
+          <button
+            onclick="switchDay(6)"
+            id="btn-day-6"
+            class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 6 · 9.10 (四)<br /><span
+              class="text-[10px] font-normal opacity-80"
+              >雍和宫 · 国子监</span
+            >
+          </button>
+          <button
+            onclick="switchDay(7)"
+            id="btn-day-7"
+            class="day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 7 · 9.11 (五)<br /><span
+              class="text-[10px] font-normal opacity-80"
+              >北海白塔 · 烤鸭返程</span
+            >
+          </button>
         </div>
 
-        <!-- Ticket Card 4: Mutianyu Great Wall -->
-        <div class="bg-emerald-50/40 rounded-xl p-3.5 border border-emerald-300 shadow-sm space-y-1.5">
-          <div class="flex justify-between items-start">
-            <div class="font-bold text-sm text-gray-900 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>慕田峪长城
+        <!-- DYNAMIC DAY CARD CONTAINER -->
+        <div
+          id="day-content"
+          class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-sm border border-amber-900/10 transition-all"
+        >
+          <!-- Content injected by JS -->
+        </div>
+      </section>
+
+      <!-- SECTION 2: TICKETS & RESERVATIONS -->
+      <section id="tickets" class="space-y-4 sm:space-y-6">
+        <div class="border-b-2 border-[#8e1c14]/20 pb-3">
+          <span
+            class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded"
+            >Reservation Matrix</span
+          >
+          <h2
+            class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1"
+          >
+            全网场馆与景点门票预约看板
+          </h2>
+          <p class="text-xs text-gray-600 mt-0.5">
+            提前放票周期、价格明细与周一闭馆规则汇总
+          </p>
+        </div>
+
+        <!-- URGENT ALARM BOX -->
+        <div
+          class="bg-gradient-to-r from-red-50 via-amber-50 to-orange-50 rounded-xl p-3.5 sm:p-5 border-l-4 border-[#c0392b] shadow-sm space-y-2"
+        >
+          <div class="flex items-center gap-2">
+            <span class="relative flex h-2.5 w-2.5">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"
+              ></span>
+            </span>
+            <span class="font-bold text-[#8e1c14] text-xs sm:text-sm"
+              >手机抢票闹钟提醒（提前录入同行人身份证）：</span
+            >
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-gray-800"
+          >
+            <div class="bg-white/80 p-2 rounded border border-red-200">
+              <span class="font-bold text-red-700">8月29日 20:00</span
+              >：故宫博物院 (提前7天抢)
             </div>
-            <span class="badge-green px-2 py-0.5 rounded text-[11px] font-bold">周一正常开放</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">门票及设施</span>
-            <span class="font-bold text-gray-900">门票¥40 + 摆渡¥15 + 缆车双程¥120</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">开放时间</span>
-            <span class="text-gray-700">07:30 - 18:00</span>
-          </div>
-          <div class="flex justify-between text-xs pt-1 border-t border-emerald-200 text-[11px]">
-            <span class="text-gray-500">预约平台</span>
-            <span class="text-emerald-800 font-medium">微信“慕田峪长城”/直通车打包</span>
-          </div>
-        </div>
-
-        <!-- Ticket Card 5: Summer Palace -->
-        <div class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5">
-          <div class="flex justify-between items-start">
-            <div class="font-bold text-sm text-gray-900">颐和园</div>
-            <span class="badge-gold px-2 py-0.5 rounded text-[11px]">提前7天 21:00</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">门票价格</span>
-            <span class="font-bold text-gray-900">联票 ¥60 (含佛香阁/德和园)</span>
-          </div>
-          <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-            <span class="text-gray-500">预约平台</span>
-            <span class="text-blue-700 font-medium">微信“颐和园” / 畅游公园</span>
-          </div>
-        </div>
-
-        <!-- Ticket Card 6: Prince Kung's Mansion -->
-        <div class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5">
-          <div class="flex justify-between items-start">
-            <div class="font-bold text-sm text-gray-900 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-red-600"></span>恭王府
+            <div class="bg-white/80 p-2 rounded border border-red-200">
+              <span class="font-bold text-red-700">8月30日 17:00</span
+              >：中国国家博物馆 (提前7天抢)
             </div>
-            <span class="badge-red px-2 py-0.5 rounded text-[11px] font-bold">提前10天 20:00 (秒杀)</span>
-          </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">门票价格</span>
-            <span class="font-bold text-gray-900">¥40 (周一闭馆)</span>
-          </div>
-          <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-            <span class="text-gray-500">预约平台</span>
-            <span class="text-blue-700 font-medium">微信“恭王府”官方小程序</span>
+            <div class="bg-white/80 p-2 rounded border border-red-200">
+              <span class="font-bold text-red-700">8月30日 20:00</span>：恭王府
+              (提前10天抢)
+            </div>
           </div>
         </div>
 
-        <!-- Ticket Card 7: Temple of Heaven -->
-        <div class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5">
-          <div class="flex justify-between items-start">
-            <div class="font-bold text-sm text-gray-900">天坛公园</div>
-            <span class="badge-gold px-2 py-0.5 rounded text-[11px]">提前7天</span>
+        <!-- RESPONSIVE TICKETS VIEW -->
+        <!-- MOBILE SWIPEABLE CARDS VIEW (Visible on mobile) -->
+        <div class="block lg:hidden space-y-3">
+          <!-- Ticket Card 1: Forbidden City -->
+          <div
+            class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5"
+          >
+            <div class="flex justify-between items-start">
+              <div
+                class="font-bold text-sm text-gray-900 flex items-center gap-1.5"
+              >
+                <span class="w-2 h-2 rounded-full bg-red-600"></span>故宫博物院
+              </div>
+              <span class="badge-red px-2 py-0.5 rounded text-[11px] font-bold"
+                >提前7天 20:00</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">门票价格</span>
+              <span class="font-bold text-[#8e1c14]"
+                >¥60 (珍宝+10/钟表+10)</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">开放时间</span>
+              <span class="text-gray-700">08:30-17:00 (16:00止入)</span>
+            </div>
+            <div
+              class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]"
+            >
+              <span class="text-gray-500">预约平台</span>
+              <span class="text-blue-700 font-medium"
+                >小程序“故宫博物院” (周一闭馆)</span
+              >
+            </div>
           </div>
-          <div class="flex justify-between text-xs">
-            <span class="text-gray-500">门票价格</span>
-            <span class="font-bold text-gray-900">联票 ¥34 (含祈年殿/圜丘)</span>
+
+          <!-- Ticket Card 2: National Museum -->
+          <div
+            class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5"
+          >
+            <div class="flex justify-between items-start">
+              <div
+                class="font-bold text-sm text-gray-900 flex items-center gap-1.5"
+              >
+                <span class="w-2 h-2 rounded-full bg-red-600"></span
+                >中国国家博物馆
+              </div>
+              <span class="badge-red px-2 py-0.5 rounded text-[11px] font-bold"
+                >提前7天 17:00</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">门票价格</span>
+              <span class="font-bold text-emerald-600">免费 (需预约)</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">开放时间</span>
+              <span class="text-gray-700">09:00-17:30 (16:30止入)</span>
+            </div>
+            <div
+              class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]"
+            >
+              <span class="text-gray-500">预约平台</span>
+              <span class="text-blue-700 font-medium"
+                >官网/小程序“国家博物馆” (周一闭馆)</span
+              >
+            </div>
           </div>
-          <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-            <span class="text-gray-500">预约平台</span>
-            <span class="text-blue-700 font-medium">微信“天坛” / 畅游公园</span>
+
+          <!-- Ticket Card 3: Tiananmen -->
+          <div
+            class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5"
+          >
+            <div class="flex justify-between items-start">
+              <div class="font-bold text-sm text-gray-900">天安门广场</div>
+              <span class="badge-gold px-2 py-0.5 rounded text-[11px]"
+                >提前1~7天 12:00</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">门票价格</span>
+              <span class="font-bold text-emerald-600">免费 (需预约)</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">开放时间</span>
+              <span class="text-gray-700">升旗前1h - 降旗后清场</span>
+            </div>
+            <div
+              class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]"
+            >
+              <span class="text-gray-500">预约平台</span>
+              <span class="text-blue-700 font-medium"
+                >小程序“天安门广场预约参观”</span
+              >
+            </div>
+          </div>
+
+          <!-- Ticket Card 4: Mutianyu Great Wall -->
+          <div
+            class="bg-emerald-50/40 rounded-xl p-3.5 border border-emerald-300 shadow-sm space-y-1.5"
+          >
+            <div class="flex justify-between items-start">
+              <div
+                class="font-bold text-sm text-gray-900 flex items-center gap-1.5"
+              >
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span
+                >慕田峪长城
+              </div>
+              <span
+                class="badge-green px-2 py-0.5 rounded text-[11px] font-bold"
+                >周一正常开放</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">门票及设施</span>
+              <span class="font-bold text-gray-900"
+                >门票¥40 + 摆渡¥15 + 缆车双程¥120</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">开放时间</span>
+              <span class="text-gray-700">07:30 - 18:00</span>
+            </div>
+            <div
+              class="flex justify-between text-xs pt-1 border-t border-emerald-200 text-[11px]"
+            >
+              <span class="text-gray-500">预约平台</span>
+              <span class="text-emerald-800 font-medium"
+                >微信“慕田峪长城”/直通车打包</span
+              >
+            </div>
+          </div>
+
+          <!-- Ticket Card 5: Summer Palace -->
+          <div
+            class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5"
+          >
+            <div class="flex justify-between items-start">
+              <div class="font-bold text-sm text-gray-900">颐和园</div>
+              <span class="badge-gold px-2 py-0.5 rounded text-[11px]"
+                >提前7天 21:00</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">门票价格</span>
+              <span class="font-bold text-gray-900"
+                >联票 ¥60 (含佛香阁/德和园)</span
+              >
+            </div>
+            <div
+              class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]"
+            >
+              <span class="text-gray-500">预约平台</span>
+              <span class="text-blue-700 font-medium"
+                >微信“颐和园” / 畅游公园</span
+              >
+            </div>
+          </div>
+
+          <!-- Ticket Card 6: Prince Kung's Mansion -->
+          <div
+            class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5"
+          >
+            <div class="flex justify-between items-start">
+              <div
+                class="font-bold text-sm text-gray-900 flex items-center gap-1.5"
+              >
+                <span class="w-2 h-2 rounded-full bg-red-600"></span>恭王府
+              </div>
+              <span class="badge-red px-2 py-0.5 rounded text-[11px] font-bold"
+                >提前10天 20:00 (秒杀)</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">门票价格</span>
+              <span class="font-bold text-gray-900">¥40 (周一闭馆)</span>
+            </div>
+            <div
+              class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]"
+            >
+              <span class="text-gray-500">预约平台</span>
+              <span class="text-blue-700 font-medium"
+                >微信“恭王府”官方小程序</span
+              >
+            </div>
+          </div>
+
+          <!-- Ticket Card 7: Temple of Heaven -->
+          <div
+            class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5"
+          >
+            <div class="flex justify-between items-start">
+              <div class="font-bold text-sm text-gray-900">天坛公园</div>
+              <span class="badge-gold px-2 py-0.5 rounded text-[11px]"
+                >提前7天</span
+              >
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-500">门票价格</span>
+              <span class="font-bold text-gray-900"
+                >联票 ¥34 (含祈年殿/圜丘)</span
+              >
+            </div>
+            <div
+              class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]"
+            >
+              <span class="text-gray-500">预约平台</span>
+              <span class="text-blue-700 font-medium"
+                >微信“天坛” / 畅游公园</span
+              >
+            </div>
+          </div>
+
+          <!-- Ticket Card 8: Lama Temple & Others -->
+          <div
+            class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5 text-xs"
+          >
+            <div class="font-bold text-gray-900">其他名胜一览：</div>
+            <div class="text-gray-600 leading-relaxed text-[11px]">
+              • <strong>雍和宫</strong>：¥25
+              (提前7天，小程序“雍和宫游客信众服务”)<br />
+              • <strong>孔庙和国子监</strong>：¥30 (提前7天，周一闭馆)<br />
+              • <strong>圆明园遗址</strong>：通票¥25 (含大水法西洋楼)<br />
+              • <strong>景山公园</strong>：¥2 (登万春亭看故宫全景)<br />
+              • <strong>北京钟鼓楼</strong>：联票¥30 (提前3天)<br />
+              • <strong>什刹海/奥林匹克公园</strong>：免费公共开放
+            </div>
           </div>
         </div>
 
-        <!-- Ticket Card 8: Lama Temple & Others -->
-        <div class="bg-white rounded-xl p-3.5 border border-amber-900/10 shadow-sm space-y-1.5 text-xs">
-          <div class="font-bold text-gray-900">其他名胜一览：</div>
-          <div class="text-gray-600 leading-relaxed text-[11px]">
-            • <strong>雍和宫</strong>：¥25 (提前7天，小程序“雍和宫游客信众服务”)<br>
-            • <strong>孔庙和国子监</strong>：¥30 (提前7天，周一闭馆)<br>
-            • <strong>圆明园遗址</strong>：通票¥25 (含大水法西洋楼)<br>
-            • <strong>景山公园</strong>：¥2 (登万春亭看故宫全景)<br>
-            • <strong>北京钟鼓楼</strong>：联票¥30 (提前3天)<br>
-            • <strong>什刹海/奥林匹克公园</strong>：免费公共开放
-          </div>
+        <!-- DESKTOP TABLE VIEW (Visible on >= lg screens) -->
+        <div
+          class="hidden lg:block overflow-x-auto rounded-xl border border-amber-900/10 shadow-sm bg-white"
+        >
+          <table class="min-w-full text-left text-xs sm:text-sm">
+            <thead
+              class="bg-[#f5efe4] text-[#4a3b2c] font-serif-sc font-bold border-b border-amber-900/10"
+            >
+              <tr>
+                <th class="py-3 px-4">景点 / 场馆</th>
+                <th class="py-3 px-4">门票及体验费用</th>
+                <th class="py-3 px-4">开放时间</th>
+                <th class="py-3 px-4">放票时间与周期</th>
+                <th class="py-3 px-4">官方预约平台</th>
+                <th class="py-3 px-4">闭馆与入园规则</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-amber-50/50">
+                <td class="py-3 px-4 font-bold text-gray-900">
+                  <a
+                    href="https://www.dpm.org.cn"
+                    target="_blank"
+                    class="hover:text-red-700 hover:underline"
+                    ><span class="text-red-600">● </span>故宫博物院</a
+                  >
+                </td>
+                <td class="py-3 px-4 font-semibold text-[#8e1c14]">
+                  ¥60
+                  <span class="text-xs text-gray-500 font-normal"
+                    >(珍宝馆+10/钟表馆+10)</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-600">08:30 - 17:00 (16:00止)</td>
+                <td class="py-3 px-4">
+                  <span class="badge-red px-2 py-0.5 rounded text-xs font-bold"
+                    >提前7天 20:00</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-700">
+                  <a
+                    href="https://gugong.ktmtech.cn"
+                    target="_blank"
+                    class="text-blue-700 hover:underline font-medium"
+                    >小程序“故宫” / 票务网 ↗</a
+                  >
+                </td>
+                <td class="py-3 px-4 text-red-600 text-xs">
+                  周一闭馆 · 刷身份证
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50/50">
+                <td class="py-3 px-4 font-bold text-gray-900">
+                  <a
+                    href="https://www.chnmuseum.cn"
+                    target="_blank"
+                    class="hover:text-red-700 hover:underline"
+                    ><span class="text-red-600">● </span>中国国家博物馆</a
+                  >
+                </td>
+                <td class="py-3 px-4 font-bold text-emerald-600">
+                  免费 (需预约)
+                </td>
+                <td class="py-3 px-4 text-gray-600">09:00 - 17:30 (16:30止)</td>
+                <td class="py-3 px-4">
+                  <span class="badge-red px-2 py-0.5 rounded text-xs font-bold"
+                    >提前7天 17:00</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-700">
+                  <a
+                    href="https://www.chnmuseum.cn"
+                    target="_blank"
+                    class="text-blue-700 hover:underline font-medium"
+                    >国博官网预约通道 ↗</a
+                  >
+                </td>
+                <td class="py-3 px-4 text-red-600 text-xs">
+                  周一闭馆 · 严禁带打火机
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50/50 bg-emerald-50/30">
+                <td class="py-3 px-4 font-bold text-gray-900">
+                  <a
+                    href="https://www.mutianyugreatwall.com"
+                    target="_blank"
+                    class="hover:text-emerald-700 hover:underline"
+                    ><span class="text-emerald-600">● </span>慕田峪长城</a
+                  >
+                </td>
+                <td class="py-3 px-4 font-semibold text-gray-800">
+                  ¥40
+                  <span class="text-xs text-gray-500 font-normal"
+                    >(摆渡¥15+缆车¥120)</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-600">07:30 - 18:00</td>
+                <td class="py-3 px-4">
+                  <span class="badge-green px-2 py-0.5 rounded text-xs"
+                    >提前1~15天随放</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-700">
+                  <a
+                    href="https://www.mutianyugreatwall.com"
+                    target="_blank"
+                    class="text-emerald-800 hover:underline font-medium"
+                    >慕田峪官网直订平台 ↗</a
+                  >
+                </td>
+                <td class="py-3 px-4 text-emerald-700 font-medium text-xs">
+                  周一正常开放 · 刷身份证
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50/50">
+                <td class="py-3 px-4 font-bold text-gray-900">
+                  <a
+                    href="https://www.tiantanpark.com"
+                    target="_blank"
+                    class="hover:text-amber-800 hover:underline"
+                    >天坛公园</a
+                  >
+                </td>
+                <td class="py-3 px-4 font-semibold text-gray-800">
+                  ¥34
+                  <span class="text-xs text-gray-500 font-normal"
+                    >(联票含祈年殿/圜丘)</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-600">
+                  大门06-22点 / 景点08-18点
+                </td>
+                <td class="py-3 px-4">
+                  <span class="badge-gold px-2 py-0.5 rounded text-xs"
+                    >提前7天</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-700">
+                  <a
+                    href="https://www.bjgyol.com.cn"
+                    target="_blank"
+                    class="text-blue-700 hover:underline font-medium"
+                    >畅游公园官方平台 ↗</a
+                  >
+                </td>
+                <td class="py-3 px-4 text-amber-700 text-xs">
+                  周一核心景点关闭
+                </td>
+              </tr>
+              <tr class="hover:bg-amber-50/50">
+                <td class="py-3 px-4 font-bold text-gray-900">
+                  <a
+                    href="https://www.summerpalace-china.com"
+                    target="_blank"
+                    class="hover:text-blue-800 hover:underline"
+                    >颐和园</a
+                  >
+                </td>
+                <td class="py-3 px-4 font-semibold text-gray-800">
+                  ¥60
+                  <span class="text-xs text-gray-500 font-normal"
+                    >(联票含佛香阁/德和园)</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-600">
+                  06:00 - 20:00 (景点8:30-18)
+                </td>
+                <td class="py-3 px-4">
+                  <span class="badge-gold px-2 py-0.5 rounded text-xs"
+                    >提前7天 21:00</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-700">
+                  <a
+                    href="https://www.bjgyol.com.cn"
+                    target="_blank"
+                    class="text-blue-700 hover:underline font-medium"
+                    >畅游公园颐和园预约 ↗</a
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-600 text-xs">刷身份证入园</td>
+              </tr>
+              <tr class="hover:bg-amber-50/50">
+                <td class="py-3 px-4 font-bold text-gray-900">
+                  <a
+                    href="https://www.pgm.org.cn"
+                    target="_blank"
+                    class="hover:text-red-700 hover:underline"
+                    ><span class="text-red-600">● </span>恭王府</a
+                  >
+                </td>
+                <td class="py-3 px-4 font-semibold text-gray-800">¥40</td>
+                <td class="py-3 px-4 text-gray-600">08:30 - 17:00 (16:10止)</td>
+                <td class="py-3 px-4">
+                  <span class="badge-red px-2 py-0.5 rounded text-xs font-bold"
+                    >提前10天 20:00</span
+                  >
+                </td>
+                <td class="py-3 px-4 text-gray-700">
+                  <a
+                    href="https://www.pgm.org.cn"
+                    target="_blank"
+                    class="text-blue-700 hover:underline font-medium"
+                    >恭王府官方网站预订 ↗</a
+                  >
+                </td>
+                <td class="py-3 px-4 text-red-600 text-xs">
+                  周一闭馆 · 准点秒杀
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </section>
 
-      </div>
-
-      <!-- DESKTOP TABLE VIEW (Visible on >= lg screens) -->
-      <div class="hidden lg:block overflow-x-auto rounded-xl border border-amber-900/10 shadow-sm bg-white">
-        <table class="min-w-full text-left text-xs sm:text-sm">
-          <thead class="bg-[#f5efe4] text-[#4a3b2c] font-serif-sc font-bold border-b border-amber-900/10">
-            <tr>
-              <th class="py-3 px-4">景点 / 场馆</th>
-              <th class="py-3 px-4">门票及体验费用</th>
-              <th class="py-3 px-4">开放时间</th>
-              <th class="py-3 px-4">放票时间与周期</th>
-              <th class="py-3 px-4">官方预约平台</th>
-              <th class="py-3 px-4">闭馆与入园规则</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-amber-50/50">
-              <td class="py-3 px-4 font-bold text-gray-900"><span class="text-red-600">● </span>故宫博物院</td>
-              <td class="py-3 px-4 font-semibold text-[#8e1c14]">¥60 <span class="text-xs text-gray-500 font-normal">(珍宝馆+10/钟表馆+10)</span></td>
-              <td class="py-3 px-4 text-gray-600">08:30 - 17:00 (16:00止)</td>
-              <td class="py-3 px-4"><span class="badge-red px-2 py-0.5 rounded text-xs font-bold">提前7天 20:00</span></td>
-              <td class="py-3 px-4 text-gray-700">小程序“故宫博物院”</td>
-              <td class="py-3 px-4 text-red-600 text-xs">周一闭馆 · 刷身份证</td>
-            </tr>
-            <tr class="hover:bg-amber-50/50">
-              <td class="py-3 px-4 font-bold text-gray-900"><span class="text-red-600">● </span>中国国家博物馆</td>
-              <td class="py-3 px-4 font-bold text-emerald-600">免费 (需预约)</td>
-              <td class="py-3 px-4 text-gray-600">09:00 - 17:30 (16:30止)</td>
-              <td class="py-3 px-4"><span class="badge-red px-2 py-0.5 rounded text-xs font-bold">提前7天 17:00</span></td>
-              <td class="py-3 px-4 text-gray-700">官网 / 小程序“国家博物馆”</td>
-              <td class="py-3 px-4 text-red-600 text-xs">周一闭馆 · 严禁带打火机</td>
-            </tr>
-            <tr class="hover:bg-amber-50/50 bg-emerald-50/30">
-              <td class="py-3 px-4 font-bold text-gray-900"><span class="text-emerald-600">● </span>慕田峪长城</td>
-              <td class="py-3 px-4 font-semibold text-gray-800">¥40 <span class="text-xs text-gray-500 font-normal">(摆渡¥15+缆车¥120)</span></td>
-              <td class="py-3 px-4 text-gray-600">07:30 - 18:00</td>
-              <td class="py-3 px-4"><span class="badge-green px-2 py-0.5 rounded text-xs">提前1~15天随放</span></td>
-              <td class="py-3 px-4 text-gray-700">小程序“慕田峪长城”/官网</td>
-              <td class="py-3 px-4 text-emerald-700 font-medium text-xs">周一正常开放 · 刷身份证</td>
-            </tr>
-            <tr class="hover:bg-amber-50/50">
-              <td class="py-3 px-4 font-bold text-gray-900">天坛公园</td>
-              <td class="py-3 px-4 font-semibold text-gray-800">¥34 <span class="text-xs text-gray-500 font-normal">(联票含祈年殿/圜丘)</span></td>
-              <td class="py-3 px-4 text-gray-600">大门06-22点 / 景点08-18点</td>
-              <td class="py-3 px-4"><span class="badge-gold px-2 py-0.5 rounded text-xs">提前7天</span></td>
-              <td class="py-3 px-4 text-gray-700">公众号“天坛”/“畅游公园”</td>
-              <td class="py-3 px-4 text-amber-700 text-xs">周一核心景点关闭</td>
-            </tr>
-            <tr class="hover:bg-amber-50/50">
-              <td class="py-3 px-4 font-bold text-gray-900">颐和园</td>
-              <td class="py-3 px-4 font-semibold text-gray-800">¥60 <span class="text-xs text-gray-500 font-normal">(联票含佛香阁/德和园)</span></td>
-              <td class="py-3 px-4 text-gray-600">06:00 - 20:00 (景点8:30-18)</td>
-              <td class="py-3 px-4"><span class="badge-gold px-2 py-0.5 rounded text-xs">提前7天 21:00</span></td>
-              <td class="py-3 px-4 text-gray-700">小程序“颐和园”/畅游公园</td>
-              <td class="py-3 px-4 text-gray-600 text-xs">刷身份证入园</td>
-            </tr>
-            <tr class="hover:bg-amber-50/50">
-              <td class="py-3 px-4 font-bold text-gray-900"><span class="text-red-600">● </span>恭王府</td>
-              <td class="py-3 px-4 font-semibold text-gray-800">¥40</td>
-              <td class="py-3 px-4 text-gray-600">08:30 - 17:00 (16:10止)</td>
-              <td class="py-3 px-4"><span class="badge-red px-2 py-0.5 rounded text-xs font-bold">提前10天 20:00</span></td>
-              <td class="py-3 px-4 text-gray-700">小程序“恭王府”</td>
-              <td class="py-3 px-4 text-red-600 text-xs">周一闭馆 · 准点秒杀</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- SECTION 3: HOTELS COMPARISON -->
-    <section id="hotels" class="space-y-4 sm:space-y-6">
-      <div class="border-b-2 border-[#8e1c14]/20 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-1">
-        <div>
-          <span class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded">Accommodation Tiers</span>
-          <h2 class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1">三大住宿档位真实比价 (6 晚总测算)</h2>
-        </div>
-        <div class="text-[11px] sm:text-xs text-gray-500">携程 / 华住会 / 同程旅行 实时可查</div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-
-        <!-- TIER 1 -->
-        <div class="glass-card glass-card-hover rounded-xl sm:rounded-2xl p-4 sm:p-6 border-t-4 border-amber-600 flex flex-col justify-between">
+      <!-- SECTION 3: HOTELS COMPARISON -->
+      <section id="hotels" class="space-y-4 sm:space-y-6">
+        <div
+          class="border-b-2 border-[#8e1c14]/20 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-1"
+        >
           <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="badge-gold px-2.5 py-0.5 rounded-full text-[11px] font-bold">档位一 · 入门经济型</span>
-              <span class="text-[11px] text-gray-500">高性价比</span>
-            </div>
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-0.5">全季酒店 (天安门王府井店)</h3>
-            <p class="text-[11px] text-gray-500 mb-3">备选：汉庭酒店（天安门广场前门店）</p>
-
-            <div class="space-y-1.5 text-xs text-gray-700 mb-4">
-              <p>📍 <strong>区位</strong>：东四西大街（近地铁5/6号线东四站）</p>
-              <p>🛏️ <strong>房型</strong>：大床房 / 商务双床房（简约东方、静音）</p>
-              <p>📱 <strong>平台</strong>：华住会 App / 携程 / 同程</p>
-            </div>
+            <span
+              class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded"
+              >Accommodation Tiers</span
+            >
+            <h2
+              class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1"
+            >
+              三大住宿档位真实比价 (6 晚总测算)
+            </h2>
           </div>
-
-          <div class="border-t border-gray-100 pt-3 bg-[#faf7f2] -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 p-4 sm:p-5 rounded-b-xl sm:rounded-b-2xl">
-            <div class="flex justify-between items-baseline text-xs text-gray-600 mb-1">
-              <span>单晚均价</span>
-              <span class="font-bold text-gray-900 text-sm">¥480 ~ 550 /晚</span>
-            </div>
-            <div class="flex justify-between items-baseline text-xs text-gray-600 mb-2">
-              <span>6 晚房费总计</span>
-              <span class="font-bold text-[#8e1c14] text-base">¥2,880 ~ 3,300</span>
-            </div>
-            <div class="text-[11px] text-emerald-700 bg-emerald-50 p-1.5 rounded border border-emerald-200">
-              差旅总计约 ¥4,351 ~ 4,851 (结余 ¥5,150+)
-            </div>
+          <div class="text-[11px] sm:text-xs text-gray-500">
+            携程 / 华住会 / 同程旅行 实时可查
           </div>
         </div>
 
-        <!-- TIER 2 (RECOMMENDED) -->
-        <div class="glass-card glass-card-hover rounded-xl sm:rounded-2xl p-4 sm:p-6 border-t-4 border-[#8e1c14] ring-2 ring-[#8e1c14]/30 shadow-lg flex flex-col justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <!-- TIER S (USER DESIGNATED <= 2000 RMB) -->
+          <div
+            class="glass-card glass-card-hover rounded-xl sm:rounded-2xl p-4 sm:p-6 border-t-4 border-emerald-600 ring-2 ring-emerald-600/30 shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span
+                  class="badge-green px-2.5 py-0.5 rounded-full text-[11px] font-bold"
+                  >★ 方案 S · 2,000元控本专档</span
+                >
+                <span class="text-[11px] text-emerald-800 font-bold"
+                  >华住官方可查</span
+                >
+              </div>
+              <h3 class="text-lg sm:text-xl font-black text-gray-900 mb-0.5">
+                汉庭 (同仁医院崇文门地铁站店)
+              </h3>
+              <p class="text-[11px] text-gray-500 mb-3">
+                备选：汉庭(前门天坛北门店) / 如家商旅(天坛崇门店)
+              </p>
+
+              <div class="space-y-1.5 text-xs text-gray-700 mb-4">
+                <p>
+                  📍
+                  <strong>区位</strong
+                  >：东城区船板胡同47号（近地铁2/5号线崇文门站）
+                </p>
+                <p>
+                  🛏️
+                  <strong>房型</strong
+                  >：舒享大床房（汉庭3.5版新风静音、智能洗衣）
+                </p>
+                <p>
+                  📱 <strong>平台</strong>：<a
+                    href="https://www.huazhu.com"
+                    target="_blank"
+                    class="text-emerald-800 font-bold hover:underline"
+                    >华住会App/小程序</a
+                  >
+                  /
+                  <a
+                    href="https://www.homeinns.com"
+                    target="_blank"
+                    class="text-blue-600 hover:underline"
+                    >首旅如家</a
+                  >
+                  /
+                  <a
+                    href="https://www.ctrip.com"
+                    target="_blank"
+                    class="text-blue-600 hover:underline"
+                    >携程</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border-t border-emerald-200/60 pt-3 bg-emerald-50/40 -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 p-4 sm:p-5 rounded-b-xl sm:rounded-b-2xl"
+            >
+              <div
+                class="flex justify-between items-baseline text-xs text-gray-600 mb-1"
+              >
+                <span>单晚均价</span>
+                <span class="font-bold text-emerald-800 text-sm"
+                  >¥280 ~ 320 /晚</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-baseline text-xs text-gray-600 mb-2"
+              >
+                <span>6 晚房费总计</span>
+                <span class="font-black text-emerald-900 text-base"
+                  >¥1,680 ~ 1,920 (≤ ¥2,000)</span
+                >
+              </div>
+              <div
+                class="text-[11px] text-emerald-900 bg-emerald-100 p-1.5 rounded border border-emerald-300 font-bold"
+              >
+                ✓ 差旅总计仅 ¥3,411 ~ 3,831 (结余 ¥6,169+)
+              </div>
+            </div>
+          </div>
+
+          <!-- TIER 2 (RECOMMENDED) -->
+          <div
+            class="glass-card glass-card-hover rounded-xl sm:rounded-2xl p-4 sm:p-6 border-t-4 border-[#8e1c14] ring-2 ring-[#8e1c14]/30 shadow-lg flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span
+                  class="badge-red px-2.5 py-0.5 rounded-full text-[11px] font-bold"
+                  >档位二 · 舒适品质型</span
+                >
+                <span class="text-[11px] text-[#8e1c14] font-bold"
+                  >★ 强烈推荐</span
+                >
+              </div>
+              <h3 class="text-lg sm:text-xl font-black text-gray-900 mb-0.5">
+                北京前门四合院漫心府
+              </h3>
+              <p class="text-[11px] text-gray-500 mb-3">
+                备选：北京新世界酒店 (五星豪华客房)
+              </p>
+
+              <div class="space-y-1.5 text-xs text-gray-700 mb-4">
+                <p>
+                  📍
+                  <strong>区位</strong>：前门大栅栏西街胡同（近地铁7号线珠市口）
+                </p>
+                <p>
+                  🛏️ <strong>房型</strong>：心怡大床房 /
+                  胡同庭院房（三进四合院）
+                </p>
+                <p>
+                  📱 <strong>平台</strong>：<a
+                    href="https://www.huazhu.com"
+                    target="_blank"
+                    class="text-[#8e1c14] font-bold hover:underline"
+                    >华住会（会员含早）</a
+                  >
+                  /
+                  <a
+                    href="https://www.ctrip.com"
+                    target="_blank"
+                    class="text-blue-600 hover:underline"
+                    >携程</a
+                  >
+                  /
+                  <a
+                    href="https://www.ly.com"
+                    target="_blank"
+                    class="text-blue-600 hover:underline"
+                    >同程</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border-t border-amber-200/50 pt-3 bg-[#fdfaf5] -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 p-4 sm:p-5 rounded-b-xl sm:rounded-b-2xl"
+            >
+              <div
+                class="flex justify-between items-baseline text-xs text-gray-600 mb-1"
+              >
+                <span>单晚均价</span>
+                <span class="font-bold text-[#8e1c14] text-sm"
+                  >¥850 ~ 1,050 /晚</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-baseline text-xs text-gray-600 mb-2"
+              >
+                <span>6 晚房费总计</span>
+                <span class="font-black text-[#8e1c14] text-lg"
+                  >¥5,100 ~ 6,300</span
+                >
+              </div>
+              <div
+                class="text-[11px] text-emerald-800 bg-emerald-100/80 p-2 rounded-lg border border-emerald-300 font-bold"
+              >
+                ✓ 差旅总计 ¥6,651 ~ 7,651 (在1万元内结余 ¥2,350~3,350)
+              </div>
+            </div>
+          </div>
+
+          <!-- TIER 3 -->
+          <div
+            class="glass-card glass-card-hover rounded-xl sm:rounded-2xl p-4 sm:p-6 border-t-4 border-purple-800 flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span
+                  class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-100 text-purple-900 border border-purple-300"
+                  >档位三 · 奢华尊享型</span
+                >
+                <span class="text-[11px] text-gray-500">地标奢华</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-0.5">
+                王府半岛酒店
+              </h3>
+              <p class="text-[11px] text-gray-500 mb-3">
+                备选：北京璞瑄酒店 (嘉德艺术中心顶层)
+              </p>
+
+              <div class="space-y-1.5 text-xs text-gray-700 mb-4">
+                <p>
+                  📍 <strong>区位</strong>：王府井金鱼胡同8号（步行直达东华门）
+                </p>
+                <p>🛏️ <strong>房型</strong>：高级套房（60㎡全套房设计）</p>
+                <p>
+                  📱 <strong>平台</strong>：<a
+                    href="https://www.peninsula.com/beijing"
+                    target="_blank"
+                    class="text-purple-800 font-bold hover:underline"
+                    >半岛官网</a
+                  >
+                  /
+                  <a
+                    href="https://www.thepuxuan.com"
+                    target="_blank"
+                    class="text-purple-800 hover:underline"
+                    >璞瑄官网</a
+                  >
+                  /
+                  <a
+                    href="https://www.ctrip.com"
+                    target="_blank"
+                    class="text-blue-600 hover:underline"
+                    >携程</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border-t border-gray-100 pt-3 bg-[#faf7f2] -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 p-4 sm:p-5 rounded-b-xl sm:rounded-b-2xl"
+            >
+              <div
+                class="flex justify-between items-baseline text-xs text-gray-600 mb-1"
+              >
+                <span>单晚均价</span>
+                <span class="font-bold text-purple-900 text-sm"
+                  >¥2,800 ~ 3,800 /晚</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-baseline text-xs text-gray-600 mb-2"
+              >
+                <span>6 晚房费总计</span>
+                <span class="font-bold text-purple-950 text-base"
+                  >¥16,800 ~ 22,800</span
+                >
+              </div>
+              <div
+                class="text-[11px] text-purple-800 bg-purple-50 p-1.5 rounded border border-purple-200"
+              >
+                差旅总计约 ¥17,851 ~ 23,851 (超出预算)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: BUDGET BREAKDOWN -->
+      <section id="budget" class="space-y-4 sm:space-y-6">
+        <div class="border-b-2 border-[#8e1c14]/20 pb-3">
+          <span
+            class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded"
+            >Financial Breakdown</span
+          >
+          <h2
+            class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1"
+          >
+            10,000 元预算收支透视图
+          </h2>
+          <p class="text-xs text-gray-600 mt-0.5">
+            固定硬性差旅开销 ¥1,851 元 + 住宿比价
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-4 sm:p-6 border border-amber-900/10 shadow-sm space-y-4"
+        >
+          <!-- Progress Scheme S (User Designated <= 2000 RMB) -->
           <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="badge-red px-2.5 py-0.5 rounded-full text-[11px] font-bold">档位二 · 舒适品质型</span>
-              <span class="text-[11px] text-[#8e1c14] font-bold">★ 强烈推荐</span>
+            <div class="flex justify-between text-xs font-semibold mb-1">
+              <span class="text-emerald-800 font-bold"
+                >★ 方案 S · 2,000元控本专档
+                (汉庭崇文门店/如家商旅/四合院独立间)</span
+              >
+              <span class="text-emerald-800 font-black"
+                >¥3,831 / ¥10,000 (38.3%)</span
+              >
             </div>
-            <h3 class="text-lg sm:text-xl font-black text-gray-900 mb-0.5">北京前门四合院漫心府</h3>
-            <p class="text-[11px] text-gray-500 mb-3">备选：北京新世界酒店 (五星豪华客房)</p>
-
-            <div class="space-y-1.5 text-xs text-gray-700 mb-4">
-              <p>📍 <strong>区位</strong>：前门大栅栏西街胡同（近地铁7号线珠市口）</p>
-              <p>🛏️ <strong>房型</strong>：心怡大床房 / 胡同庭院房（三进四合院）</p>
-              <p>📱 <strong>平台</strong>：华住会（会员含早）/ 携程 / 同程</p>
+            <div
+              class="w-full bg-gray-100 h-3.5 rounded-full overflow-hidden ring-2 ring-emerald-600/40"
+            >
+              <div
+                class="bg-gradient-to-r from-emerald-500 to-teal-600 h-full rounded-full"
+                style="width: 38.3%"
+              ></div>
             </div>
+            <p class="text-[11px] text-emerald-800 font-medium mt-0.5">
+              ✓ 用户指定红线！房费仅需 ¥1,680~1,980，总支出不到 4,000 元，结余
+              ¥6,169 元 (>60%)
+            </p>
           </div>
 
-          <div class="border-t border-amber-200/50 pt-3 bg-[#fdfaf5] -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 p-4 sm:p-5 rounded-b-xl sm:rounded-b-2xl">
-            <div class="flex justify-between items-baseline text-xs text-gray-600 mb-1">
-              <span>单晚均价</span>
-              <span class="font-bold text-[#8e1c14] text-sm">¥850 ~ 1,050 /晚</span>
-            </div>
-            <div class="flex justify-between items-baseline text-xs text-gray-600 mb-2">
-              <span>6 晚房费总计</span>
-              <span class="font-black text-[#8e1c14] text-lg">¥5,100 ~ 6,300</span>
-            </div>
-            <div class="text-[11px] text-emerald-800 bg-emerald-100/80 p-2 rounded-lg border border-emerald-300 font-bold">
-              ✓ 差旅总计 ¥6,651 ~ 7,651 (在1万元内结余 ¥2,350~3,350)
-            </div>
-          </div>
-        </div>
-
-        <!-- TIER 3 -->
-        <div class="glass-card glass-card-hover rounded-xl sm:rounded-2xl p-4 sm:p-6 border-t-4 border-purple-800 flex flex-col justify-between">
+          <!-- Progress Scheme B -->
           <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-100 text-purple-900 border border-purple-300">档位三 · 奢华尊享型</span>
-              <span class="text-[11px] text-gray-500">地标奢华</span>
+            <div class="flex justify-between text-xs font-semibold mb-1">
+              <span class="text-[#8e1c14] font-bold"
+                >方案 B · 舒适品质型 (前门漫心府四合院 / 新世界酒店)</span
+              >
+              <span class="text-[#8e1c14] font-black"
+                >¥7,651 / ¥10,000 (76.5%)</span
+              >
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-0.5">王府半岛酒店</h3>
-            <p class="text-[11px] text-gray-500 mb-3">备选：北京璞瑄酒店 (嘉德艺术中心顶层)</p>
-
-            <div class="space-y-1.5 text-xs text-gray-700 mb-4">
-              <p>📍 <strong>区位</strong>：王府井金鱼胡同8号（步行直达东华门）</p>
-              <p>🛏️ <strong>房型</strong>：高级套房（60㎡全套房设计）</p>
-              <p>📱 <strong>平台</strong>：半岛官网 / 携程黑钻 / 同程</p>
+            <div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
+              <div
+                class="bg-gradient-to-r from-[#c0392b] to-[#8e1c14] h-full rounded-full"
+                style="width: 76.5%"
+              ></div>
             </div>
+            <p class="text-[11px] text-gray-600 mt-0.5">
+              结余 ¥2,349 元，体验极佳且在万元预算内
+            </p>
           </div>
 
-          <div class="border-t border-gray-100 pt-3 bg-[#faf7f2] -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 p-4 sm:p-5 rounded-b-xl sm:rounded-b-2xl">
-            <div class="flex justify-between items-baseline text-xs text-gray-600 mb-1">
-              <span>单晚均价</span>
-              <span class="font-bold text-purple-900 text-sm">¥2,800 ~ 3,800 /晚</span>
+          <!-- Progress Scheme C -->
+          <div>
+            <div
+              class="flex justify-between text-xs font-semibold mb-1 text-gray-400"
+            >
+              <span>方案 C · 奢华尊享型 (王府半岛)</span>
+              <span class="text-purple-700 font-bold"
+                >¥19,851 (超出 198.5%)</span
+              >
             </div>
-            <div class="flex justify-between items-baseline text-xs text-gray-600 mb-2">
-              <span>6 晚房费总计</span>
-              <span class="font-bold text-purple-950 text-base">¥16,800 ~ 22,800</span>
-            </div>
-            <div class="text-[11px] text-purple-800 bg-purple-50 p-1.5 rounded border border-purple-200">
-              差旅总计约 ¥17,851 ~ 23,851 (超出预算)
+            <div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
+              <div
+                class="bg-purple-600 h-full rounded-full"
+                style="width: 100%"
+              ></div>
             </div>
           </div>
         </div>
+      </section>
 
+      <!-- SECTION 5: CREW -->
+      <section id="crew" class="space-y-4 sm:space-y-6">
+        <div class="border-b-2 border-[#8e1c14]/20 pb-3">
+          <span
+            class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded"
+            >Expert Team</span
+          >
+          <h2
+            class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1"
+          >
+            华夏纵横文旅智库专家阵容
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
+        >
+          <div
+            class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-[#8e1c14] text-white flex items-center justify-center font-serif-sc font-bold shrink-0"
+            >
+              陆
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-gray-900">
+                陆承远
+                <span class="text-gray-500 font-normal text-[11px]"
+                  >(总负责人)</span
+                >
+              </h4>
+              <p class="text-[11px] text-[#8e1c14]">
+                前国旅总社总监 · MTA/EMBA
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-serif-sc font-bold shrink-0"
+            >
+              程
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-gray-900">
+                程若曦
+                <span class="text-gray-500 font-normal text-[11px]"
+                  >(出行规划负责人)</span
+                >
+              </h4>
+              <p class="text-[11px] text-blue-900">
+                交大/中大双硕士 · 15年架构师
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-emerald-800 text-white flex items-center justify-center font-serif-sc font-bold shrink-0"
+            >
+              卫
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-gray-900">
+                卫国强
+                <span class="text-gray-500 font-normal text-[11px]"
+                  >(资深特级导游)</span
+                >
+              </h4>
+              <p class="text-[11px] text-emerald-800">
+                文旅部特级导游 · 金牌导游 · WFR
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-amber-800 text-white flex items-center justify-center font-serif-sc font-bold shrink-0"
+            >
+              梁
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-gray-900">
+                梁思涵 博士
+                <span class="text-gray-500 font-normal text-[11px]"
+                  >(资深历史学者)</span
+                >
+              </h4>
+              <p class="text-[11px] text-amber-800">
+                北大文博博士 · 61项世遗专研
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-teal-800 text-white flex items-center justify-center font-serif-sc font-bold shrink-0"
+            >
+              顾
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-gray-900">
+                顾玄石 博士
+                <span class="text-gray-500 font-normal text-[11px]"
+                  >(资深地理学者)</span
+                >
+              </h4>
+              <p class="text-[11px] text-teal-800">
+                中科院地理所 (IGSNRR) 博士
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: TIPS -->
+      <section
+        id="tips"
+        class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-amber-200 space-y-3"
+      >
+        <h3
+          class="text-base sm:text-xl font-bold font-serif-sc text-[#8e1c14] flex items-center gap-2"
+        >
+          <span>💡</span> 9 月初北京出行锦囊与实用须知
+        </h3>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-6 text-xs sm:text-sm text-gray-700"
+        >
+          <div class="bg-white/85 p-3.5 rounded-lg border border-amber-200">
+            <h4 class="font-bold text-gray-900 mb-1">🌤️ 气候与着装</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">
+              日间约 26~28℃，早晚
+              16~18℃，秋高气爽。备一件薄防风外套应对长城与早晚；日均步行 1.5
+              万步，<strong>务必穿减震运动鞋</strong>。
+            </p>
+          </div>
+          <div class="bg-white/85 p-3.5 rounded-lg border border-amber-200">
+            <h4 class="font-bold text-gray-900 mb-1">🪪 证件与安检</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">
+              全城景点实行 100%
+              刷身份证入园，<strong>身份证原件必须随身携带</strong>；天安门广场与故宫严禁携带打火机。
+            </p>
+          </div>
+          <div class="bg-white/85 p-3.5 rounded-lg border border-amber-200">
+            <h4 class="font-bold text-gray-900 mb-1">🦆 老字号美食</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">
+              推荐：四季民福烤鸭（故宫店）、南门涮肉（前门店）、烤肉季（什刹海炙子烤肉）、稻香村零号店糕点。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: EVIDENCE DOSSIER -->
+      <section id="evidence" class="space-y-4 sm:space-y-6">
+        <div class="border-b-2 border-[#8e1c14]/20 pb-3">
+          <span
+            class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded"
+            >Evidence & Fact-Checking</span
+          >
+          <h2
+            class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1"
+          >
+            方案论证、数据核验与权威依据溯源
+          </h2>
+          <p class="text-xs text-gray-600 mt-0.5">
+            民航/高铁12306、官方文博规约、OTA价格采样与学术文献全景实证
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Evidence Card 1 -->
+          <div
+            class="bg-white rounded-xl p-4 border border-amber-900/10 shadow-sm space-y-2"
+          >
+            <h4
+              class="font-bold text-sm text-[#8e1c14] flex items-center gap-1.5"
+            >
+              <span>✈️/🚄</span> 1. 大交通与市内接驳官方源
+            </h4>
+            <ul class="space-y-1 text-gray-600 leading-relaxed">
+              <li>
+                • <strong>国航 CA8691</strong>：中国民航局 (CAAC)
+                与航旅纵横官方排班核验，广州白云 08:10 &rarr; 北京大兴
+                11:15，早班黄金时刻。
+              </li>
+              <li>
+                • <strong>大兴快轨</strong>：北京市发改委官方定价 ¥35，19
+                分钟直达草桥枢纽，无缝换乘 19/10 号线。
+              </li>
+              <li>
+                • <strong>复兴号标杆 G79</strong>：铁路 12306 官方时刻，北京西
+                &rarr; 广州南 7h38m，二等座 ¥924~964.5。
+              </li>
+            </ul>
+          </div>
+
+          <!-- Evidence Card 2 -->
+          <div
+            class="bg-white rounded-xl p-4 border border-amber-900/10 shadow-sm space-y-2"
+          >
+            <h4
+              class="font-bold text-sm text-[#8e1c14] flex items-center gap-1.5"
+            >
+              <span>🏛️</span> 2. 文博门票与周一闭馆官方规则
+            </h4>
+            <ul class="space-y-1 text-gray-600 leading-relaxed">
+              <li>
+                •
+                <strong>故宫 / 国博 / 恭王府</strong
+                >：文化和旅游部直属场馆，<strong>每周一闭馆</strong>；故宫提前7天20点放票，国博提前7天17点放票，恭王府提前10天20点放票。
+              </li>
+              <li>
+                •
+                <strong>慕田峪长城</strong
+                >：怀柔文物局公报，<strong>周一正常开放</strong>，门票¥40+摆渡¥15+缆车¥120。
+              </li>
+              <li>
+                •
+                <strong>天坛公园</strong
+                >：周一大门开放但核心祈年殿/回音壁关闭，故排在周六。
+              </li>
+            </ul>
+          </div>
+
+          <!-- Evidence Card 3 -->
+          <div
+            class="bg-white rounded-xl p-4 border border-amber-900/10 shadow-sm space-y-2"
+          >
+            <h4
+              class="font-bold text-sm text-[#8e1c14] flex items-center gap-1.5"
+            >
+              <span>🏨</span> 3. 酒店市场报价与供应链真实性
+            </h4>
+            <ul class="space-y-1 text-gray-600 leading-relaxed">
+              <li>
+                •
+                <strong>★ 2,000元专属控本档</strong
+                >：9月上旬汉庭3.5(同仁医院崇文门店/前门天坛北门店)均价
+                ¥280~320/晚（6晚 ¥1,680~1,920）；如家商旅(天坛崇门店)均价
+                ¥280~330/晚（6晚 ¥1,680~1,980）；北平青旅四合院独立间均价
+                ¥260~310/晚（6晚 ¥1,560~1,860）。
+              </li>
+              <li>
+                • <strong>差旅审计结论</strong>：方案 S 6晚总房费 ≤
+                ¥2,000，差旅总支出仅 **¥3,411 ~ 3,831 元**，在 1
+                万元总预算内产生高达 **¥6,169 ~ 6,589 元** 结余！
+              </li>
+            </ul>
+          </div>
+
+          <!-- Evidence Card 4 -->
+          <div
+            class="bg-white rounded-xl p-4 border border-amber-900/10 shadow-sm space-y-2"
+          >
+            <h4
+              class="font-bold text-sm text-[#8e1c14] flex items-center gap-1.5"
+            >
+              <span>📜</span> 4. 历史建筑与地理学术考据
+            </h4>
+            <ul class="space-y-1 text-gray-600 leading-relaxed">
+              <li>
+                •
+                <strong>太和殿十脊兽</strong
+                >：《清工部工程做法则例》考证全国唯一具备“行什”孤例。
+              </li>
+              <li>
+                •
+                <strong>天坛28立柱</strong
+                >：《明史·礼志》考据四季、月令、时辰与二十八宿天文算学统摄。
+              </li>
+              <li>
+                •
+                <strong>景山微气候</strong
+                >：《明实录》与中科院地理所研究，挖筒子河堆山以御西北寒风。
+              </li>
+              <li>
+                •
+                <strong>国子监辟雍</strong
+                >：《周礼·考工记》天子太学环水辟雍制度实存孤本。
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- QUICK OFFICIAL LINKS HUB -->
+        <div
+          class="bg-gradient-to-r from-amber-100/60 to-red-50 p-4 sm:p-6 rounded-xl border border-amber-300/80 shadow-sm space-y-3"
+        >
+          <h4
+            class="font-bold text-sm sm:text-base text-[#8e1c14] flex items-center gap-2"
+          >
+            <span>🔗</span> 全网官方预约与出行服务极速导航通道
+          </h4>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 text-xs"
+          >
+            <a
+              href="https://gugong.ktmtech.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>故宫门票预约</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.chnmuseum.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>中国国家博物馆</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://yuyue.tamgw.beijing.gov.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>天安门广场预约</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.mutianyugreatwall.com"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>慕田峪长城官网</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.bjgyol.com.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>畅游公园(天坛/颐和园)</span
+              ><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.pgm.org.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>恭王府博物馆</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.yonghegong.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>雍和宫官方预约</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.kmgzj.com"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-red-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>孔庙国子监官网</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.12306.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-blue-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>铁路 12306 官网</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.airchina.com.cn"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-blue-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>中国国际航空</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.huazhu.com"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-amber-800 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>华住会(漫心/全季)</span><span class="text-gray-400">↗</span>
+            </a>
+            <a
+              href="https://www.ctrip.com"
+              target="_blank"
+              class="p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200 text-gray-800 hover:text-blue-700 font-medium flex items-center justify-between shadow-xs transition-colors"
+            >
+              <span>携程旅行网</span><span class="text-gray-400">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MOBILE BOTTOM STICKY NAVIGATION BAR (Only on mobile devices) -->
+    <nav
+      class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#faf7f2]/95 backdrop-blur-lg border-t border-[#e2d7c5] shadow-2xl px-2 py-1.5"
+    >
+      <div class="grid grid-cols-5 text-center text-[10px]">
+        <a
+          href="#itinerary"
+          class="flex flex-col items-center py-1 text-[#8e1c14] font-bold"
+        >
+          <span class="text-base">📅</span>
+          <span>行程</span>
+        </a>
+        <a
+          href="#tickets"
+          class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]"
+        >
+          <span class="text-base">🎫</span>
+          <span>门票</span>
+        </a>
+        <a
+          href="#hotels"
+          class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]"
+        >
+          <span class="text-base">🏨</span>
+          <span>住宿</span>
+        </a>
+        <a
+          href="#budget"
+          class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]"
+        >
+          <span class="text-base">💰</span>
+          <span>预算</span>
+        </a>
+        <a
+          href="#tips"
+          class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]"
+        >
+          <span class="text-base">💡</span>
+          <span>锦囊</span>
+        </a>
       </div>
-    </section>
+    </nav>
 
-    <!-- SECTION 4: BUDGET BREAKDOWN -->
-    <section id="budget" class="space-y-4 sm:space-y-6">
-      <div class="border-b-2 border-[#8e1c14]/20 pb-3">
-        <span class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded">Financial Breakdown</span>
-        <h2 class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1">10,000 元预算收支透视图</h2>
-        <p class="text-xs text-gray-600 mt-0.5">固定硬性差旅开销 ¥1,851 元 + 住宿比价</p>
+    <!-- FOOTER -->
+    <footer
+      class="bg-[#2c1d11] text-[#f4dfa6]/70 py-8 px-4 text-center text-xs border-t-2 border-[#d4af37]"
+    >
+      <div class="font-serif-sc font-bold text-white mb-1">
+        华夏纵横文旅智库旅行社
       </div>
-
-      <div class="bg-white rounded-xl p-4 sm:p-6 border border-amber-900/10 shadow-sm space-y-4">
-        <!-- Progress Scheme A -->
-        <div>
-          <div class="flex justify-between text-xs font-semibold mb-1">
-            <span>方案 A · 入门经济型</span>
-            <span class="text-emerald-700 font-bold">¥4,851 / ¥10,000 (48.5%)</span>
-          </div>
-          <div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
-            <div class="bg-emerald-500 h-full rounded-full" style="width: 48.5%"></div>
-          </div>
-          <p class="text-[11px] text-gray-500 mt-0.5">结余预算 ¥5,149 元</p>
-        </div>
-
-        <!-- Progress Scheme B -->
-        <div>
-          <div class="flex justify-between text-xs font-semibold mb-1">
-            <span class="text-[#8e1c14] font-bold">★ 方案 B · 舒适品质型 (前门漫心府四合院)</span>
-            <span class="text-[#8e1c14] font-black">¥7,651 / ¥10,000 (76.5%)</span>
-          </div>
-          <div class="w-full bg-gray-100 h-3.5 rounded-full overflow-hidden ring-2 ring-[#8e1c14]/30">
-            <div class="bg-gradient-to-r from-[#c0392b] to-[#8e1c14] h-full rounded-full" style="width: 76.5%"></div>
-          </div>
-          <p class="text-[11px] text-emerald-800 font-medium mt-0.5">✓ 黄金推荐！结余 ¥2,349 元，体验极佳且在预算红线内</p>
-        </div>
-
-        <!-- Progress Scheme C -->
-        <div>
-          <div class="flex justify-between text-xs font-semibold mb-1 text-gray-400">
-            <span>方案 C · 奢华尊享型 (王府半岛)</span>
-            <span class="text-purple-700 font-bold">¥19,851 (超出 198.5%)</span>
-          </div>
-          <div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
-            <div class="bg-purple-600 h-full rounded-full" style="width: 100%"></div>
-          </div>
-        </div>
+      <p class="text-[11px] text-amber-200/50">
+        以严谨学术求真考证 · 以精密工程思维规划 · 以国家级标准做服务
+      </p>
+      <div class="text-[10px] text-gray-500 mt-2">
+        © 2026 Huaxia Horizon Travel Agency · 移动自适应版本
       </div>
-    </section>
+    </footer>
 
-    <!-- SECTION 5: CREW -->
-    <section id="crew" class="space-y-4 sm:space-y-6">
-      <div class="border-b-2 border-[#8e1c14]/20 pb-3">
-        <span class="text-[10px] sm:text-xs font-bold text-[#8e1c14] uppercase tracking-widest bg-red-100/80 px-2 py-0.5 rounded">Expert Team</span>
-        <h2 class="text-xl sm:text-3xl font-black font-serif-sc text-[#1a1a1a] mt-1">华夏纵横文旅智库专家阵容</h2>
-      </div>
+    <!-- SCRIPT FOR DAY SWITCHING WITH AUTO-SCROLL ON MOBILE -->
+    <script>
+      const dayData = {
+        1: {
+          date: "2026年9月5日 (周六)",
+          theme: "抵京安顿 · 天坛祭天与南中轴古韵",
+          morningAlert:
+            "✈️ 国航 CA8691 (08:10 广州白云 &rarr; 11:15 北京大兴落地)",
+          intensity: "中等 (首日接驳与适应性慢步)",
+          timeline: [
+            {
+              time: "11:15 - 12:45",
+              title: "大兴机场快轨接驳",
+              desc: "落地大兴机场，搭乘快轨19分钟直达草桥站，转乘地铁19/8号线抵达酒店办理入住与休整。",
+            },
+            {
+              time: "14:00 - 17:00",
+              title: "天坛公园（联票）",
+              duration: "预计游玩 3.0 小时",
+              desc: "由南向北探访：圜丘坛（天心石共鸣） &rarr; 皇穹宇（回音壁传音） &rarr; 丹陛桥 &rarr; 祈年殿（纯木重檐榫卯奇迹）。",
+              highlight:
+                "重点研学明嘉靖九年天地分祀空间礼制与古代声学反射原理。",
+            },
+            {
+              time: "17:30 - 20:00",
+              title: "前门大街 & 大栅栏 & 三里河胡同",
+              duration: "预计游玩 2.5 小时",
+              desc: "探访同仁堂、内联升等老字号；漫步至前门闹中取静的芦苇水系‘三里河胡同’，体验京派水乡烟火气。",
+              dining: "晚餐推荐：南门涮肉（前门直营店）或都一处烧麦。",
+            },
+          ],
+          scholarNote:
+            "<strong>梁思涵博士注</strong>：天坛祈年殿采用了独一无二的 28 根楠木巨柱：中央4根代表四季，中层12根代表十二个月，外层12根代表十二时辰，合计28宿，是中国古代天文算学与建筑形制的极致统一。",
+        },
+        2: {
+          date: "2026年9月6日 (周日)",
+          theme: "国之重器 · 紫禁城全景与景山落日",
+          morningAlert:
+            "🏛️ 重点行程：需提前抢订国博(17:00抢)与故宫(20:00抢)门票",
+          intensity: "较高 (步数约 18,000 步)",
+          timeline: [
+            {
+              time: "08:00 - 08:30",
+              title: "天安门广场",
+              duration: "预计 0.5 小时",
+              desc: "瞻仰人民英雄纪念碑，眺望人民大会堂与天安门城楼雄姿。",
+            },
+            {
+              time: "08:30 - 11:30",
+              title: "中国国家博物馆",
+              duration: "预计 3.0 小时",
+              desc: "专场观摩《古代中国》展厅：后母戊鼎、四羊方尊、利簋、孝端皇后凤冠等国宝重器。",
+            },
+            {
+              time: "12:30 - 17:00",
+              title: "故宫博物院（紫禁城）",
+              duration: "预计 4.5 小时",
+              desc: "午门 &rarr; 太和殿（十兽屋脊） &rarr; 中和殿 &rarr; 保和殿 &rarr; 养心殿 &rarr; 珍宝馆（九龙壁） &rarr; 钟表馆 &rarr; 神武门。",
+              highlight: "重点解析大木作榫卯与金丝楠木受力平衡。",
+            },
+            {
+              time: "17:15 - 18:30",
+              title: "景山公园（万春亭）",
+              duration: "预计 1.2 小时",
+              desc: "登临中轴线制高点万春亭，正南俯瞰紫禁城落日余晖金顶，正北远眺地安门钟鼓楼。",
+            },
+          ],
+          scholarNote:
+            "<strong>顾玄石博士注</strong>：景山并非自然山体，而是明代开挖紫禁城护城河（筒子河）的泥土堆叠而成，其选址恰好阻挡了北京冬季从西北呼啸而来的寒风，是古代‘背山面水’微气候生态营造的经典范例。",
+        },
+        3: {
+          date: "2026年9月7日 (周一)",
+          theme: "绝壁雄关 · 慕田峪长城与双奥之光",
+          morningAlert:
+            "🛡️ 规避周一闭馆：全天安排户外长城与奥林匹克公园，全线通畅",
+          intensity: "高强度 (长城山脊徒步)",
+          timeline: [
+            {
+              time: "07:30 - 09:00",
+              title: "旅游直通车前往怀柔",
+              desc: "乘慕巴士直通车（约80元往返）走京承高速直抵慕田峪景区。",
+            },
+            {
+              time: "09:00 - 14:00",
+              title: "慕田峪长城科考登临",
+              duration: "预计 4.5 ~ 5.0 小时",
+              desc: "换乘摆渡车，缆车上14号敌楼 &rarr; 沿山脊西行至20号敌楼（好汉坡最高点，海拔1039米） &rarr; 俯瞰明代关隘奇景。",
+              highlight: "慕田峪植被覆盖率超96%，敌楼密度居长城之冠。",
+            },
+            {
+              time: "16:30 - 19:30",
+              title: "奥林匹克公园",
+              duration: "预计 2.5 小时",
+              desc: "观赏鸟巢国家体育场钢结构织网美感与水立方膜结构，守候18:30亮灯夜景。",
+            },
+          ],
+          scholarNote:
+            "<strong>卫国强领队提示</strong>：长城台阶陡峭，下山严禁奔跑；长城山区气温较市区低 3~5℃，随身小包务必放入防风皮肤衣与充足饮用水。",
+        },
+        4: {
+          date: "2026年9月8日 (周二)",
+          theme: "山水寄情 · 皇家名园与名校风采",
+          morningAlert: "🏞️ 经典皇家园林全景：昆明湖与西洋楼遗址",
+          intensity: "中等偏高 (步数约 15,000 步)",
+          timeline: [
+            {
+              time: "08:30 - 12:30",
+              title: "颐和园（联票）",
+              duration: "预计 4.0 小时",
+              desc: "东宫门 &rarr; 仁寿殿 &rarr; 德和园大戏楼 &rarr; 728米彩画长廊 &rarr; 佛香阁俯瞰昆明湖 &rarr; 石舫 &rarr; 十七孔桥。",
+            },
+            {
+              time: "14:00 - 16:30",
+              title: "圆明园遗址公园",
+              duration: "预计 2.5 小时",
+              desc: "探访长春园西洋楼遗址区、大水法、远瀛观残石断柱与海晏堂十二生肖喷泉基址。",
+            },
+            {
+              time: "17:00 - 18:30",
+              title: "清华大学 / 北京大学周边",
+              duration: "预计 1.5 小时",
+              desc: "在标志性古典西校门前拍照打卡，感受中国顶尖学府浓厚人文底蕴。",
+            },
+          ],
+          scholarNote:
+            "<strong>梁思涵博士注</strong>：颐和园以杭州西湖为蓝本，但巧妙结合了万寿山与北京西山余脉作为借景，是中国造园艺术中‘巧于因借、精在体宜’的巅峰代表作。",
+        },
+        5: {
+          date: "2026年9月9日 (周三)",
+          theme: "清史烟云 · 恭王府与什刹海胡同慢调",
+          morningAlert: "🏮 感受‘一座恭王府，半部清代史’与老北京胡同生活",
+          intensity: "舒适慢游",
+          timeline: [
+            {
+              time: "09:00 - 11:30",
+              title: "恭王府",
+              duration: "预计 2.5 小时",
+              desc: "银安殿 &rarr; 锡晋斋（楠木违制建筑） &rarr; 后罩楼（99间半藏宝楼） &rarr; 大戏楼 &rarr; 秘云洞摸康熙御笔‘福’字碑。",
+            },
+            {
+              time: "12:00 - 14:30",
+              title: "什刹海 & 烟袋斜街 & 银锭桥",
+              duration: "预计 2.5 小时",
+              desc: "漫步湖畔观赏‘银锭观山’，穿行800年烟袋斜街。",
+              dining: "午餐推荐：烤肉季炙子烤肉或鸦儿李记涮肉。",
+            },
+            {
+              time: "15:00 - 17:00",
+              title: "北京钟鼓楼",
+              duration: "预计 2.0 小时",
+              desc: "登临中轴线北端钟楼与鼓楼，俯瞰老城四合院青砖灰瓦，聆听击鼓报时表演。",
+            },
+            {
+              time: "17:30 - 20:00",
+              title: "南锣鼓巷与东四老胡同",
+              duration: "预计 2.5 小时",
+              desc: "穿行雨儿胡同、帽儿胡同，感受地道京派四合院居民烟火气。",
+            },
+          ],
+          scholarNote:
+            "<strong>程若曦架构师注</strong>：恭王府周边胡同狭窄，今日全程依托地铁 6 号线北海北站及共享单车/步行接驳最为丝滑，避免早晚高峰地面出租车拥堵。",
+        },
+        6: {
+          date: "2026年9月10日 (周四)",
+          theme: "儒释交融 · 雍和古刹与国子文华",
+          morningAlert: "📿 京城最大藏传古刹与古代国家最高学府",
+          intensity: "舒适文化漫步",
+          timeline: [
+            {
+              time: "09:00 - 11:30",
+              title: "雍和宫",
+              duration: "预计 2.5 小时",
+              desc: "雍和门 &rarr; 法轮殿 &rarr; 万福阁（瞻仰18米白檀木弥勒大佛，吉尼斯世界纪录） &rarr; 结缘开光法物。",
+            },
+            {
+              time: "11:30 - 13:00",
+              title: "五道营胡同特色午餐",
+              desc: "在雍和宫对面的文艺胡同五道营享用精致轻食或京味素斋。",
+            },
+            {
+              time: "13:30 - 15:30",
+              title: "孔庙和国子监博物馆",
+              duration: "预计 2.0 小时",
+              desc: "大成殿孔子祭祀 &rarr; 辟雍大殿（乾隆帝讲学处） &rarr; 乾隆十三经刻石碑林。",
+            },
+            {
+              time: "16:00 - 18:30",
+              title: "中国工艺美术馆 / 非遗馆",
+              duration: "预计 2.5 小时",
+              desc: "观赏四大国宝级翡翠巨制（《岱岳奇观》等）与全国非遗绝技珍品。",
+            },
+          ],
+          scholarNote:
+            "<strong>梁思涵博士注</strong>：国子监的‘辟雍’大殿取自《周礼》，四周环以圆形水池，桥梁四通，寓意王道教化如水波般周流四方，是全中国绝无仅有的古代学制建筑孤品。",
+        },
+        7: {
+          date: "2026年9月11日 (周五)",
+          theme: "泛舟白塔 · 京韵结营与满载归途",
+          morningAlert: "🦆 让我们荡起双桨 & 正宗挂炉烤鸭盛宴",
+          intensity: "轻松慢行",
+          timeline: [
+            {
+              time: "09:00 - 11:30",
+              title: "北海公园",
+              duration: "预计 2.5 小时",
+              desc: "游览团城（承光殿与元代玉瓮） &rarr; 琼华岛瞻仰白塔 &rarr; 太液池泛舟 &rarr; 九龙壁与静心斋乾隆皇家小庭院。",
+            },
+            {
+              time: "12:00 - 13:30",
+              title: "结营午宴：四季民福正宗烤鸭",
+              dining:
+                "品尝酥脆金黄的正宗挂炉烤鸭、干炸丸子、巧拌凤尾与传统京八件。",
+            },
+            {
+              time: "14:00",
+              title: "退房并启程返穗",
+              desc: "携行李前往北京西站搭乘 G79 标杆高铁（或大兴机场航班），顺利返回广州，圆满结营！",
+            },
+          ],
+          scholarNote:
+            "<strong>全员寄语</strong>：从永定门到钟鼓楼，从万寿山到太液池，七天穿越八百年古都风云。华夏纵横团队祝您归途平安，期待下次山河同行！",
+        },
+      };
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
-        <div class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-[#8e1c14] text-white flex items-center justify-center font-serif-sc font-bold shrink-0">陆</div>
-          <div>
-            <h4 class="font-bold text-xs sm:text-sm text-gray-900">陆承远 <span class="text-gray-500 font-normal text-[11px]">(总负责人)</span></h4>
-            <p class="text-[11px] text-[#8e1c14]">前国旅总社总监 · MTA/EMBA</p>
-          </div>
-        </div>
+      function switchDay(dayNum) {
+        // Update Buttons
+        document.querySelectorAll(".day-tab-btn").forEach((btn) => {
+          btn.classList.remove("tab-active");
+          btn.classList.add("bg-white", "text-gray-700", "border-gray-200");
+        });
+        const activeBtn = document.getElementById(`btn-day-${dayNum}`);
+        if (activeBtn) {
+          activeBtn.classList.add("tab-active");
+          activeBtn.classList.remove(
+            "bg-white",
+            "text-gray-700",
+            "border-gray-200",
+          );
+          // Smooth scroll tab into view on mobile
+          activeBtn.scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest",
+          });
+        }
 
-        <div class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-serif-sc font-bold shrink-0">程</div>
-          <div>
-            <h4 class="font-bold text-xs sm:text-sm text-gray-900">程若曦 <span class="text-gray-500 font-normal text-[11px]">(出行规划负责人)</span></h4>
-            <p class="text-[11px] text-blue-900">交大/中大双硕士 · 15年架构师</p>
-          </div>
-        </div>
+        // Render Content
+        const data = dayData[dayNum];
+        const container = document.getElementById("day-content");
 
-        <div class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-emerald-800 text-white flex items-center justify-center font-serif-sc font-bold shrink-0">卫</div>
-          <div>
-            <h4 class="font-bold text-xs sm:text-sm text-gray-900">卫国强 <span class="text-gray-500 font-normal text-[11px]">(资深特级导游)</span></h4>
-            <p class="text-[11px] text-emerald-800">文旅部特级导游 · 金牌导游 · WFR</p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-amber-800 text-white flex items-center justify-center font-serif-sc font-bold shrink-0">梁</div>
-          <div>
-            <h4 class="font-bold text-xs sm:text-sm text-gray-900">梁思涵 博士 <span class="text-gray-500 font-normal text-[11px]">(资深历史学者)</span></h4>
-            <p class="text-[11px] text-amber-800">北大文博博士 · 61项世遗专研</p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl p-3.5 sm:p-5 border border-amber-900/10 shadow-sm flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-teal-800 text-white flex items-center justify-center font-serif-sc font-bold shrink-0">顾</div>
-          <div>
-            <h4 class="font-bold text-xs sm:text-sm text-gray-900">顾玄石 博士 <span class="text-gray-500 font-normal text-[11px]">(资深地理学者)</span></h4>
-            <p class="text-[11px] text-teal-800">中科院地理所 (IGSNRR) 博士</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6: TIPS -->
-    <section id="tips" class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-amber-200 space-y-3">
-      <h3 class="text-base sm:text-xl font-bold font-serif-sc text-[#8e1c14] flex items-center gap-2">
-        <span>💡</span> 9 月初北京出行锦囊与实用须知
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-6 text-xs sm:text-sm text-gray-700">
-        <div class="bg-white/85 p-3.5 rounded-lg border border-amber-200">
-          <h4 class="font-bold text-gray-900 mb-1">🌤️ 气候与着装</h4>
-          <p class="text-gray-600 text-xs leading-relaxed">日间约 26~28℃，早晚 16~18℃，秋高气爽。备一件薄防风外套应对长城与早晚；日均步行 1.5 万步，<strong>务必穿减震运动鞋</strong>。</p>
-        </div>
-        <div class="bg-white/85 p-3.5 rounded-lg border border-amber-200">
-          <h4 class="font-bold text-gray-900 mb-1">🪪 证件与安检</h4>
-          <p class="text-gray-600 text-xs leading-relaxed">全城景点实行 100% 刷身份证入园，<strong>身份证原件必须随身携带</strong>；天安门广场与故宫严禁携带打火机。</p>
-        </div>
-        <div class="bg-white/85 p-3.5 rounded-lg border border-amber-200">
-          <h4 class="font-bold text-gray-900 mb-1">🦆 老字号美食</h4>
-          <p class="text-gray-600 text-xs leading-relaxed">推荐：四季民福烤鸭（故宫店）、南门涮肉（前门店）、烤肉季（什刹海炙子烤肉）、稻香村零号店糕点。</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- MOBILE BOTTOM STICKY NAVIGATION BAR (Only on mobile devices) -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#faf7f2]/95 backdrop-blur-lg border-t border-[#e2d7c5] shadow-2xl px-2 py-1.5">
-    <div class="grid grid-cols-5 text-center text-[10px]">
-      <a href="#itinerary" class="flex flex-col items-center py-1 text-[#8e1c14] font-bold">
-        <span class="text-base">📅</span>
-        <span>行程</span>
-      </a>
-      <a href="#tickets" class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]">
-        <span class="text-base">🎫</span>
-        <span>门票</span>
-      </a>
-      <a href="#hotels" class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]">
-        <span class="text-base">🏨</span>
-        <span>住宿</span>
-      </a>
-      <a href="#budget" class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]">
-        <span class="text-base">💰</span>
-        <span>预算</span>
-      </a>
-      <a href="#tips" class="flex flex-col items-center py-1 text-gray-600 hover:text-[#8e1c14]">
-        <span class="text-base">💡</span>
-        <span>锦囊</span>
-      </a>
-    </div>
-  </nav>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#2c1d11] text-[#f4dfa6]/70 py-8 px-4 text-center text-xs border-t-2 border-[#d4af37]">
-    <div class="font-serif-sc font-bold text-white mb-1">华夏纵横文旅智库旅行社</div>
-    <p class="text-[11px] text-amber-200/50">以严谨学术求真考证 · 以精密工程思维规划 · 以国家级标准做服务</p>
-    <div class="text-[10px] text-gray-500 mt-2">© 2026 Huaxia Horizon Travel Agency · 移动自适应版本</div>
-  </footer>
-
-  <!-- SCRIPT FOR DAY SWITCHING WITH AUTO-SCROLL ON MOBILE -->
-  <script>
-    const dayData = {
-      1: {
-        date: "2026年9月5日 (周六)",
-        theme: "抵京安顿 · 天坛祭天与南中轴古韵",
-        morningAlert: "✈️ 国航 CA8691 (08:10 广州白云 &rarr; 11:15 北京大兴落地)",
-        intensity: "中等 (首日接驳与适应性慢步)",
-        timeline: [
-          { time: "11:15 - 12:45", title: "大兴机场快轨接驳", desc: "落地大兴机场，搭乘快轨19分钟直达草桥站，转乘地铁19/8号线抵达酒店办理入住与休整。" },
-          { time: "14:00 - 17:00", title: "天坛公园（联票）", duration: "预计游玩 3.0 小时", desc: "由南向北探访：圜丘坛（天心石共鸣） &rarr; 皇穹宇（回音壁传音） &rarr; 丹陛桥 &rarr; 祈年殿（纯木重檐榫卯奇迹）。", highlight: "重点研学明嘉靖九年天地分祀空间礼制与古代声学反射原理。" },
-          { time: "17:30 - 20:00", title: "前门大街 & 大栅栏 & 三里河胡同", duration: "预计游玩 2.5 小时", desc: "探访同仁堂、内联升等老字号；漫步至前门闹中取静的芦苇水系‘三里河胡同’，体验京派水乡烟火气。", dining: "晚餐推荐：南门涮肉（前门直营店）或都一处烧麦。" }
-        ],
-        scholarNote: "<strong>梁思涵博士注</strong>：天坛祈年殿采用了独一无二的 28 根楠木巨柱：中央4根代表四季，中层12根代表十二个月，外层12根代表十二时辰，合计28宿，是中国古代天文算学与建筑形制的极致统一。"
-      },
-      2: {
-        date: "2026年9月6日 (周日)",
-        theme: "国之重器 · 紫禁城全景与景山落日",
-        morningAlert: "🏛️ 重点行程：需提前抢订国博(17:00抢)与故宫(20:00抢)门票",
-        intensity: "较高 (步数约 18,000 步)",
-        timeline: [
-          { time: "08:00 - 08:30", title: "天安门广场", duration: "预计 0.5 小时", desc: "瞻仰人民英雄纪念碑，眺望人民大会堂与天安门城楼雄姿。" },
-          { time: "08:30 - 11:30", title: "中国国家博物馆", duration: "预计 3.0 小时", desc: "专场观摩《古代中国》展厅：后母戊鼎、四羊方尊、利簋、孝端皇后凤冠等国宝重器。" },
-          { time: "12:30 - 17:00", title: "故宫博物院（紫禁城）", duration: "预计 4.5 小时", desc: "午门 &rarr; 太和殿（十兽屋脊） &rarr; 中和殿 &rarr; 保和殿 &rarr; 养心殿 &rarr; 珍宝馆（九龙壁） &rarr; 钟表馆 &rarr; 神武门。", highlight: "重点解析大木作榫卯与金丝楠木受力平衡。" },
-          { time: "17:15 - 18:30", title: "景山公园（万春亭）", duration: "预计 1.2 小时", desc: "登临中轴线制高点万春亭，正南俯瞰紫禁城落日余晖金顶，正北远眺地安门钟鼓楼。" }
-        ],
-        scholarNote: "<strong>顾玄石博士注</strong>：景山并非自然山体，而是明代开挖紫禁城护城河（筒子河）的泥土堆叠而成，其选址恰好阻挡了北京冬季从西北呼啸而来的寒风，是古代‘背山面水’微气候生态营造的经典范例。"
-      },
-      3: {
-        date: "2026年9月7日 (周一)",
-        theme: "绝壁雄关 · 慕田峪长城与双奥之光",
-        morningAlert: "🛡️ 规避周一闭馆：全天安排户外长城与奥林匹克公园，全线通畅",
-        intensity: "高强度 (长城山脊徒步)",
-        timeline: [
-          { time: "07:30 - 09:00", title: "旅游直通车前往怀柔", desc: "乘慕巴士直通车（约80元往返）走京承高速直抵慕田峪景区。" },
-          { time: "09:00 - 14:00", title: "慕田峪长城科考登临", duration: "预计 4.5 ~ 5.0 小时", desc: "换乘摆渡车，缆车上14号敌楼 &rarr; 沿山脊西行至20号敌楼（好汉坡最高点，海拔1039米） &rarr; 俯瞰明代关隘奇景。", highlight: "慕田峪植被覆盖率超96%，敌楼密度居长城之冠。" },
-          { time: "16:30 - 19:30", title: "奥林匹克公园", duration: "预计 2.5 小时", desc: "观赏鸟巢国家体育场钢结构织网美感与水立方膜结构，守候18:30亮灯夜景。" }
-        ],
-        scholarNote: "<strong>卫国强领队提示</strong>：长城台阶陡峭，下山严禁奔跑；长城山区气温较市区低 3~5℃，随身小包务必放入防风皮肤衣与充足饮用水。"
-      },
-      4: {
-        date: "2026年9月8日 (周二)",
-        theme: "山水寄情 · 皇家名园与名校风采",
-        morningAlert: "🏞️ 经典皇家园林全景：昆明湖与西洋楼遗址",
-        intensity: "中等偏高 (步数约 15,000 步)",
-        timeline: [
-          { time: "08:30 - 12:30", title: "颐和园（联票）", duration: "预计 4.0 小时", desc: "东宫门 &rarr; 仁寿殿 &rarr; 德和园大戏楼 &rarr; 728米彩画长廊 &rarr; 佛香阁俯瞰昆明湖 &rarr; 石舫 &rarr; 十七孔桥。" },
-          { time: "14:00 - 16:30", title: "圆明园遗址公园", duration: "预计 2.5 小时", desc: "探访长春园西洋楼遗址区、大水法、远瀛观残石断柱与海晏堂十二生肖喷泉基址。" },
-          { time: "17:00 - 18:30", title: "清华大学 / 北京大学周边", duration: "预计 1.5 小时", desc: "在标志性古典西校门前拍照打卡，感受中国顶尖学府浓厚人文底蕴。" }
-        ],
-        scholarNote: "<strong>梁思涵博士注</strong>：颐和园以杭州西湖为蓝本，但巧妙结合了万寿山与北京西山余脉作为借景，是中国造园艺术中‘巧于因借、精在体宜’的巅峰代表作。"
-      },
-      5: {
-        date: "2026年9月9日 (周三)",
-        theme: "清史烟云 · 恭王府与什刹海胡同慢调",
-        morningAlert: "🏮 感受‘一座恭王府，半部清代史’与老北京胡同生活",
-        intensity: "舒适慢游",
-        timeline: [
-          { time: "09:00 - 11:30", title: "恭王府", duration: "预计 2.5 小时", desc: "银安殿 &rarr; 锡晋斋（楠木违制建筑） &rarr; 后罩楼（99间半藏宝楼） &rarr; 大戏楼 &rarr; 秘云洞摸康熙御笔‘福’字碑。" },
-          { time: "12:00 - 14:30", title: "什刹海 & 烟袋斜街 & 银锭桥", duration: "预计 2.5 小时", desc: "漫步湖畔观赏‘银锭观山’，穿行800年烟袋斜街。", dining: "午餐推荐：烤肉季炙子烤肉或鸦儿李记涮肉。" },
-          { time: "15:00 - 17:00", title: "北京钟鼓楼", duration: "预计 2.0 小时", desc: "登临中轴线北端钟楼与鼓楼，俯瞰老城四合院青砖灰瓦，聆听击鼓报时表演。" },
-          { time: "17:30 - 20:00", title: "南锣鼓巷与东四老胡同", duration: "预计 2.5 小时", desc: "穿行雨儿胡同、帽儿胡同，感受地道京派四合院居民烟火气。" }
-        ],
-        scholarNote: "<strong>程若曦架构师注</strong>：恭王府周边胡同狭窄，今日全程依托地铁 6 号线北海北站及共享单车/步行接驳最为丝滑，避免早晚高峰地面出租车拥堵。"
-      },
-      6: {
-        date: "2026年9月10日 (周四)",
-        theme: "儒释交融 · 雍和古刹与国子文华",
-        morningAlert: "📿 京城最大藏传古刹与古代国家最高学府",
-        intensity: "舒适文化漫步",
-        timeline: [
-          { time: "09:00 - 11:30", title: "雍和宫", duration: "预计 2.5 小时", desc: "雍和门 &rarr; 法轮殿 &rarr; 万福阁（瞻仰18米白檀木弥勒大佛，吉尼斯世界纪录） &rarr; 结缘开光法物。" },
-          { time: "11:30 - 13:00", title: "五道营胡同特色午餐", desc: "在雍和宫对面的文艺胡同五道营享用精致轻食或京味素斋。" },
-          { time: "13:30 - 15:30", title: "孔庙和国子监博物馆", duration: "预计 2.0 小时", desc: "大成殿孔子祭祀 &rarr; 辟雍大殿（乾隆帝讲学处） &rarr; 乾隆十三经刻石碑林。" },
-          { time: "16:00 - 18:30", title: "中国工艺美术馆 / 非遗馆", duration: "预计 2.5 小时", desc: "观赏四大国宝级翡翠巨制（《岱岳奇观》等）与全国非遗绝技珍品。" }
-        ],
-        scholarNote: "<strong>梁思涵博士注</strong>：国子监的‘辟雍’大殿取自《周礼》，四周环以圆形水池，桥梁四通，寓意王道教化如水波般周流四方，是全中国绝无仅有的古代学制建筑孤品。"
-      },
-      7: {
-        date: "2026年9月11日 (周五)",
-        theme: "泛舟白塔 · 京韵结营与满载归途",
-        morningAlert: "🦆 让我们荡起双桨 & 正宗挂炉烤鸭盛宴",
-        intensity: "轻松慢行",
-        timeline: [
-          { time: "09:00 - 11:30", title: "北海公园", duration: "预计 2.5 小时", desc: "游览团城（承光殿与元代玉瓮） &rarr; 琼华岛瞻仰白塔 &rarr; 太液池泛舟 &rarr; 九龙壁与静心斋乾隆皇家小庭院。" },
-          { time: "12:00 - 13:30", title: "结营午宴：四季民福正宗烤鸭", dining: "品尝酥脆金黄的正宗挂炉烤鸭、干炸丸子、巧拌凤尾与传统京八件。" },
-          { time: "14:00", title: "退房并启程返穗", desc: "携行李前往北京西站搭乘 G79 标杆高铁（或大兴机场航班），顺利返回广州，圆满结营！" }
-        ],
-        scholarNote: "<strong>全员寄语</strong>：从永定门到钟鼓楼，从万寿山到太液池，七天穿越八百年古都风云。华夏纵横团队祝您归途平安，期待下次山河同行！"
-      }
-    };
-
-    function switchDay(dayNum) {
-      // Update Buttons
-      document.querySelectorAll('.day-tab-btn').forEach(btn => {
-        btn.classList.remove('tab-active');
-        btn.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
-      });
-      const activeBtn = document.getElementById(`btn-day-${dayNum}`);
-      if (activeBtn) {
-        activeBtn.classList.add('tab-active');
-        activeBtn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
-        // Smooth scroll tab into view on mobile
-        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      }
-
-      // Render Content
-      const data = dayData[dayNum];
-      const container = document.getElementById('day-content');
-
-      let timelineHtml = data.timeline.map((item) => `
+        let timelineHtml = data.timeline
+          .map(
+            (item) => `
         <div class="relative pl-6 sm:pl-8 pb-5 last:pb-0 timeline-dot">
           <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
             <span class="font-mono text-[11px] sm:text-xs font-bold text-[#8e1c14] bg-red-50 px-2 py-0.5 rounded">${item.time}</span>
-            ${item.duration ? `<span class="text-[10px] sm:text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">${item.duration}</span>` : ''}
+            ${item.duration ? `<span class="text-[10px] sm:text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">${item.duration}</span>` : ""}
           </div>
           <h4 class="text-sm sm:text-base font-bold text-gray-900">${item.title}</h4>
           <p class="text-xs sm:text-sm text-gray-600 mt-1 leading-relaxed">${item.desc}</p>
-          ${item.highlight ? `<div class="mt-2 text-[11px] sm:text-xs text-[#7d5a0f] bg-amber-50 p-2 rounded border border-amber-200/70"><strong>💡 看点</strong>：${item.highlight}</div>` : ''}
-          ${item.dining ? `<div class="mt-2 text-[11px] sm:text-xs text-orange-900 bg-orange-50 p-2 rounded border border-orange-200/70"><strong>🍲 美食</strong>：${item.dining}</div>` : ''}
+          ${item.highlight ? `<div class="mt-2 text-[11px] sm:text-xs text-[#7d5a0f] bg-amber-50 p-2 rounded border border-amber-200/70"><strong>💡 看点</strong>：${item.highlight}</div>` : ""}
+          ${item.dining ? `<div class="mt-2 text-[11px] sm:text-xs text-orange-900 bg-orange-50 p-2 rounded border border-orange-200/70"><strong>🍲 美食</strong>：${item.dining}</div>` : ""}
         </div>
-      `).join('');
+      `,
+          )
+          .join("");
 
-      container.innerHTML = `
+        container.innerHTML = `
         <div class="space-y-4 sm:space-y-6">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-amber-900/10 pb-3">
             <div>
@@ -895,28 +2108,30 @@
             </div>
           </div>
 
-          ${data.morningAlert ? `
+          ${
+            data.morningAlert
+              ? `
             <div class="text-xs sm:text-sm bg-blue-50 text-blue-900 p-2.5 sm:p-3 rounded-xl border border-blue-200 font-medium">
               ${data.morningAlert}
             </div>
-          ` : ''}
+          `
+              : ""
+          }
 
           <div class="space-y-3 relative border-l-2 border-red-200 ml-2.5 sm:ml-3.5 my-4 sm:my-6">
             ${timelineHtml}
           </div>
 
-          <div class="bg-[#fcf8f0] p-3.5 sm:p-4 rounded-xl border-l-4 border-[#d4af37] text-xs sm:text-sm text-gray-700 leading-relaxed shadow-sm">
             ${data.scholarNote}
           </div>
         </div>
       `;
-    }
+      }
 
-    // Initialize on Day 1
-    document.addEventListener('DOMContentLoaded', () => {
-      switchDay(1);
-    });
-  </script>
-</body>
+      // Initialize on Day 1
+      document.addEventListener("DOMContentLoaded", () => {
+        switchDay(1);
+      });
+    </script>
+  </body>
 </html>
-

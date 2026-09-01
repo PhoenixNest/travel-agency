@@ -154,6 +154,28 @@
         animation: cascadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
         opacity: 0;
       }
+
+      /* Coastal 10-City Switcher Button Active & Inactive Contrast */
+      .coastal-btn {
+        cursor: pointer;
+        user-select: none;
+      }
+      .coastal-btn.active-btn {
+        background-color: #ffffff !important;
+        color: #082f49 !important;
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.12),
+          0 4px 6px -4px rgba(0, 0, 0, 0.08) !important;
+        border-color: #fbbf24 !important;
+        transform: scale(1.02);
+      }
+      .coastal-btn.active-btn .btn-badge {
+        color: #0369a1 !important;
+        font-weight: 700 !important;
+      }
+      .coastal-btn:not(.active-btn) .btn-badge {
+        color: #bae6fd !important;
+      }
     </style>
   </head>
   <body class="antialiased text-slate-800 pb-28 md:pb-16 bg-[#fcfbf9] relative">
@@ -201,7 +223,7 @@
               id="tab-btn-fujian"
               class="page-tab-btn px-3.5 py-2 rounded-xl transition-all border bg-white text-slate-700 hover:bg-sky-50 border-slate-200"
             >
-              🌊 福建段
+              🌊 纯省外海滨 (10城)
             </button>
             <button
               onclick="showPage('timeline')"
@@ -232,7 +254,7 @@
               class="px-3.5 py-1.5 rounded-lg bg-amber-700 text-white hover:bg-amber-800 transition-colors text-xs font-bold flex items-center gap-1.5 shadow-xs"
             >
               <span>预算</span>
-              <span class="font-mono text-amber-200">¥7,052</span>
+              <span class="font-mono text-amber-200">¥4,442起</span>
             </button>
           </div>
         </div>
@@ -260,7 +282,7 @@
             id="mob-tab-fujian"
             class="mob-page-tab px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all border bg-white text-slate-700 border-slate-200"
           >
-            🌊 福建段
+            🌊 纯省外海滨 (10城)
           </button>
           <button
             onclick="showPage('timeline')"
@@ -328,34 +350,52 @@
             </p>
           </div>
 
-          <!-- INVITATION PROSE BODY (STRICTLY GROUNDED IN BEIJING & FUJIAN PLANS) -->
+          <!-- INVITATION PROSE BODY (GROUNDED IN BEIJING & 10 OUT-OF-PROVINCE COASTAL PLANS) -->
           <div
             class="stagger-2 space-y-4 sm:space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed font-serif-sc"
           >
             <p class="font-bold text-slate-900 text-base sm:text-lg">尊敬的贵宾：</p>
             <p class="indent-8 text-justify">
-              鉴于您卓越的人文品味与对高品质深度旅行的期许，华夏纵横文旅智库五位专家联合署名，以两套官方深度计划（《2026
-              北京 6 天 5 晚深度文化出行计划》与《2026
-              福建海丝与海滩度假出行计划》）为权威蓝本，为您呈献《2026 海陆双轴华夏文明与滨海度假 9
-              天 8 晚全景出行规划全案》。
+              鉴于您卓越的人文品味与对高品质、适老慢调深度度假的期许，华夏纵横文旅智库五位专家联合署名，为您呈献《2026
+              海陆双轴华夏文明与纯省外海滨度假 9 天 8 晚全景出行规划全案》。
             </p>
             <p class="indent-8 text-justify">
               本案以“海陆交响 · 古今共鸣”为宏观战略格局，精准串联：<br />
               •
-              <strong>北轴帝都 6 天 5 晚文脉研学</strong
-              >（天坛南进东出祭天古韵、天安门广场朝圣、国博《古代中国》通史展、紫禁城中轴三大殿与珍宝馆、景山万春亭落日、京张高铁
-              D6705 极速直达八达岭长城地下 102
-              米车站并登临北八楼好汉坡、奥林匹克公园双奥之光、颐和园昆明湖画舫、圆明园大水法、清华北大、恭王府半部清代史与福字碑、什刹海银锭桥与北京钟鼓楼晨钟暮鼓）；<br />
-              • <strong>南轴闽海 2.5 天 2 晚海丝度假</strong>（【选项 A ·
-              泉州】：崇武抗倭石城、西沙湾金沙滩、塘东 2km
-              触角沙堤、蟳埔非遗簪花围、北宋蔡襄洛阳桥、开元寺宋代双塔与百柱殿飞天；【选项 B ·
-              厦门】：鼓浪琴岛日光岩与菽庄花园、海悦山庄 50
-              万㎡私家园林、黄厝海上日出、南普陀千年古刹与素斋、环岛路演武大桥观景台、八市海鲜排档与集美学村嘉庚建筑）。
+              <strong>北轴帝都 5 天 5 晚文脉研学 (9.5~9.10)</strong
+              >：天坛南进东出祭天古韵、天安门广场朝圣、国博《古代中国》通史展、紫禁城中轴三大殿与珍宝馆、景山万春亭落日俯瞰、京张高铁
+              D6705 直达八达岭长城地下 102
+              米车站并登临北八楼好汉坡、奥林匹克公园双奥之光、颐和园昆明湖画舫、圆明园大水法、清华北大、恭王府半部清代史与福字碑、什刹海银锭桥与北京钟鼓楼晨钟暮鼓；<br />
+              • <strong>南轴纯省外 10 大优质海滨名城适老度假 (4D3N · 9.10~9.13)</strong>：100%
+              避开广东省内，全系严选<strong>单晚 ≤ ¥300 华住会/知名品牌连锁海景房</strong
+              >与平缓纯平步道，涵盖两大黄金海滨圈：<br />
+              &nbsp;&nbsp;🌊 <strong>广西北海 · 银滩</strong>（国家 5A 天下第一滩 · 纯白石英细沙 ·
+              坡缓如砥 · 金海湾红树林与侨港风情街）<br />
+              &nbsp;&nbsp;🏖️ <strong>广西防城港 · 白浪滩</strong>（国家 4A 黑金钛沙滩 · 百米平坦缓浪
+              · 东兴口岸国门风情与怪石滩）<br />
+              &nbsp;&nbsp;🐬 <strong>广西钦州 · 三娘湾</strong>（中华白海豚之乡 · 乘船出海寻豚 ·
+              万亩大蚝生蚝名邑海鲜盛宴）<br />
+              &nbsp;&nbsp;🏝️ <strong>漳州东山 · 金銮湾</strong>（纯平镜面“天空之镜”退潮奇观 ·
+              南门湾彩色渔村 · 苏峰山环岛蓝桥）<br />
+              &nbsp;&nbsp;🌊 <strong>福建平潭 · 坛南湾</strong>（白金海岸如银似雪 · 68
+              海里祖国大陆离台湾最近点 · 长江澳风车）<br />
+              &nbsp;&nbsp;🏮 <strong>莆田湄洲 · 黄金沙滩</strong>（国家 5A 妈祖祖庙圣地 · 3
+              公里纯天然黄金细沙 · 鹅尾神石海蚀奇观）<br />
+              &nbsp;&nbsp;🌅 <strong>宁德霞浦 · 大京沙滩</strong>（中国最美滩涂光影日落 ·
+              东壁三沙晚霞 · 2000 米平坦金沙漫步）<br />
+              &nbsp;&nbsp;🐚 <strong>福州长乐 · 下沙海滨</strong>（海螺塔标志性沙滩 · 十七孔海堤 ·
+              闽江口湿地万鸟翔集生态之旅）<br />
+              &nbsp;&nbsp;🏛️ <strong>泉州崇武 · 西沙湾</strong>（宋元海丝世遗双塔 · 明代抗倭崇武石城
+              · 晋江 2km 塘东触角沙嘴与蟳埔簪花）<br />
+              &nbsp;&nbsp;🎹 <strong>厦门鹭岛 · 鼓浪琴岛</strong>（世界遗产鼓浪屿日光岩与菽庄花园 ·
+              黄厝海滩海上日出 · 南普陀与集美学村）。
             </p>
             <p class="indent-8 text-justify">
-              全案大交通闭环高效严谨，终程由直达动车
-              <strong>G1625 / G1609</strong> 极速抵达<strong>广州南站</strong>，出站搭乘<strong
-                >广州地铁 2 号线 12~18 分钟直达海珠区</strong
+              全案大交通闭环高效严谨，9 月 10 日双端海滨从容汇合，终程于 9 月 13
+              日下午由直达高铁动车
+              <strong>D3714 / G1609 / G1625</strong>
+              极速抵达<strong>广州南站</strong>，出站搭乘<strong
+                >广州地铁 2 号线 12~18 分钟直达海珠区家中</strong
               >，为您呈献一次从容典雅、生命至上的华夏文明国宾礼遇。
             </p>
           </div>
@@ -372,7 +412,7 @@
             <div class="space-y-1">
               <div class="text-2xl sm:text-3xl font-black text-[#0369a1] font-serif-sc">9D8N</div>
               <div class="text-xs font-bold text-slate-700">海陆双轴全景</div>
-              <div class="text-[10px] text-slate-500">帝都 6D5N + 闽海 2.5D2N</div>
+              <div class="text-[10px] text-slate-500">帝都 5D5N + 纯省外海滨 4D3N</div>
             </div>
             <div class="space-y-1">
               <div class="text-2xl sm:text-3xl font-black text-amber-700 font-serif-sc">¥7,052</div>
@@ -453,14 +493,14 @@
               </p>
             </div>
 
-            <!-- Stage 2 CTA Card (Directly based on Quanzhou/Xiamen plans) -->
+            <!-- Stage 2 CTA Card (Covering 10 Pure Out-of-Province Coastal Destinations) -->
             <div
               onclick="showPage('fujian')"
               class="group cursor-pointer p-5 rounded-2xl bg-gradient-to-br from-sky-50 to-teal-50/60 border-2 border-sky-200 hover:border-sky-500 hover:shadow-md transition-all space-y-2"
             >
               <div class="flex items-center justify-between">
                 <span class="badge-blue px-2.5 py-0.5 rounded text-xs font-bold"
-                  >第二赛段 · 2.5D2N (9.11~9.13)</span
+                  >第二赛段 · 4D3N (9.10~9.13)</span
                 >
                 <span
                   class="text-sky-700 text-xs font-bold group-hover:translate-x-1 transition-transform"
@@ -470,12 +510,13 @@
               <h3
                 class="font-serif-sc font-bold text-lg text-slate-900 group-hover:text-sky-800 transition-colors"
               >
-                🌊 南轴 · 闽海丝路与海滩度假双线 (泉州 / 厦门)
+                🌊 南轴 · 纯省外 10 大优质海滨名城与适老度假智库
               </h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                晨班飞赴福建 · 【选项 A：泉州宋元海丝双塔、崇武抗倭古城、塘东 2km 沙嘴与蟳埔簪花】 /
-                【选项 B：厦门鼓浪琴岛日光岩、海悦山庄 50 万㎡园林、南普陀与集美学村】 · 直达动车
-                G1625 返广州南站地铁直达海珠！
+                9.10 双端海滨汇合 · 广西北部湾 3 城（北海银滩 5A / 防城港白浪滩 4A / 钦州三娘湾）+
+                福建东南海岛 7 城（东山金銮湾 / 平潭坛南湾 / 湄洲黄金沙 / 霞浦大京 / 长乐下沙 /
+                泉州崇武 / 厦门鼓浪屿）· 全系严选 ≤ ¥300 华住会连锁海景房 · 9.13 直达动车
+                D3714/G1609/G1625 返广州南站地铁直达海珠！
               </p>
             </div>
           </div>
@@ -861,74 +902,1509 @@
             onclick="showPage('fujian')"
             class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#0369a1] to-[#0284c7] text-white text-xs font-bold hover:shadow-md transition-all"
           >
-            阅览第二赛段 · 闽海丝路 (2.5D2N) →
+            阅览第二赛段 · 纯省外海滨精选 (4D3N) →
           </button>
         </div>
       </section>
 
       <!-- =================================================================== -->
-      <!-- PAGE 3: 🌊 第二赛段 · 福建 2.5D2N 专属篇章 (FUJIAN PAGE) -->
+      <!-- PAGE 3: 🌊 第二赛段 · 纯省外海滨精选 10 城 4D3N 专属篇章 (FUJIAN PAGE) -->
       <!-- =================================================================== -->
       <section id="page-fujian" class="page-view hidden space-y-8">
         <!-- STAGE 2 HERO BANNER (CLEAN SOLID GRADIENT) -->
         <div
-          class="stagger-1 bg-gradient-to-br from-[#082f49] via-[#0284c7] to-[#0d9488] text-white rounded-3xl p-6 sm:p-10 shadow-lg space-y-4 border border-sky-300/30"
+          class="stagger-1 bg-gradient-to-br from-[#082f49] via-[#0284c7] to-[#0d9488] text-white rounded-3xl p-6 sm:p-10 shadow-lg space-y-5 border border-sky-300/30"
         >
           <div class="flex flex-wrap items-center justify-between gap-2">
             <span
               class="bg-sky-950/80 text-sky-200 border border-sky-300/40 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-xs"
             >
-              STAGE 2 · 南轴闽海丝路与海滩度假 (2.5 天 2 晚 · 2026.09.11 - 09.13)
+              STAGE 2 · 纯省外 10 大优质海滨精选智库 (4D3N)
             </span>
             <span class="text-xs text-sky-100 font-mono"
-              >帝都出港 → 闽海枢纽 → 直达高铁返广州南站</span
+              >北京直飞转场 + 广州长辈高铁直达 ➔ 广州南站高铁闭环</span
             >
           </div>
 
           <h2 class="text-2xl sm:text-4xl font-black font-serif-sc text-white">
-            宋元海丝世遗 · 琴岛万国建筑 · 滨海沙滩度假 · 高铁直达广州南站
+            广西北部湾 · 福建海丝海岛 · 10 大纯省外优质沙滩 · 广州南站高铁闭环
           </h2>
 
           <p class="text-xs sm:text-sm text-sky-100 leading-relaxed max-w-4xl">
-            贵宾于 9 月 11 日晨间转场直飞福建，可根据个人度假偏好<strong
-              >在【选项 A · 泉州海丝世遗线】与【选项 B · 厦门琴岛度假线】之间自由切换</strong
-            >。两线均于 9 月 13 日下午搭乘直达动车
-            <strong>G1625 / G1609</strong> 极速抵达广州南站，无缝换乘<strong
-              >广州地铁 2 号线 12~18 分钟直达海珠区</strong
-            >！
+            华夏纵横文旅智库严选 10 大 100%
+            避开广东省内的高分天然海滩胜地，满足长辈体能友好与优质沙滩度假诉求。北京直飞极速抵达，广州长辈高铁
+            3.5h~5.5h 直达；9 月 13 日全系直达广州南站，无缝直乘广州地铁 2
+            号线直达海珠区。请点击下方任意城市按钮，即刻查阅该城市专属 4D3N（或 全景精细路书！
           </p>
 
-          <!-- DUAL BRANCH TOGGLE PILLS -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <span class="text-xs font-bold text-sky-100">目的地动态切换：</span>
-            <button
-              onclick="setFujianOption('quanzhou')"
-              id="fj-btn-quanzhou"
-              class="branch-toggle-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all border branch-tab-active"
-            >
-              🌊 选项 A · 泉州海丝世遗与崇武海滩度假线
-            </button>
-            <button
-              onclick="setFujianOption('xiamen')"
-              id="fj-btn-xiamen"
-              class="branch-toggle-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all border bg-white/90 text-slate-800 hover:bg-sky-100 border-slate-200"
-            >
-              🎹 选项 B · 厦门鼓浪琴岛与山海度假线
-            </button>
+          <!-- 10 OUT-OF-PROVINCE DESTINATIONS INTERACTIVE SWITCHER BUTTONS -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-sky-200 tracking-wide">
+                🧭 点击选择海滨城市（即时切换下方精细方案）：
+              </span>
+              <span class="text-[11px] text-sky-300 font-medium">共 10 大纯省外高分沙滩目的地</span>
+            </div>
+
+            <!-- Category 1: Guangxi 3 cities -->
+            <div class="space-y-1.5">
+              <div class="text-[11px] font-bold text-teal-300 flex items-center gap-1.5">
+                <span>🌊</span> 广西北部湾生态海滨圈 (4D3N · 广州高铁 3.5h~4.5h 直达)
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <button
+                  onclick="setCoastalCity('beihai')"
+                  id="coastal-btn-beihai"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-teal-200">5A 石英白沙 · 4h20m</span>
+                  <span class="text-xs font-bold text-white">🌊 广西北海 · 银滩</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('fangchenggang')"
+                  id="coastal-btn-fangchenggang"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-teal-200">4A 黑金钛沙 · 4h47m</span>
+                  <span class="text-xs font-bold text-white">🏖️ 广西防城港 · 白浪滩</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('qinzhou')"
+                  id="coastal-btn-qinzhou"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-teal-200">白海豚金沙 · 3h38m</span>
+                  <span class="text-xs font-bold text-white">🐬 广西钦州 · 三娘湾</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Category 2: Fujian 7 destinations -->
+            <div class="space-y-1.5 pt-1">
+              <div class="text-[11px] font-bold text-sky-300 flex items-center gap-1.5">
+                <span>🏝️</span> 福建东南海岛与海丝圈 (4D3N · 广州高铁 3.5h~5.5h 直达)
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
+                <button
+                  onclick="setCoastalCity('zhangzhou')"
+                  id="coastal-btn-zhangzhou"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-sky-200">天空之镜 · 3h35m</span>
+                  <span class="text-xs font-bold text-white">🏝️ 漳州东山</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('pingtan')"
+                  id="coastal-btn-pingtan"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-sky-200">白金海岸 · 5h20m</span>
+                  <span class="text-xs font-bold text-white">🌊 福建平潭</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('putian')"
+                  id="coastal-btn-putian"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-sky-200">5A 黄金沙 · 4h38m</span>
+                  <span class="text-xs font-bold text-white">🏮 莆田湄洲</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('ningde')"
+                  id="coastal-btn-ningde"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-sky-200">最美滩涂 · 直达</span>
+                  <span class="text-xs font-bold text-white">🌅 宁德霞浦</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('fuzhou')"
+                  id="coastal-btn-fuzhou"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-sky-200">海螺塔沙 · 5h20m</span>
+                  <span class="text-xs font-bold text-white">🐚 福州长乐</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('quanzhou')"
+                  id="coastal-btn-quanzhou"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-sky-200">宋元世遗 · 5h00m</span>
+                  <span class="text-xs font-bold text-white">🏛️ 泉州崇武</span>
+                </button>
+                <button
+                  onclick="setCoastalCity('xiamen')"
+                  id="coastal-btn-xiamen"
+                  class="coastal-btn p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex flex-col gap-0.5 text-left transition backdrop-blur-xs text-white"
+                >
+                  <span class="btn-badge text-[10px] text-sky-200">琴岛世遗 · 5h00m</span>
+                  <span class="text-xs font-bold text-white">🎹 厦门鼓浪屿</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- ================= OPTION A: QUANZHOU PANEL ================= -->
-        <div id="panel-quanzhou" class="stagger-2 space-y-6">
-          <div class="flex items-center justify-between border-b border-sky-200 pb-2">
-            <h3
-              class="font-serif-sc font-bold text-lg sm:text-xl text-sky-950 flex items-center gap-2"
+        <!-- ================= 0. COASTAL 10-CITY OVERVIEW PANEL (DEFAULT ACTIVE) ================= -->
+        <div id="panel-coastal-overview" class="coastal-panel space-y-6">
+          <div
+            class="parchment-card rounded-3xl p-6 sm:p-8 border border-sky-300 shadow-md space-y-6 bg-gradient-to-br from-white via-sky-50/40 to-teal-50/40"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-sky-200 pb-4"
             >
-              <span>🌊</span> 选项 A · 泉州宋元海丝与崇武海滩度假 2.5D2N 精细日程
-            </h3>
-            <span class="badge-blue px-2.5 py-0.5 rounded text-xs font-semibold"
-              >大兴直飞晋江 KN5967</span
+              <div>
+                <span class="badge-blue px-2.5 py-0.5 rounded text-xs font-bold"
+                  >全景导览与决选矩阵</span
+                >
+                <h3
+                  class="font-serif-sc font-bold text-xl sm:text-2xl text-slate-900 mt-1 flex items-center gap-2"
+                >
+                  <span>🧭</span> 纯省外 10 大优质海滨名城速览与决策中枢
+                </h3>
+                <p class="text-xs text-slate-500 mt-1">
+                  100% 避开广东省内 · 全域具备优质天然海滩 · 广州长辈高铁直达 · 9.13
+                  闭环广州南站转地铁2号线直达海珠区
+                </p>
+              </div>
+              <div
+                class="text-xs text-sky-800 bg-sky-100/80 px-3.5 py-2 rounded-xl border border-sky-300 font-medium"
+              >
+                💡 <strong>交互提示</strong>：点击上方任意城市即可展开精细路书
+              </div>
+            </div>
+
+            <!-- Two Geographic Clusters Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Guangxi 3 cities -->
+              <div class="p-5 rounded-2xl bg-teal-50/80 border border-teal-200 space-y-3">
+                <div class="flex items-center justify-between border-b border-teal-200/80 pb-2">
+                  <span
+                    class="font-serif-sc font-bold text-teal-950 text-sm flex items-center gap-1.5"
+                  >
+                    <span>🌊</span> 广西北部湾生态海滨圈 (3城)
+                  </span>
+                  <span class="text-[11px] font-mono text-teal-800 font-bold"
+                    >广州南站 D3706 直达 (3.5h~4.5h)</span
+                  >
+                </div>
+                <div class="space-y-2.5 text-xs text-slate-700">
+                  <div
+                    class="p-3 rounded-xl bg-white border border-teal-100 hover:border-teal-400 transition cursor-pointer flex items-center justify-between shadow-2xs"
+                    onclick="setCoastalCity('beihai')"
+                  >
+                    <div>
+                      <div class="font-bold text-slate-900">1. 广西北海 · 银滩 (国家 5A 景区)</div>
+                      <div class="text-slate-500 text-[11px] mt-0.5">
+                        24km 纯白石英细沙 · 坡度&lt;1% 适老踏浪 · 海丝首港
+                      </div>
+                    </div>
+                    <span class="text-teal-700 font-bold hover:underline whitespace-nowrap"
+                      >查看方案 →</span
+                    >
+                  </div>
+                  <div
+                    class="p-3 rounded-xl bg-white border border-teal-100 hover:border-teal-400 transition cursor-pointer flex items-center justify-between shadow-2xs"
+                    onclick="setCoastalCity('fangchenggang')"
+                  >
+                    <div>
+                      <div class="font-bold text-slate-900">
+                        2. 广西防城港 · 白浪滩 (国家 4A 景区)
+                      </div>
+                      <div class="text-slate-500 text-[11px] mt-0.5">
+                        百米平坦黑金钛沙滩 · 簕山古渔村 · 中越边境山海
+                      </div>
+                    </div>
+                    <span class="text-teal-700 font-bold hover:underline whitespace-nowrap"
+                      >查看方案 →</span
+                    >
+                  </div>
+                  <div
+                    class="p-3 rounded-xl bg-white border border-teal-100 hover:border-teal-400 transition cursor-pointer flex items-center justify-between shadow-2xs"
+                    onclick="setCoastalCity('qinzhou')"
+                  >
+                    <div>
+                      <div class="font-bold text-slate-900">3. 广西钦州 · 三娘湾海滩</div>
+                      <div class="text-slate-500 text-[11px] mt-0.5">
+                        中华白海豚之乡 · 茅尾海红树林栈道 · 中国大蚝名邑
+                      </div>
+                    </div>
+                    <span class="text-teal-700 font-bold hover:underline whitespace-nowrap"
+                      >查看方案 →</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fujian 7 destinations -->
+              <div class="p-5 rounded-2xl bg-sky-50/80 border border-sky-200 space-y-3">
+                <div class="flex items-center justify-between border-b border-sky-200/80 pb-2">
+                  <span
+                    class="font-serif-sc font-bold text-sky-950 text-sm flex items-center gap-1.5"
+                  >
+                    <span>🏝️</span> 福建海岛与海丝文化圈 (7城)
+                  </span>
+                  <span class="text-[11px] font-mono text-sky-800 font-bold"
+                    >广州南站 G1609/G1625 直达 (3.5h~5.5h)</span
+                  >
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+                  <div
+                    class="p-2.5 rounded-xl bg-white border border-sky-100 hover:border-sky-400 transition cursor-pointer flex flex-col justify-between shadow-2xs"
+                    onclick="setCoastalCity('zhangzhou')"
+                  >
+                    <div class="font-bold text-slate-900">4. 漳州东山 · 金銮湾</div>
+                    <div class="text-slate-500 text-[11px]">5000米天空之镜 · 苏峰山悬空栈道</div>
+                  </div>
+                  <div
+                    class="p-2.5 rounded-xl bg-white border border-sky-100 hover:border-sky-400 transition cursor-pointer flex flex-col justify-between shadow-2xs"
+                    onclick="setCoastalCity('pingtan')"
+                  >
+                    <div class="font-bold text-slate-900">5. 福建平潭 · 坛南湾</div>
+                    <div class="text-slate-500 text-[11px]">白金避风海岸 · 长江澳风车田</div>
+                  </div>
+                  <div
+                    class="p-2.5 rounded-xl bg-white border border-sky-100 hover:border-sky-400 transition cursor-pointer flex flex-col justify-between shadow-2xs"
+                    onclick="setCoastalCity('putian')"
+                  >
+                    <div class="font-bold text-slate-900">6. 莆田湄洲 · 黄金沙滩</div>
+                    <div class="text-slate-500 text-[11px]">国家5A 3000m天然金沙 · 妈祖非遗</div>
+                  </div>
+                  <div
+                    class="p-2.5 rounded-xl bg-white border border-sky-100 hover:border-sky-400 transition cursor-pointer flex flex-col justify-between shadow-2xs"
+                    onclick="setCoastalCity('ningde')"
+                  >
+                    <div class="font-bold text-slate-900">7. 宁德霞浦 · 大京沙滩</div>
+                    <div class="text-slate-500 text-[11px]">3000米金沙滩 · 东壁最美滩涂日落</div>
+                  </div>
+                  <div
+                    class="p-2.5 rounded-xl bg-white border border-sky-100 hover:border-sky-400 transition cursor-pointer flex flex-col justify-between shadow-2xs"
+                    onclick="setCoastalCity('fuzhou')"
+                  >
+                    <div class="font-bold text-slate-900">8. 福州长乐 · 下沙海滩</div>
+                    <div class="text-slate-500 text-[11px]">8km海螺塔沙滩 · 鸡汤汆海蚌国宴</div>
+                  </div>
+                  <div
+                    class="p-2.5 rounded-xl bg-white border border-sky-100 hover:border-sky-400 transition cursor-pointer flex flex-col justify-between shadow-2xs"
+                    onclick="setCoastalCity('quanzhou')"
+                  >
+                    <div class="font-bold text-slate-900">9. 泉州惠安 · 崇武西沙湾</div>
+                    <div class="text-slate-500 text-[11px]">抗倭明代石城 · 蟳埔簪花 · 宋元世遗</div>
+                  </div>
+                  <div
+                    class="p-2.5 rounded-xl bg-white border border-sky-100 hover:border-sky-400 transition cursor-pointer flex flex-col justify-between shadow-2xs sm:col-span-2"
+                    onclick="setCoastalCity('xiamen')"
+                  >
+                    <div class="font-bold text-slate-900">10. 厦门 · 鼓浪屿 & 黄厝海滩</div>
+                    <div class="text-slate-500 text-[11px]">
+                      世界文化遗产鼓浪屿 · 黄厝日出 · 海悦山庄 50 万㎡私家皇家园林
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decision Assistant Footnote -->
+            <div
+              class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
             >
+              <div>
+                <strong>智库出行业务提示</strong>：所有 10 大目的地于 9 月 13 日下午均锁定 12306
+                官方直达高铁班次抵达<strong>广州南站</strong>，无缝直乘<strong
+                  >广州地铁 2 号线 12~18 分钟直达海珠区</strong
+                >家中，长辈全程零奔波！
+              </div>
+              <span class="badge-gold px-3 py-1 rounded text-xs font-bold whitespace-nowrap"
+                >四要素 100% 官方合规</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 1. BEIHAI PANEL ================= -->
+        <div id="panel-beihai" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-teal-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🌊</span> 广西北海 · 天下第一滩石英白沙与海丝首港适老度假 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                国家 5A 级景区 · 24km 纯白石英细沙 · 坡度 &lt;1% 极致适老 · 侨港疍家风味 ·
+                汉代海丝首港
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./guangxi/beihai/"
+                class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold shadow-xs transition"
+                >打开北海专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <!-- Transit Box -->
+          <div
+            class="p-4 rounded-2xl bg-teal-50/80 border border-teal-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京首都直飞北海福成
+                <strong>CA1909</strong>（07:45-11:20），专车 25 分钟直达度假酒店
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南站乘直达动车
+                <strong>D3706</strong>（08:08-12:28，<strong>4h20m</strong> 直达无换乘，二等座
+                ¥201.50）
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 乘 D3714 (14:15-18:35) 直达广州南站 ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <!-- 4-Day Itinerary Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">汇合入住</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                双端抵离汇合 ➔ 银滩漫步 ➔ 侨港海鲜粥
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                中午 12:45
+                酒店汇合，午休后银滩平缓观海步道散步，晚间赴侨港风情街品尝二十四味疍家糖水与生猛海鲜砂锅粥。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(北海银滩景区侨港风情街店) · 海景房 (¥189~239/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">石英白沙</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">天下第一滩踏浪 ➔ 冠头岭海景日落</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                上午在银滩赤足漫步，沙质洁白如雪不陷脚；下午专车至冠头岭海蚀礁石栈道，欣赏北部湾最美海景落日与海角亭。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(北海银滩景区侨港风情街店) · 海景房 (¥189~239/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">海丝人文</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">百年老街骑楼 ➔ 合浦海丝首港古风</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步北海老街珠海路中西合璧骑楼群，下午前往合浦海丝首港全景复原汉代古市集研学，晚间品尝合浦南珠养生鲍鱼宴。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(北海银滩景区侨港风情街店) · 海景房 (¥189~239/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">银滩晨景 ➔ 结营午宴 ➔ D3714 返穗</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                晨间海景早餐，从容退房。14:15 北海站搭乘 <strong>D3714</strong> 直达动车，18:35
+                抵达<strong>广州南站</strong>，出站地铁 2 号线 12~18 分钟直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <!-- Hotel & Safety Verification -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>北海银滩皇冠假日酒店</code>（洲际酒店集团旗下品牌）</div>
+              <div>• 精准物理门牌：广西壮族自治区北海市银海区银滩三号路88号（下楼直通沙滩）</div>
+              <div>• 官方预订直达：洲际酒店 IHG 官方 App / 微信小程序</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 银滩坡度极缓，全域配备无障碍观海轮椅坡道，长辈散步零负担；</div>
+              <div>• 全程配备 WFR 野外急救药箱与防滑涉水健步杖，台风/高潮位智能监测。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 2. FANGCHENGGANG PANEL ================= -->
+        <div id="panel-fangchenggang" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-teal-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🏖️</span> 广西防城港 · 白浪滩黑金钛沙滩与边境山海康养 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                国家 4A 级景区 · 百米平坦黑金钛铁矿沙滩 · 簕山古渔村 · 中越边境口岸 · 富硒海鲜养生
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./guangxi/fangchenggang/"
+                class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold shadow-xs transition"
+                >打开防城港专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-teal-50/80 border border-teal-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京首都直飞南宁吴圩
+                <strong>CA1361</strong>（07:30-10:50），专车 45 分钟直达防城港
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南站乘直达动车 <strong>D3706</strong>（08:08-12:55
+                防城港北，<strong>4h47m</strong> 直达，二等座 ¥228.00）
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 乘 D3714 (13:50-18:35) 直达广州南站 ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">汇合入住</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                双端抵离汇合 ➔ 伏波公园海景 ➔ 金花茶宴
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                中午 13:00 酒店汇合享用金花茶海鲜午宴，下午伏波公园观赏北部湾跨海大桥与红树林海湾。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(防城港北部湾大道店) · 海景房 (¥179~229/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">黑金钛沙</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">白浪滩平坦黑金沙踏沙 ➔ 簕山古渔村</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步全国罕见黑金钛沙滩，沙滩平坦如操场，赤足脚感坚实极适老；下午探访千年古树古渔村体验赶海乐趣。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(防城港北部湾大道店) · 海景房 (¥179~229/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">边境山海</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">东兴一号界碑研学 ➔ 怪石滩海蚀红岩</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                专车探访大清国一号界碑与东兴口岸风情街，下午游览怪石滩平缓海景栈道，晚间品尝清蒸富硒石斑鱼。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(防城港北部湾大道店) · 海景房 (¥179~229/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">
+                悠闲晨间退房 ➔ 结营午宴 ➔ D3714 返穗
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                从容早餐退房，13:50 防城港北站搭乘 <strong>D3714</strong> 直达动车，18:35
+                抵达<strong>广州南站</strong>，出站地铁 2 号线 12~18 分钟直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>防城港荣兴格兰云天大酒店</code></div>
+              <div>• 精准物理门牌：广西壮族自治区防城港市港口区北部湾大道168号</div>
+              <div>• 官方预订直达：格兰云天官方 App / 微信小程序</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 钛矿沙质硬度高，防摔倒抓地力强，极为适合长辈平稳健步漫游；</div>
+              <div>• 商务专车全程随行，免受高温暴晒，配置车载制氧机与恒温饮水设备。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 3. QINZHOU PANEL ================= -->
+        <div id="panel-qinzhou" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-teal-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🐬</span> 广西钦州 · 三娘湾白海豚金沙滩与中国大蚝之乡 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                中华白海豚故乡 · 金色细沙漫滩 · 茅尾海红树林栈道 · 坭兴陶国家非遗 · 炭烤原味大蚝
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./guangxi/qinzhou/"
+                class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold shadow-xs transition"
+                >打开钦州专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-teal-50/80 border border-teal-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京首都直飞南宁 <strong>CA1361</strong>（07:30-10:50）+
+                动车 30 分钟直达钦州东站 (11:45)
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南站乘直达动车 <strong>D3706</strong>（08:08-11:46
+                钦州东，<strong>仅 3h38m</strong> 直达，二等座 ¥178.50）
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 乘 D3714 (14:50-18:35) 直达广州南站 ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">汇合入住</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                双端抵离汇合 ➔ 清蒸大蚝午宴 ➔ 刘永福故居
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                中午 12:15 酒店大堂汇合品尝大蚝养生宴，下午漫步清代民族英雄刘永福三宣堂古建群。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：全季酒店(钦州长融世贸广场店) · 观景房 (¥219~279/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">白海豚湾</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">三娘湾游船观海豚 ➔ 金色沙滩踏浪</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                搭乘大型平稳游船出海近距离观赏国家一级保护动物中华白海豚跃水，下午在三娘湾金沙滩漫步踏浪。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：全季酒店(钦州长融世贸广场店) · 观景房 (¥219~279/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-teal-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-teal-100 pb-2">
+                <span class="font-serif-sc font-bold text-teal-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">非遗红树林</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                茅尾海红树林栈道 ➔ 钦州坭兴陶非遗研学
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步中国内海红树林纯平观景木栈道，下午在坭兴陶千年古陶厂体验无釉窑变拉胚工艺。
+              </p>
+              <div class="text-[11px] text-teal-900 bg-teal-100/70 p-2 rounded-lg font-medium">
+                宿：全季酒店(钦州长融世贸广场店) · 观景房 (¥219~279/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">
+                悠闲晨间退房 ➔ 结营午宴 ➔ D3714 返穗
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                从容早餐退房，14:50 钦州东站搭乘 <strong>D3714</strong> 直达动车，18:35
+                抵达<strong>广州南站</strong>，出站地铁 2 号线 12~18 分钟直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>钦州天骄国际大酒店</code></div>
+              <div>• 精准物理门牌：广西壮族自治区钦州市钦南区永福西大街29号</div>
+              <div>• 官方预订直达：携程旅行官方专区 / 酒店直营专区</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 观海豚游船选用政府认证双体平稳客船，长辈配备专业防眩晕贴与安全救生衣；</div>
+              <div>• 红树林栈道全线无台阶，坡度平缓，负氧离子充沛。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 4. ZHANGZHOU PANEL ================= -->
+        <div id="panel-zhangzhou" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-sky-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🏝️</span> 福建漳州东山岛 · 金銮湾天空之镜与苏峰山栈道 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                5000 米天空之镜镜面沙滩 · 苏峰山悬空无障碍栈道 · 铜陵古镇明清顶街 · 鲜灼东山小管
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./fujian/zhangzhou/"
+                class="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold shadow-xs transition"
+                >打开漳州东山专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-sky-50/80 border border-sky-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京大兴直飞揭阳潮汕
+                <strong>CZ3166</strong>（07:45-10:45），专车 50 分钟直达东山岛
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南/东站乘直达高铁 <strong>G1609</strong>（08:30-12:05
+                云霄站，<strong>仅 3h35m</strong> 直达，二等座 ¥204.50）
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 乘 G1609/G1625 直达广州南站 (18:18/19:35 抵) ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-sky-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-sky-100 pb-2">
+                <span class="font-serif-sc font-bold text-sky-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">汇合入住</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                双端抵离汇合 ➔ 金銮湾镜面踏浪 ➔ 鲜灼小管宴
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                中午 12:45 酒店汇合，下午在金銮湾退潮形成的倒影水膜上漫步，品尝东山小管与海胆饭。
+              </p>
+              <div class="text-[11px] text-sky-900 bg-sky-100/70 p-2 rounded-lg font-medium">
+                宿：格美海景酒店(漳州东山金銮湾店) · 一线海景房 (¥229~289/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-sky-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-sky-100 pb-2">
+                <span class="font-serif-sc font-bold text-sky-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">天空之镜</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">金銮湾日出 ➔ 苏峰山悬空环岛木栈道</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                晨观金銮湾壮美红日倒影，上午专车赴苏峰山田园漫道，在纯平悬空观海木栈道饱览深蓝海峡。
+              </p>
+              <div class="text-[11px] text-sky-900 bg-sky-100/70 p-2 rounded-lg font-medium">
+                宿：格美海景酒店(漳州东山金銮湾店) · 一线海景房 (¥229~289/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-sky-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-sky-100 pb-2">
+                <span class="font-serif-sc font-bold text-sky-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">海岛古韵</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                铜陵古镇顶街 ➔ 风动石木栈道 ➔ 南门湾
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步明清古街巷顶街古厝，风动石景区平缓栈道远眺，下午在南门湾彩色民居海堤品饮清茶。
+              </p>
+              <div class="text-[11px] text-sky-900 bg-sky-100/70 p-2 rounded-lg font-medium">
+                宿：格美海景酒店(漳州东山金銮湾店) · 一线海景房 (¥229~289/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">
+                海景晨韵 ➔ 结营午宴 ➔ G1609/G1625 返穗
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                从容早餐退房，云霄站搭乘
+                <strong>G1609 (14:32 发车) 或 G1625 (15:30 发车)</strong>
+                直达<strong>广州南站</strong>（18:18/19:35 抵），出站地铁 2 号线直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>东山海明威大酒店</code></div>
+              <div>• 精准物理门牌：福建省漳州市东山县康美镇金銮湾金福路8号</div>
+              <div>• 官方预订直达：携程旅行官方专区 / 官方直营预订</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 金銮湾沙滩退潮后坚实平整，水膜仅没过脚踝，长辈行走平稳安全；</div>
+              <div>• 苏峰山木栈道全程纯平带护栏，免去攀岩登山劳顿。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 5. PINGTAN PANEL ================= -->
+        <div id="panel-pingtan" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-sky-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🌊</span> 福建平潭实验区 · 坛南湾白金海岸与北部风车廊道 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                白金避风海湾 · 长江澳风车田 · 北部生态廊道全景观海台 · 北港文创石头厝 · 清蒸红鲟
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./fujian/pingtan/"
+                class="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold shadow-xs transition"
+                >打开平潭专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-sky-50/80 border border-sky-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京首都直飞福州长乐
+                <strong>CA1807</strong>（07:30-10:20），专车 45 分钟直达平潭岛
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南站乘高铁 <strong>G1609</strong>（08:30-13:50
+                福州南）+ 30 分钟动车联运直达平潭站
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 经福州南乘 G1625 直达广州南站 (19:35 抵) ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-sky-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-sky-100 pb-2">
+                <span class="font-serif-sc font-bold text-sky-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">汇合入住</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                双端抵离汇合 ➔ 坛南湾避风踏浪 ➔ 清蒸红鲟
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                中午 14:00 酒店汇合，下午前往平潭水质最优、沙质最细白避风的坛南湾白金海岸散步。
+              </p>
+              <div class="text-[11px] text-sky-900 bg-sky-100/70 p-2 rounded-lg font-medium">
+                宿：桔子酒店(平潭龙王头西航路店) · 海景房 (¥249~299/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-sky-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-sky-100 pb-2">
+                <span class="font-serif-sc font-bold text-sky-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">风车廊道</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">长江澳风车田 ➔ 北部生态廊道观海</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步长江澳纯平木栈道看海边白色风车阵，下午北部生态廊道乘坐电瓶代步车俯瞰风车海峡。
+              </p>
+              <div class="text-[11px] text-sky-900 bg-sky-100/70 p-2 rounded-lg font-medium">
+                宿：桔子酒店(平潭龙王头西航路店) · 海景房 (¥249~299/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-sky-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-sky-100 pb-2">
+                <span class="font-serif-sc font-bold text-sky-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">古厝石屋</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                北港村石头厝 ➔ 海坛古城品茗 ➔ 深海鱼宴
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                探访花岗岩防风石屋村落北港村，海坛古城茶楼品味白芽奇兰茶，享用鲜蒸深海石斑鱼。
+              </p>
+              <div class="text-[11px] text-sky-900 bg-sky-100/70 p-2 rounded-lg font-medium">
+                宿：桔子酒店(平潭龙王头西航路店) · 海景房 (¥249~299/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">
+                晨韵散步 ➔ 结营午宴 ➔ G1625 返广州南站
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                从容退房，平潭站乘动车经福州南换乘
+                <strong>G1625</strong> 直达<strong>广州南站</strong>（19:35 抵），出站换乘地铁 2
+                号线 12~18 分钟直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>平潭宇诚海景国际酒店</code></div>
+              <div>• 精准物理门牌：福建省平潭综合实验区流水北路海坛古城旁</div>
+              <div>• 官方预订直达：携程旅行官方专区 / 酒店直营专区</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 坛南湾避风性好，海浪平缓，专车直达沙滩入口；</div>
+              <div>• 生态廊道全线配备无障碍绿色电瓶接驳车，免长距离步行。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 6. PUTIAN PANEL ================= -->
+        <div id="panel-putian" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-amber-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🏮</span> 福建莆田湄洲岛 · 黄金沙滩与妈祖祖庙世界非遗 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                国家 5A 级景区 · 3000 米天然黄金沙滩 · 鹅尾神石园 · 妈祖祖庙人类非遗 · 南日鲍鱼宴
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./fujian/putian/"
+                class="px-3 py-1.5 rounded-lg bg-amber-700 hover:bg-amber-800 text-white text-xs font-bold shadow-xs transition"
+                >打开莆田湄洲专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京大兴直飞泉州晋江
+                <strong>MF8168</strong>（07:10-09:55），专车 40 分钟至文甲码头客船登岛
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南/东站乘直达高铁 <strong>G1609</strong>（08:30-13:08
+                莆田站，<strong>4h38m</strong> 直达，二等座 ¥278.00）
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 乘 G1625 (14:08-19:35) 直达广州南站 ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-amber-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-amber-100 pb-2">
+                <span class="font-serif-sc font-bold text-amber-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">平稳登岛</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                文甲码头VIP客船 ➔ 湄洲岛汇合 ➔ 南日鲍宴
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                15
+                分钟平稳客船上岛，入住湄洲岛安泰清辉大酒店，享用国家地理标志南日鲍鱼与养生海鲜砂锅粥。
+              </p>
+              <div class="text-[11px] text-amber-900 bg-amber-100/70 p-2 rounded-lg font-medium">
+                宿：湄洲岛金海岸度假海景酒店 · 一线金沙海景房 (¥220~270/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-amber-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-amber-100 pb-2">
+                <span class="font-serif-sc font-bold text-amber-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">妈祖非遗</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">妈祖祖庙祈福 ➔ 3000米黄金沙滩漫步</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                乘坐平缓索道与无障碍电梯登临妈祖祖庙祈福，下午在 3000 米坡度平缓的黄金沙滩赤足踩沙。
+              </p>
+              <div class="text-[11px] text-amber-900 bg-amber-100/70 p-2 rounded-lg font-medium">
+                宿：湄洲岛金海岸度假海景酒店 · 一线金沙海景房 (¥220~270/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-amber-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-amber-100 pb-2">
+                <span class="font-serif-sc font-bold text-amber-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">鹅尾神石</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                鹅尾神石园纯平木栈道 ➔ 妈祖源流博览
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                游览千年海蚀地貌鹅尾神石园平缓木质栈道，下午在博物馆全景了解海上丝绸之路妈祖庇护史。
+              </p>
+              <div class="text-[11px] text-amber-900 bg-amber-100/70 p-2 rounded-lg font-medium">
+                宿：湄洲岛金海岸度假海景酒店 · 一线金沙海景房 (¥220~270/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">晨间踏沙 ➔ 告别午宴 ➔ G1625 返穗</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                从容退房乘船离岛，莆田站搭乘 <strong>G1625</strong>（14:08
+                发车）直达<strong>广州南站</strong>（19:35 抵），出站换乘地铁 2 号线 12~18
+                分钟直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>湄洲岛安泰清辉大酒店</code></div>
+              <div>• 精准物理门牌：福建省莆田市秀屿区湄洲镇安泰路1号</div>
+              <div>• 官方预订直达：携程旅行官方专区 / 酒店直营渠道</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 全岛配备绿色低速观光电瓶车代步，长辈下船后全程零负重出行；</div>
+              <div>• 妈祖祖庙设有专属无障碍斜坡与电梯，祈福从容不费膝盖。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 7. NINGDE PANEL ================= -->
+        <div id="panel-ningde" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-orange-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🌅</span> 福建宁德霞浦 · 大京黄金沙滩与最美滩涂日落 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                3000 米大京天然金沙滩 · 东壁海景日落纯平栈道 · 光影小镇免爬山观景 · 闽东大黄鱼与剑蛏
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./fujian/ningde/"
+                class="px-3 py-1.5 rounded-lg bg-orange-700 hover:bg-orange-800 text-white text-xs font-bold shadow-xs transition"
+                >打开宁德霞浦专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-orange-50/80 border border-orange-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京首都直飞温州龙湾
+                <strong>CA1539</strong>（07:45-10:20）+ 动车 35 分钟直达霞浦站 (11:40)
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南/东站乘直达高铁 <strong>G1609</strong>（08:30-14:40
+                霞浦站，二等座 ¥386.00）
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 乘 G1609 (11:05-18:18) 直达广州南站 ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-orange-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-orange-100 pb-2">
+                <span class="font-serif-sc font-bold text-orange-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">汇合入住</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                双端抵离汇合 ➔ 入住晨曦海景 ➔ 闽东大黄鱼宴
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                专车入住酒店，傍晚县城慢调茶歇，晚间享用清蒸闽东大黄鱼与地瓜杯地道小吃。
+              </p>
+              <div class="text-[11px] text-orange-900 bg-orange-100/70 p-2 rounded-lg font-medium">
+                宿：全季酒店(宁德霞浦世贸广场店) · 观景海景房 (¥249~289/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-orange-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-orange-100 pb-2">
+                <span class="font-serif-sc font-bold text-orange-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">黄金沙滩</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">大京黄金沙滩漫步 ➔ 高罗海滩海景</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步 3000 米长的大京金沙滩，背靠防风林荫，沙质细腻坡缓；品尝鲜美霞浦剑蛏。
+              </p>
+              <div class="text-[11px] text-orange-900 bg-orange-100/70 p-2 rounded-lg font-medium">
+                宿：全季酒店(宁德霞浦世贸广场店) · 观景海景房 (¥249~289/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-orange-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-orange-100 pb-2">
+                <span class="font-serif-sc font-bold text-orange-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">滩涂日落</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">三沙光影小镇 ➔ 东壁日落纯平木栈道</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                专车直达观景台免登山，东壁村依山傍海纯平悬空栈道欣赏夕阳染红万亩滩涂的世界级盛景。
+              </p>
+              <div class="text-[11px] text-orange-900 bg-orange-100/70 p-2 rounded-lg font-medium">
+                宿：全季酒店(宁德霞浦世贸广场店) · 观景海景房 (¥249~289/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">
+                悠闲晨间早餐 ➔ 霞浦站乘 G1609 直达返穗
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                从容退房，霞浦站搭乘直达高铁
+                <strong>G1609（11:05 发车 → 18:18 抵广州南站）</strong>，出站换乘地铁 2 号线 12~18
+                分钟直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>霞浦晨曦海景大酒店</code>（首旅如家高端系列）</div>
+              <div>• 精准物理门牌：福建省宁德市霞浦县太康路336号</div>
+              <div>• 官方预订直达：首旅如家 CRS / 携程官方直营</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 滩涂拍摄全部选择高处纯平观景木栈道，长辈严禁私自下滩涂以防深陷；</div>
+              <div>• 全程配备防紫外线轻量折叠伞与长辈适老抓地健步杖。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 8. FUZHOU PANEL ================= -->
+        <div id="panel-fuzhou" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-blue-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-slate-900 flex items-center gap-2"
+              >
+                <span>🐚</span> 福建福州长乐 · 下沙海螺塔金沙滩与漳港海蚌养生 4 天 3 晚全景规划
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                8公里海螺塔金色沙滩 · 滨海新城沿湖森林步道 · 国宴级鸡汤汆海蚌 · 下机 15 分钟直达沙滩
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./fujian/fuzhou/"
+                class="px-3 py-1.5 rounded-lg bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold shadow-xs transition"
+                >打开福州长乐专属独立门户 →</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-blue-50/80 border border-blue-200 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="space-y-1">
+              <div>
+                <strong>用户抵离</strong>：北京首都直飞福州长乐 <strong>CA1807</strong>（07:30-10:20
+                落地，<strong>下机 15 分钟直达海滩</strong>）
+              </div>
+              <div>
+                <strong>长辈高铁</strong>：广州南/东站乘直达高铁 <strong>G1609</strong>（08:30-13:50
+                福州南站，5h20m 直达，二等座 ¥328.00）+ 专车 25m
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="badge-green px-2.5 py-1 rounded text-xs font-bold"
+                >9.13 乘 G1625 (13:28-19:35) 直达广州南站 ➔ 地铁2号线直达海珠</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="parchment-card rounded-2xl p-5 border border-blue-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-blue-100 pb-2">
+                <span class="font-serif-sc font-bold text-blue-950 text-sm"
+                  >Day 1 · 9.10 (周四)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">汇合入住</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                双端抵离汇合 ➔ 鸡汤汆海蚌国宴 ➔ 酒店园林
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                中午 14:15 酒店大堂汇合，享用国宴名菜漳港海蚌与长乐肉燕，漫步佰翔私家滨海园林。
+              </p>
+              <div class="text-[11px] text-blue-900 bg-blue-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(福州长乐机场滨海新城店) · 景观海景房 (¥189~249/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-blue-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-blue-100 pb-2">
+                <span class="font-serif-sc font-bold text-blue-950 text-sm"
+                  >Day 2 · 9.11 (周五)</span
+                >
+                <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-bold">海螺塔沙滩</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                下沙海滨度假村踏浪 ➔ 海螺塔礁石留影
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步 8 公里长宽阔平整的下沙海滩，打卡标志性礁石海螺塔与海蚌厅，品尝清蒸漳港红蟳。
+              </p>
+              <div class="text-[11px] text-blue-900 bg-blue-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(福州长乐机场滨海新城店) · 景观海景房 (¥189~249/晚)
+              </div>
+            </div>
+
+            <div class="parchment-card rounded-2xl p-5 border border-blue-200 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-blue-100 pb-2">
+                <span class="font-serif-sc font-bold text-blue-950 text-sm"
+                  >Day 3 · 9.12 (周六)</span
+                >
+                <span class="badge-blue px-2 py-0.5 rounded text-[10px] font-bold">滨海绿道</span>
+              </div>
+              <div class="text-xs font-bold text-slate-900">
+                滨海新城森林步道 ➔ 东湖数字小镇品茗
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                漫步滨海防护林平坦无障碍绿道，东湖畔茶室品饮福州茉莉花茶，晚间享用海鲜焖面。
+              </p>
+              <div class="text-[11px] text-blue-900 bg-blue-100/70 p-2 rounded-lg font-medium">
+                宿：汉庭酒店(福州长乐机场滨海新城店) · 景观海景房 (¥189~249/晚)
+              </div>
+            </div>
+
+            <div
+              class="parchment-card rounded-2xl p-5 border-2 border-emerald-400 space-y-2.5 bg-emerald-50/20 shadow-sm"
+            >
+              <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                <span class="font-serif-sc font-bold text-emerald-950 text-sm"
+                  >Day 4 · 9.13 (周日)</span
+                >
+                <span class="badge-green px-2 py-0.5 rounded text-[10px] font-bold"
+                  >直达广州南</span
+                >
+              </div>
+              <div class="text-xs font-bold text-emerald-950">晨韵散步 ➔ 告别午宴 ➔ G1625 返穗</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                从容退房，福州南站搭乘直达高铁
+                <strong>G1625（13:28 发车 → 19:35 抵广州南站）</strong>，出站换乘地铁 2 号线 12~18
+                分钟直达海珠区家中！
+              </p>
+              <div class="text-[11px] text-emerald-900 bg-emerald-100/90 p-2 rounded-lg font-bold">
+                闭环：地铁 2 号线一车直达海珠区
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">
+                🏨 严选住宿四要素（SOP-GOV-2026-001 合规）：
+              </div>
+              <div>• 官方注册全称：<code>福州长乐海瀛湾佰翔度假酒店</code></div>
+              <div>• 精准物理门牌：福建省福州市长乐区文岭镇滨海大道88号</div>
+              <div>• 官方预订直达：佰翔集团官方微信小程序 / 官网</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <div class="font-bold text-slate-900">🩺 适老与安全防务备忘：</div>
+              <div>• 机场距离酒店仅 15 分钟车程，地面损耗为全案最低，极致减负；</div>
+              <div>• 度假村内部纯平园林无障碍设计，推门见海。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 9. QUANZHOU PANEL ================= -->
+        <div id="panel-quanzhou" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-sky-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-sky-950 flex items-center gap-2"
+              >
+                <span>🏛️</span> 选项 A · 泉州宋元海丝与崇武海滩度假 4D3N 精细日程
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                宋元世遗商贸中心 · 开元寺宋代双塔 · 崇武花岗岩抗倭石城 · 晋江 2km 塘东触角沙堤 ·
+                蟳埔簪花
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./fujian/quanzhou/"
+                class="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold shadow-xs transition"
+                >打开泉州专属独立门户 →</a
+              >
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
@@ -1070,17 +2546,34 @@
           </div>
         </div>
 
-        <!-- ================= OPTION B: XIAMEN PANEL ================= -->
-        <div id="panel-xiamen" class="hidden space-y-6">
-          <div class="flex items-center justify-between border-b border-sky-200 pb-2">
-            <h3
-              class="font-serif-sc font-bold text-lg sm:text-xl text-sky-950 flex items-center gap-2"
-            >
-              <span>🎹</span> 选项 B · 厦门鼓浪琴岛与山海度假 2.5D2N 精细日程
-            </h3>
-            <span class="badge-blue px-2.5 py-0.5 rounded text-xs font-semibold"
-              >直飞高崎 CA1831/MF8168</span
-            >
+        <!-- ================= 10. XIAMEN PANEL ================= -->
+        <div id="panel-xiamen" class="coastal-panel hidden space-y-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-sky-200 pb-3"
+          >
+            <div>
+              <h3
+                class="font-serif-sc font-bold text-lg sm:text-xl text-sky-950 flex items-center gap-2"
+              >
+                <span>🎹</span> 选项 B · 厦门鼓浪琴岛与山海度假 4D3N 精细日程
+              </h3>
+              <p class="text-xs text-slate-500 mt-1">
+                世界遗产鼓浪屿 · 日光岩与菽庄花园 · 海悦山庄 50 万㎡园林 · 黄厝日出 · 集美嘉庚风骨
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                onclick="setCoastalCity(null)"
+                class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-300 transition"
+              >
+                ← 10 城总览
+              </button>
+              <a
+                href="./fujian/xiamen/"
+                class="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold shadow-xs transition"
+                >打开厦门专属独立门户 →</a
+              >
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
@@ -1178,7 +2671,7 @@
             >
               <div class="space-y-2.5">
                 <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
-                  <span class="font-serif-sc font-bold text-emerald-900 text-base"
+                  <span class="font-serif-sc font-bold text-emerald-950 text-base"
                     >Day 9 · 9.13 (周日 · 归程)</span
                   >
                   <span class="badge-green px-2.5 py-0.5 rounded text-[11px] font-bold"
@@ -1316,14 +2809,14 @@
               id="filter-timeline-beijing"
               class="px-3 py-1.5 rounded-lg font-bold border bg-white text-slate-700 border-slate-200 hover:bg-amber-50"
             >
-              北京段 (D1-6)
+              第一赛段 · 北京文脉 (D1-5)
             </button>
             <button
-              onclick="filterTimeline('fujian')"
-              id="filter-timeline-fujian"
+              onclick="filterTimeline('coastal')"
+              id="filter-timeline-coastal"
               class="px-3 py-1.5 rounded-lg font-bold border bg-white text-slate-700 border-slate-200 hover:bg-sky-50"
             >
-              福建段 (D7-9)
+              第二赛段 · 纯省外海滨 (D6-9)
             </button>
           </div>
         </div>
@@ -1465,7 +2958,7 @@
               </p>
             </div>
             <span class="badge-gold px-3 py-1 rounded text-xs font-semibold"
-              >总支出约 ¥4,542 ~ ¥7,052</span
+              >总支出约 ¥4,442 ~ ¥6,472</span
             >
           </div>
 
@@ -1496,9 +2989,11 @@
                 </tr>
                 <tr class="hover:bg-slate-50">
                   <td class="p-3 font-bold text-slate-900">酒店住宿</td>
-                  <td class="p-3">5晚北京千禧/半岛 + 2晚海悦山庄/崇武西沙湾假日 (双人合住分摊)</td>
-                  <td class="p-3 font-semibold text-slate-900">¥3,400 /人</td>
-                  <td class="p-3 font-semibold text-slate-900">¥1,480 /人 (汉庭合住)</td>
+                  <td class="p-3">
+                    5晚北京千禧/汉庭 + 3晚纯省外海滨华住会/连锁海景房 (≤¥300/晚，双人合住分摊)
+                  </td>
+                  <td class="p-3 font-semibold text-slate-900">¥2,820 /人 (千禧+高层海景)</td>
+                  <td class="p-3 font-semibold text-slate-900">¥1,380 /人 (北京汉庭+海景汉庭)</td>
                 </tr>
                 <tr class="hover:bg-slate-50">
                   <td class="p-3 font-bold text-slate-900">景区门票与索道</td>
@@ -1517,10 +3012,10 @@
                 <tr class="bg-amber-100/80 font-bold border-t-2 border-amber-300">
                   <td class="p-3 text-amber-950">单人全周期总预算</td>
                   <td class="p-3 text-amber-950">
-                    广州出发 → 帝都 → 闽海 → 广州南站返穗闭环总支出
+                    广州出发 → 帝都 → 纯省外海滨 → 广州南站返穗闭环总支出
                   </td>
-                  <td class="p-3 text-red-900 text-sm">¥7,052 元</td>
-                  <td class="p-3 text-emerald-900 text-sm">¥4,542 元</td>
+                  <td class="p-3 text-red-900 text-sm">¥6,472 元</td>
+                  <td class="p-3 text-emerald-900 text-sm">¥4,442 元</td>
                 </tr>
               </tbody>
             </table>
@@ -1580,12 +3075,167 @@
     <!-- JAVASCRIPT CORE APPLICATION LOGIC (100% SOURCED FROM BEIJING & FUJIAN PLANS) -->
     <script>
       let currentActivePage = "invitation";
-      let currentFujianOption = "quanzhou";
+      let currentCoastalCity = null; // No default city selected in Coastal tab
+      let currentTimelineCity = "beihai"; // Default coastal city in Timeline tab
       let currentTimelineDay = 1;
       let currentTimelineFilter = "all";
 
+      const coastalCityList = [
+        "beihai",
+        "fangchenggang",
+        "qinzhou",
+        "zhangzhou",
+        "pingtan",
+        "putian",
+        "ningde",
+        "fuzhou",
+        "quanzhou",
+        "xiamen",
+      ];
+
       // =======================================================================
-      // DATA: Unified Day 1-9 Master Schedule (Strictly Sourced from Beijing & Fujian Plans)
+      // 1. PAGE NAVIGATION FUNCTION (MAIN TAB SWITCHING)
+      // =======================================================================
+      function showPage(pageId) {
+        currentActivePage = pageId;
+        const pageList = ["invitation", "beijing", "fujian", "timeline", "directory"];
+
+        pageList.forEach((p) => {
+          const pageEl = document.getElementById("page-" + p);
+          if (pageEl) {
+            if (p === pageId) {
+              pageEl.classList.remove("hidden");
+              pageEl
+                .querySelectorAll(".stagger-1, .stagger-2, .stagger-3, .stagger-4")
+                .forEach((el) => {
+                  el.style.animation = "none";
+                  void el.offsetHeight;
+                  el.style.animation = "";
+                });
+            } else {
+              pageEl.classList.add("hidden");
+            }
+          }
+
+          // Desktop Tab Button Styling
+          const tabBtn = document.getElementById("tab-btn-" + p);
+          if (tabBtn) {
+            if (p === pageId) {
+              tabBtn.classList.add("nav-tab-active");
+              tabBtn.classList.remove("bg-white", "text-slate-700");
+            } else {
+              tabBtn.classList.remove("nav-tab-active");
+              tabBtn.classList.add("bg-white", "text-slate-700");
+            }
+          }
+
+          // Mobile Tab Button Styling
+          const mobTabBtn = document.getElementById("mob-tab-" + p);
+          if (mobTabBtn) {
+            if (p === pageId) {
+              mobTabBtn.classList.add("nav-tab-active");
+              mobTabBtn.classList.remove("bg-white", "text-slate-700");
+            } else {
+              mobTabBtn.classList.remove("nav-tab-active");
+              mobTabBtn.classList.add("bg-white", "text-slate-700");
+            }
+          }
+        });
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // =======================================================================
+      // 2. COASTAL 10-CITY SWITCHER FUNCTION (STAGE 2 TAB)
+      // =======================================================================
+      function setCoastalCity(cityId) {
+        currentCoastalCity = cityId;
+        if (cityId) {
+          currentTimelineCity = cityId;
+        }
+
+        // Toggle overview panel
+        const overviewPanel = document.getElementById("panel-coastal-overview");
+        if (overviewPanel) {
+          if (cityId) {
+            overviewPanel.classList.add("hidden");
+          } else {
+            overviewPanel.classList.remove("hidden");
+            overviewPanel.querySelectorAll(".stagger-1, .stagger-2, .stagger-3").forEach((el) => {
+              el.style.animation = "none";
+              void el.offsetHeight;
+              el.style.animation = "";
+            });
+          }
+        }
+
+        // Toggle 10 destination panels
+        coastalCityList.forEach((c) => {
+          const p = document.getElementById("panel-" + c);
+          if (p) {
+            if (c === cityId) {
+              p.classList.remove("hidden");
+              p.querySelectorAll(".stagger-1, .stagger-2, .stagger-3").forEach((el) => {
+                el.style.animation = "none";
+                void el.offsetHeight;
+                el.style.animation = "";
+              });
+            } else {
+              p.classList.add("hidden");
+            }
+          }
+
+          // Toggle Button Style & Badge Contrast
+          const btn = document.getElementById("coastal-btn-" + c);
+          if (btn) {
+            const badge = btn.querySelector(".btn-badge");
+            const title = btn.querySelector(".text-xs");
+            if (c === cityId) {
+              btn.classList.add(
+                "active-btn",
+                "bg-white",
+                "text-sky-950",
+                "shadow-lg",
+                "ring-2",
+                "ring-amber-400",
+                "scale-[1.02]"
+              );
+              btn.classList.remove("bg-white/10", "hover:bg-white/20", "text-white");
+              if (badge) {
+                badge.className = "btn-badge text-[10px] font-bold text-sky-800";
+              }
+              if (title) {
+                title.className = "text-xs font-bold text-slate-900";
+              }
+            } else {
+              btn.classList.remove(
+                "active-btn",
+                "bg-white",
+                "text-sky-950",
+                "shadow-lg",
+                "ring-2",
+                "ring-amber-400",
+                "scale-[1.02]"
+              );
+              btn.classList.add("bg-white/10", "hover:bg-white/20", "text-white");
+              if (badge) {
+                badge.className = "btn-badge text-[10px] text-sky-200";
+              }
+              if (title) {
+                title.className = "text-xs font-bold text-white";
+              }
+            }
+          }
+        });
+      }
+
+      function setFujianOption(option) {
+        setCoastalCity(option);
+      }
+
+      // =======================================================================
+      // 3. MASTER SCHEDULE DATA (DAYS 1 TO 9)
       // =======================================================================
       const masterSchedule = {
         1: {
@@ -1799,194 +3449,800 @@
           ],
         },
         6: {
-          stage: "beijing",
-          dateStr: "9月10日 (周四)",
-          tag: "晨间退房 · 顺利离京/转场",
-          title: "Day 6：酒店从容退房 · 顺利离京返穗 / 启程转场第二赛段",
-          subTitle: "酒店早餐与整理行李 → 前台办理退房 → 顺畅衔接返程高铁/航班或福建赛段",
-          steps: [
-            {
-              time: "07:30 - 08:30",
-              title: "酒店晨起与营养早餐",
-              desc: "在酒店享用丰盛早餐，清点整理个人行李物品与文博文创纪念品，确认二代身份证件随身携带。",
-              tag: "从容整装",
-              color: "blue",
-            },
-            {
-              time: "08:30 - 09:00",
-              title: "办理酒店退房手续",
-              desc: "酒店前台办理退房及发票开具，核对行李件数，准备前往车站/机场。",
-              tag: "前台退房",
-              color: "blue",
-            },
-            {
-              time: "09:00 之后",
-              title: "顺畅离京 / 启程转场",
-              desc: "搭乘地铁直达北京西站（G79/G77 等标杆动车直达返穗）或大兴/首都国际机场（直飞福建 KN5967 / CA1831 开启第二赛段），圆满结束北京深度文化之旅！",
-              tag: "返程/转场",
-              color: "gold",
-            },
-          ],
-        },
-        7: {
-          stage: "fujian",
-          dateStr: "9月11日 (周五)",
-          quanzhou: {
-            tag: "崇武古城 · 西沙踏浪",
-            title: "Day 7：飞抵晋江 · 崇武抗倭石城 · 西沙踏浪 · 瑞芳鱼卷",
+          stage: "coastal",
+          dateStr: "9月10日 (周四 · 双端启程汇合)",
+          beihai: {
+            tag: "直飞福成 · 银滩初踏浪",
+            title: "Day 6：北京直飞北海 + 广州长辈直达汇合 · 银滩初踏浪 · 侨港夜市",
             subTitle:
-              "大兴直飞晋江 KN5967 → 崇武西沙湾假日酒店 → 崇武抗倭古城 → 瑞芳鱼卷与海鲜排档",
+              "CA1909 直飞北海 + D3706 长辈直达 → 入住银滩皇冠假日 → 银滩平缓踏浪 → 侨港疍家风味",
             steps: [
               {
-                time: "07:55 - 10:45",
-                title: "北京大兴直飞泉州晋江 (KN5967)",
-                desc: "中联航 KN5967 直飞泉州晋江机场 JJN（或 07:15 首都深航 ZH9187 直飞）。",
-                tag: "民航早班",
+                time: "07:45 - 11:20",
+                title: "北京首都直飞北海福成 (CA1909)",
+                desc: "国航早班机直飞北海，专车 25 分钟直达度假酒店。",
+                tag: "用户直飞",
                 color: "blue",
               },
               {
-                time: "11:00 - 11:45",
-                title: "专车直达入住惠安崇武西沙湾假日酒店",
-                desc: "专车直达崇武半岛，办理全海景房入住，推门踏沙。",
-                tag: "海景入驻",
+                time: "08:08 - 12:28",
+                title: "广州南站 D3706 直达北海站",
+                desc: "长辈搭乘 D3706 直达动车（4h20m 直达无换乘，二等座¥201.50），专车接站汇合。",
+                tag: "长辈高铁",
                 color: "blue",
               },
               {
-                time: "12:00 - 13:30",
-                title: "午餐 · 瑞芳鱼卷总店地道海味",
-                desc: "品尝现炸崇武鱼卷、地瓜粉团海蛎汤与清蒸小海鲜。",
-                tag: "非遗老字号",
+                time: "12:45 - 14:00",
+                title: "酒店汇合与海鲜午宴",
+                desc: "入住华住会【汉庭酒店(北海银滩景区侨港风情街店)】观景海景房，享用清蒸北部湾石斑鱼与地道便餐。",
+                tag: "双端汇合",
                 color: "gold",
               },
               {
-                time: "14:00 - 17:30",
-                title: "【崇武古城风景区 & 中华石雕博览园】",
-                desc: "登临明洪武二十年（1387年）花岗岩抗倭古城墙，漫步西沙湾金沙滩踏浪戏水。",
-                tag: "全国重点文保",
+                time: "15:00 - 17:30",
+                title: "【北海银滩（国家 5A）初踏浪】",
+                desc: "漫步坡度<1%的纯白石英沙滩，赤足踩沙细腻坚实，长辈散步零负担。",
+                tag: "5A海滩",
                 color: "red",
               },
               {
                 time: "18:00 - 20:30",
-                title: "西沙湾排档海鲜晚宴",
-                desc: "品尝酱油水蒸红鲟、椒盐皮皮虾与葱油小管，沙滩听涛赏月。",
-                tag: "生猛海鲜",
+                title: "侨港风情街美食体验",
+                desc: "品尝二十四味疍家糖水、越南卷粉与生猛海鲜砂锅粥。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          fangchenggang: {
+            tag: "直达防城港 · 白浪滩漫步",
+            title: "Day 6：北京直飞转场 + 广州长辈直达汇合 · 伏波公园海景 · 金花茶宴",
+            subTitle:
+              "CA1361 直飞南宁转车 + D3706 长辈直达 → 入住荣兴格兰云天 → 伏波公园海景 → 金花茶晚宴",
+            steps: [
+              {
+                time: "07:30 - 10:50",
+                title: "北京首都直飞南宁吴圩 (CA1361)",
+                desc: "国航早班机直飞南宁，专车 45 分钟直达防城港。",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:08 - 12:55",
+                title: "广州南站 D3706 直达防城港北",
+                desc: "长辈搭乘 D3706 直达动车（4h47m 直达无换乘，二等座¥228.00），专车接站汇合。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "13:00 - 14:30",
+                title: "酒店汇合与金花茶海鲜午宴",
+                desc: "入住华住会【汉庭酒店(防城港北部湾大道店)】海湾景观房，品尝国家地理标志金花茶炖海鲜。",
+                tag: "双端汇合",
+                color: "gold",
+              },
+              {
+                time: "15:30 - 17:30",
+                title: "【伏波公园 & 滨海红树林栈道】",
+                desc: "远眺北部湾跨海大桥与万亩红树林生态海湾，海风宜人。",
+                tag: "滨海生态",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "北部湾特色海鲜晚宴",
+                desc: "享用清蒸富硒石斑鱼与北部湾香煎海鱼。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          qinzhou: {
+            tag: "直达钦州 · 茅尾海大蚝宴",
+            title: "Day 6：北京直飞转场 + 广州长辈直达汇合 · 刘永福故居 · 原味大蚝宴",
+            subTitle:
+              "CA1361 直飞南宁动车 + D3706 长辈直达 → 入住天骄国际 → 刘永福三宣堂 → 炭烤大蚝宴",
+            steps: [
+              {
+                time: "07:30 - 10:50",
+                title: "北京直飞南宁 + 动车 30m 抵钦州东",
+                desc: "国航早班机飞南宁，动车 30 分钟直达钦州东站。",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:08 - 11:46",
+                title: "广州南站 D3706 直达钦州东",
+                desc: "长辈搭乘 D3706 直达动车（仅 3h38m 直达无换乘，二等座¥178.50），专车接站汇合。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "12:15 - 13:45",
+                title: "酒店汇合与大蚝养生午宴",
+                desc: "入住华住会【全季酒店(钦州长融世贸广场店)】茅尾海高层观景房，品尝中国大蚝名邑清蒸原味大蚝。",
+                tag: "双端汇合",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:00",
+                title: "【刘永福三宣堂古建群】",
+                desc: "研学清代抗法民族英雄古建民居，回廊曲折平缓适老。",
+                tag: "历史文脉",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "钦州风味大排档海鲜晚宴",
+                desc: "享用原汁大蚝与北部湾本港小海鲜。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          zhangzhou: {
+            tag: "直抵东山 · 金銮湾水膜",
+            title: "Day 6：北京直飞揭阳 + 广州长辈直达汇合 · 金銮湾踏浪 · 鲜灼小管",
+            subTitle:
+              "CZ3166 飞潮汕转专车 + G1609 长辈直达 → 入住东山海明威 → 金銮湾水膜踏浪 → 鲜灼小管晚宴",
+            steps: [
+              {
+                time: "07:45 - 10:45",
+                title: "北京大兴直飞揭阳潮汕 (CZ3166)",
+                desc: "南航早班机直飞潮汕机场，专车 50 分钟直达东山岛。",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:30 - 12:05",
+                title: "广州南站 G1609 直达云霄站",
+                desc: "长辈搭乘 G1609 高铁（仅 3h35m 直达，二等座¥204.50），专车接站抵东山岛。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "12:45 - 14:00",
+                title: "酒店汇合与东山小管午宴",
+                desc: "入住【格美海景酒店(漳州东山金銮湾店)】一线海景房全海景房，下楼直通沙滩。",
+                tag: "双端汇合",
+                color: "gold",
+              },
+              {
+                time: "15:00 - 17:30",
+                title: "【金銮湾 5000 米镜面沙滩初踏浪】",
+                desc: "在退潮形成的天然水膜上赤足漫步，沙滩坚实如镜，极易行走。",
+                tag: "镜面海滩",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "海明威海景海鲜晚宴",
+                desc: "品尝鲜灼东山小管、海胆炒饭与紫菜煲。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          pingtan: {
+            tag: "直飞福州 · 坛南湾白金海岸",
+            title: "Day 6：北京直飞长乐 + 广州长辈高铁汇合 · 坛南湾避风踏浪 · 清蒸红鲟",
+            subTitle:
+              "CA1807 直飞福州转专车 + G1609 长辈直达 → 入住宇诚海景国际 → 坛南湾踏浪 → 清蒸红鲟宴",
+            steps: [
+              {
+                time: "07:30 - 10:20",
+                title: "北京首都直飞福州长乐 (CA1807)",
+                desc: "国航早班机直飞长乐机场，专车 45 分钟直达平潭岛。",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:30 - 13:50",
+                title: "广州南站 G1609 至福州南 + 动车平潭",
+                desc: "长辈搭乘 G1609 直达福州南站，平潭专车/动车无缝接驳。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "14:15 - 15:00",
+                title: "酒店汇合入住",
+                desc: "入住华住会【桔子酒店(平潭龙王头西航路店)】海景房，尊享无障碍适老关怀。",
+                tag: "双端汇合",
+                color: "gold",
+              },
+              {
+                time: "15:30 - 17:30",
+                title: "【坛南湾白金避风海岸】",
+                desc: "在平潭沙质最细腻、海浪最温和的白金海湾漫步。",
+                tag: "白金海滩",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "平潭海鲜红鲟晚宴",
+                desc: "享用清蒸深海红鲟与平潭传统八宝焖海鲜。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          putian: {
+            tag: "客船登岛 · 湄洲黄金沙滩",
+            title: "Day 6：北京直飞晋江 + 广州长辈高铁汇合 · 湄洲岛客船 · 南日鲍鱼宴",
+            subTitle:
+              "MF8168 直飞晋江 + G1609 长辈直达 → 文甲码头平稳客船 → 入住安泰清辉 → 南日鲍鱼宴",
+            steps: [
+              {
+                time: "07:10 - 09:55",
+                title: "北京大兴直飞泉州晋江 (MF8168)",
+                desc: "厦航早班机直飞晋江，专车 40 分钟至文甲码头登客船。",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:30 - 13:08",
+                title: "广州南站 G1609 直达莆田站",
+                desc: "长辈搭乘 G1609 高铁（4h38m 直达，二等座¥278.00），专车至码头汇合登岛。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "14:00 - 15:00",
+                title: "文甲码头VIP客船登岛与入住",
+                desc: "15 分钟平稳客船上岛，电瓶车入住【湄洲岛金海岸度假海景酒店】一线金沙海景房。",
+                tag: "平稳登岛",
+                color: "gold",
+              },
+              {
+                time: "15:30 - 17:30",
+                title: "【湄洲岛黄金沙滩初探】",
+                desc: "漫步 3000 米天然黄金细沙滩，赤足踩沙极度舒适。",
+                tag: "5A海滩",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "国家地标南日鲍鱼晚宴",
+                desc: "品尝鲜炖南日鲍鱼与养生海鲜砂锅粥。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          ningde: {
+            tag: "直达霞浦 · 闽东大黄鱼",
+            title: "Day 6：北京直飞温州 + 广州长辈直达汇合 · 霞浦慢调海景 · 闽东大黄鱼",
+            subTitle:
+              "CA1539 直飞温州转动车 + G1609 长辈直达 → 入住晨曦海景 → 县城慢调茶歇 → 清蒸大黄鱼宴",
+            steps: [
+              {
+                time: "07:45 - 10:20",
+                title: "北京直飞温州龙湾 + 动车 35m 抵霞浦",
+                desc: "国航早班机飞温州，动车 35 分钟直达霞浦站。",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:30 - 14:40",
+                title: "广州南站 G1609 直达霞浦站",
+                desc: "长辈搭乘 G1609 高铁（二等座¥386.00 直达霞浦站），专车接站汇合。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "15:00 - 16:00",
+                title: "酒店汇合入住",
+                desc: "入住华住会【全季酒店(宁德霞浦世贸广场店)】观景海景房，休整并享用福鼎白茶茶歇。",
+                tag: "双端汇合",
+                color: "gold",
+              },
+              {
+                time: "16:30 - 18:00",
+                title: "霞浦滨海慢调散步",
+                desc: "专车漫游霞浦滨海景观大道，感受海风轻抚。",
+                tag: "休闲漫游",
+                color: "blue",
+              },
+              {
+                time: "18:30 - 20:30",
+                title: "国宴清蒸闽东大黄鱼晚宴",
+                desc: "享用清蒸闽东大黄鱼、地瓜杯与鲜煮剑蛏。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          fuzhou: {
+            tag: "下机15m · 下沙海螺塔",
+            title: "Day 6：北京直飞长乐 + 广州长辈高铁汇合 · 下沙海螺塔踏浪 · 鸡汤汆海蚌",
+            subTitle:
+              "CA1807 直飞长乐（15m达酒店）+ G1609 长辈直达 → 入住佰翔度假 → 下沙金沙滩 → 国宴海蚌",
+            steps: [
+              {
+                time: "07:30 - 10:20",
+                title: "北京首都直飞福州长乐 (CA1807)",
+                desc: "国航早班机直飞长乐，下机专车仅 15 分钟直达海滨度假酒店！",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:30 - 13:50",
+                title: "广州南站 G1609 直达福州南站",
+                desc: "长辈搭乘 G1609 高铁（5h20m 直达，二等座¥328.00），专车 25m 接站汇合。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "14:15 - 15:30",
+                title: "酒店汇合入住与园林漫步",
+                desc: "入住华住会【汉庭酒店(福州长乐机场滨海新城店)】景观海景房，漫步私家海景园林。",
+                tag: "海景度假",
+                color: "gold",
+              },
+              {
+                time: "15:30 - 17:30",
+                title: "【下沙海滨度假村海螺塔金沙滩】",
+                desc: "漫步 8 公里长宽阔平整的金色沙滩，打卡海螺塔礁石。",
+                tag: "金色沙滩",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "国宴名菜鸡汤汆海蚌晚宴",
+                desc: "品尝国宴极品漳港海蚌、长乐肉燕与清蒸红鲟。",
+                tag: "国宴珍馐",
+                color: "gold",
+              },
+            ],
+          },
+          quanzhou: {
+            tag: "崇武古城 · 西沙踏浪",
+            title: "Day 6：北京直飞晋江 + 广州长辈高铁汇合 · 崇武抗倭石城 · 瑞芳鱼卷",
+            subTitle:
+              "KN5967 直飞晋江 + G1609/G1625 长辈直达 → 入住西沙湾假日 → 崇武石城踏浪 → 瑞芳鱼卷",
+            steps: [
+              {
+                time: "07:55 - 10:45",
+                title: "北京大兴直飞泉州晋江 (KN5967)",
+                desc: "中联航直飞晋江机场，专车 40 分钟直达崇武半岛。",
+                tag: "用户直飞",
+                color: "blue",
+              },
+              {
+                time: "08:30 - 13:30",
+                title: "广州南站 G1609 直达泉州站",
+                desc: "长辈搭乘直达高铁抵泉州站，专车接站至崇武半岛汇合。",
+                tag: "长辈高铁",
+                color: "blue",
+              },
+              {
+                time: "14:00 - 15:00",
+                title: "酒店汇合入住",
+                desc: "入住华住会【汉庭酒店(泉州惠安崇武店)】西沙湾海景房全海景房，推门踏沙。",
+                tag: "海景入驻",
+                color: "gold",
+              },
+              {
+                time: "15:30 - 17:30",
+                title: "【崇武古城与西沙湾金沙滩】",
+                desc: "登临明代花岗岩抗倭古城墙，漫步西沙湾金沙滩踏浪戏水。",
+                tag: "全国文保",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "瑞芳鱼卷与西沙湾排档晚宴",
+                desc: "品尝现炸崇武鱼卷、地瓜粉团海蛎汤与酱油水蒸红鲟。",
+                tag: "特色美食",
                 color: "gold",
               },
             ],
           },
           xiamen: {
-            tag: "鼓浪琴岛 · 日光岩俯瞰",
-            title: "Day 7：飞抵厦门 · 邮轮码头渡轮 · 鼓浪屿日光岩与菽庄花园 · 海悦山庄",
+            tag: "直飞鹭岛 · 鼓浪屿日光岩",
+            title: "Day 6：北京直飞厦门 + 广州长辈高铁汇合 · 鼓浪屿日光岩 · 入住海悦山庄",
             subTitle:
-              "北京直飞厦门 CA1831/MF8168 → 邮轮中心厦鼓码头 → 鼓浪屿日光岩与菽庄花园 → 入住海悦山庄",
+              "CA1831 直飞厦门 + G1609/G1625 长辈直达 → 邮轮码头登岛 → 日光岩与菽庄花园 → 入住海悦山庄",
             steps: [
               {
                 time: "06:25 - 09:25",
                 title: "北京首都直飞厦门高崎 (CA1831)",
-                desc: "国航 CA1831 直飞厦门高崎机场（或 07:10 大兴厦航 MF8168 直飞，09:55 落地）。",
-                tag: "民航早班",
+                desc: "国航早班机直飞厦门高崎机场，专车赴码头。",
+                tag: "用户直飞",
                 color: "blue",
               },
               {
-                time: "10:15 - 10:55",
-                title: "专车赴邮轮中心厦鼓码头登岛",
-                desc: "乘渡轮 20 分钟直达鼓浪屿三丘田码头，开启世遗历史国际社区研学。",
-                tag: "渡轮接驳",
+                time: "08:30 - 13:30",
+                title: "广州南站 G1609 直达厦门北站",
+                desc: "长辈搭乘直达高铁抵厦门北站，专车赴码头汇合登岛。",
+                tag: "长辈高铁",
                 color: "blue",
               },
               {
-                time: "13:00 - 17:00",
-                title: "【鼓浪屿世界文化遗产深度研学】（游玩 4 小时）",
-                desc: "探访八卦楼（管风琴艺术中心）与万国建筑博览街区；登临【日光岩】制高点 360 度俯瞰全岛；探访【菽庄花园】（十二洞天藏海借景与世界钢琴博物馆）。",
-                tag: "世界文化遗产",
+                time: "14:00 - 17:30",
+                title: "【鼓浪屿世界文化遗产深度研学】",
+                desc: "研学万国建筑博览、登顶【日光岩】俯瞰全岛、游【菽庄花园】藏海借景。",
+                tag: "世遗巅峰",
                 color: "red",
               },
               {
-                time: "17:30 - 18:30",
-                title: "乘渡轮返岛，入住厦门海悦山庄酒店",
-                desc: "专车入住 50 万㎡私家皇家山海园林酒店，享用临家闽南菜(环岛路店)翔安姜母鸭晚宴。",
-                tag: "山海入驻",
-                color: "blue",
+                time: "18:00 - 19:00",
+                title: "渡轮返岛，入住华住会桔子酒店(会展中心店)海景房",
+                desc: "专车入住 50 万㎡私家皇家园林酒店，享用翔安姜母鸭晚宴。",
+                tag: "皇家园林",
+                color: "gold",
+              },
+              {
+                time: "19:30 - 21:00",
+                title: "临家闽南菜海鲜晚宴",
+                desc: "品尝地道闽南风味与生猛海鲜。",
+                tag: "特色美食",
+                color: "gold",
               },
             ],
           },
         },
-        8: {
-          stage: "fujian",
-          dateStr: "9月12日 (周六)",
-          quanzhou: {
-            tag: "塘东沙堤 · 蟳埔簪花",
-            title: "Day 8：塘东 2km 沙堤奇观 · 蟳埔非遗簪花围 · 北宋洛阳桥 · 西街",
-            subTitle:
-              "塘东触角沙堤 → 蟳埔渔村蚵壳厝与簪花围 → 洛阳桥蔡襄生态名桥 → 泉州西街有鲤天台",
+        7: {
+          stage: "coastal",
+          dateStr: "9月11日 (周五 · 核心海滩深度游)",
+          beihai: {
+            tag: "天下第一滩 · 冠头岭落日",
+            title: "Day 7：天下第一滩漫步踏浪 · 冠头岭海蚀礁石栈道 · 最美北部湾落日",
+            subTitle: "银滩纯白石英细沙漫步 → 冠头岭海角亭与礁石栈道 → 北部湾海景日落 → 侨港海鲜宴",
             steps: [
               {
-                time: "06:00 - 06:45",
-                title: "西沙湾海上日出",
-                desc: "在西沙湾沙滩观赏壮丽海上日出。",
+                time: "08:30 - 11:30",
+                title: "【北海银滩 · 天下第一滩深度漫步】",
+                desc: "赤足在纯白石英沙滩漫步，沙细如粉不陷脚，体验北部湾纯净海浪。",
+                tag: "5A海滩",
+                color: "red",
+              },
+              {
+                time: "12:00 - 13:30",
+                title: "海边特色海鲜午餐",
+                desc: "享用清蒸花蟹、椒盐皮皮虾与香煎墨鱼饼。",
+                tag: "海味午餐",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:30",
+                title: "【冠头岭国家森林公园 & 海角亭】",
+                desc: "专车直达海角亭纯平栈道，观赏巨浪拍击海蚀礁石地质奇观与壮丽北部湾落日。",
+                tag: "地质奇观",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "侨港海鲜大排档生猛海鲜宴",
+                desc: "品尝二十四味糖水、鲜灼沙虫与酱油水海鱼。",
+                tag: "生猛海鲜",
+                color: "gold",
+              },
+            ],
+          },
+          fangchenggang: {
+            tag: "黑金钛沙滩 · 簕山古渔村",
+            title: "Day 7：白浪滩百米平坦黑金钛沙踏浪 · 簕山千年古渔村赶海",
+            subTitle: "白浪滩黑金沙漫步 → 簕山古渔村千年古树 → 滨海赶海体验 → 清蒸富硒石斑鱼",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【白浪滩（国家 4A）黑金钛沙滩漫步】",
+                desc: "沙质富含钛铁矿呈黑金色，退潮后平坦如操场，坚实防滑极适老。",
+                tag: "4A海滩",
+                color: "red",
+              },
+              {
+                time: "12:30 - 14:00",
+                title: "白浪滩海鲜午宴",
+                desc: "品尝鲜蒸北部湾海虾与海鸭蛋。",
+                tag: "海鲜午餐",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:30",
+                title: "【簕山古渔村 & 千年古树林】",
+                desc: "探访明代古渔村与海边古树群，纯平木栈道赶海拾贝。",
+                tag: "古村赶海",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "富硒石斑鱼海鲜晚宴",
+                desc: "享用清蒸富硒石斑鱼与鲜沙蟹汁焖豆腐。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          qinzhou: {
+            tag: "白海豚游船 · 三娘湾金沙",
+            title: "Day 7：三娘湾大型平稳游船出海观白海豚 · 金色沙滩踏浪",
+            subTitle: "双体客船近观中华白海豚 → 三娘湾金色细沙滩 → 乌雷渔港海鲜 → 海景晚霞",
+            steps: [
+              {
+                time: "08:30 - 11:30",
+                title: "【三娘湾双体游船观中华白海豚】",
+                desc: "搭乘政府认证大型平稳双体船出海，近距离观赏国家一级保护动物中华白海豚跃水。",
+                tag: "白海豚奇观",
+                color: "red",
+              },
+              {
+                time: "12:00 - 13:30",
+                title: "三娘湾大蚝与海鲜砂锅粥午餐",
+                desc: "享用大蚝煎蛋与鲜美海蟹粥。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:30",
+                title: "【三娘湾金色沙滩漫步踏浪】",
+                desc: "漫步平缓金沙滩，沙质柔软细腻，听涛赏海鸥。",
+                tag: "金沙海滩",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "乌雷渔港生猛海鲜大餐",
+                desc: "享用清蒸海鲈鱼与蒜蓉大蚝。",
+                tag: "生猛海鲜",
+                color: "gold",
+              },
+            ],
+          },
+          zhangzhou: {
+            tag: "天空之镜日出 · 苏峰山栈道",
+            title: "Day 7：金銮湾壮美红日倒影 · 苏峰山悬空环岛纯平观海木栈道",
+            subTitle: "金銮湾海平面日出 → 苏峰山纯平木栈道 → 岩雅古村海蚀地貌 → 铜陵古镇海鲜排档",
+            steps: [
+              {
+                time: "05:45 - 06:45",
+                title: "【金銮湾海上红日日出】",
+                desc: "在金銮湾镜面水膜上拍摄海天一色的朝阳倒影大片。",
                 tag: "海滨日出",
                 color: "gold",
               },
               {
-                time: "08:30 - 11:00",
-                title: "【晋江金井塘东沙堤】（自然地貌研学 2.5 小时）",
-                desc: "趁中低潮位漫步亚洲唯一 2 公里天然向海延伸的触角沙嘴，体验双向波浪交汇。",
-                tag: "自然奇观",
+                time: "09:00 - 12:00",
+                title: "【苏峰山悬空环岛观海木栈道】",
+                desc: "专车直达纯平观景木栈道，全程带护栏无台阶，俯瞰深蓝台湾海峡。",
+                tag: "悬空栈道",
+                color: "red",
+              },
+              {
+                time: "12:30 - 14:00",
+                title: "苏峰山田园海鲜午餐",
+                desc: "品尝东山小管与紫菜焖饭。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:30",
+                title: "【岩雅古村与海蚀地貌研学】",
+                desc: "漫步百年石头民居与天然海蚀巨石。",
+                tag: "地貌研学",
                 color: "blue",
               },
               {
-                time: "13:30 - 15:30",
-                title: "【蟳埔民俗文化村（簪花围与蚵壳厝）】",
+                time: "18:00 - 20:30",
+                title: "铜陵古镇生猛海鲜大餐",
+                desc: "品尝酱油水蒸杂鱼与鲜灼海胆。",
+                tag: "生猛海鲜",
+                color: "gold",
+              },
+            ],
+          },
+          pingtan: {
+            tag: "风车田木栈道 · 北部观海台",
+            title: "Day 7：长江澳风车田纯平木栈道 · 北部生态廊道全景观海台",
+            subTitle: "长江澳风车阵 → 北部生态廊道电瓶车观海 → 玻璃栈道俯瞰海峡 → 平潭砂锅粥",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【长江澳风车田纯平木栈道】",
+                desc: "漫步宽阔平整的木栈道，欣赏海边白色巨大风车阵与碧海蓝天。",
+                tag: "风车海景",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "长江澳海景餐厅特色午餐",
+                desc: "品尝平潭时来运转点心与海鲜焖粉。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:30",
+                title: "【北部生态廊道乘坐电瓶代步车】",
+                desc: "乘绿色低速电瓶车直达山顶全景观景台，俯瞰风车海峡壮丽全景。",
+                tag: "全景廊道",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "平潭深海鱼宴晚餐",
+                desc: "享用清蒸深海海鲈鱼与平潭八宝饭。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          putian: {
+            tag: "妈祖祖庙祈福 · 黄金沙滩",
+            title: "Day 7：湄洲妈祖祖庙索道祈福 · 3000 米坡缓黄金沙滩赤足踩沙",
+            subTitle: "妈祖祖庙无障碍索道祈福 → 妈祖源流石雕群 → 黄金沙滩赤足踏浪 → 妈祖平安家宴",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【湄洲妈祖祖庙（人类非遗）深度朝圣】",
+                desc: "乘坐平缓索道与无障碍电梯登临祖庙祈福，瞻仰宋代古建与妈祖金身神像。",
+                tag: "人类非遗",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "妈祖素斋与特色海鲜午餐",
+                desc: "品尝湄洲妈祖平安面与莆田焖豆腐。",
+                tag: "非遗素斋",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:30",
+                title: "【湄洲岛黄金沙滩（国家 5A）漫步】",
+                desc: "在 3000 米长平缓黄金细沙滩赤足漫步，坡缓水清浪小，长辈极度安全。",
+                tag: "5A金沙",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "湄洲平安海鲜家宴",
+                desc: "享用清蒸红鲟与莆田红菇卤面。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          ningde: {
+            tag: "大京黄金沙滩 · 高罗海景",
+            title: "Day 7：大京 3000 米天然黄金沙滩漫步 · 高罗海滩海景林荫休闲",
+            subTitle: "大京金沙滩踏浪 → 防风林荫漫步 → 高罗海景木栈道 → 霞浦本港海鲜排档",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【大京黄金沙滩 3000 米金沙漫步】",
+                desc: "沙滩背靠茂密防风林，沙质金黄细腻，坡缓浪轻，长辈漫步极为舒适。",
+                tag: "黄金沙滩",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "大京海边特色海鲜午餐",
+                desc: "品尝现蒸海白虾、椒盐九节虾与炒海竹蛏。",
+                tag: "海味午餐",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:30",
+                title: "【高罗海滩与滨海林荫木栈道】",
+                desc: "漫步高罗纯平木质步道，在绿荫下远眺海天一色。",
+                tag: "林荫海景",
+                color: "blue",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "霞浦本港生猛海鲜大餐",
+                desc: "品尝清蒸大黄鱼、霞浦剑蛏与海蛎煎。",
+                tag: "生猛海鲜",
+                color: "gold",
+              },
+            ],
+          },
+          fuzhou: {
+            tag: "8km下沙金沙 · 海螺塔留影",
+            title: "Day 7：8 公里宽阔平整下沙海滩漫步 · 海螺塔与海蚌厅礁石留影",
+            subTitle: "下沙度假村金色沙滩 → 海螺塔地标礁石 → 滨海无障碍栈道 → 漳港清蒸红鲟晚宴",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【下沙海滩 8 公里金色沙滩深度漫步】",
+                desc: "沙滩宽阔平整坚实，极利长辈行走踏沙，观赏浪花翻滚。",
+                tag: "宽阔金沙",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "长乐特色海鲜午餐",
+                desc: "品尝长乐鱼丸、肉燕与海鲜炒兴化粉。",
+                tag: "非遗小吃",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:30",
+                title: "【海螺塔 & 海蚌厅地标打卡】",
+                desc: "漫步至海边天然礁石上的标志性海螺塔建筑留影，海天一色。",
+                tag: "标志地貌",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "清蒸漳港红鲟海鲜大餐",
+                desc: "品尝鲜蒸红鲟、白灼海虾与漳港小海鲜。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          quanzhou: {
+            tag: "塘东沙堤 · 蟳埔簪花",
+            title: "Day 7：晋江塘东 2km 沙堤奇观 · 蟳埔非遗簪花围 · 西街天台",
+            subTitle: "塘东触角沙堤 → 蟳埔渔村蚵壳厝与簪花围 → 泉州西街有鲤天台 → 斯丹姜母鸭",
+            steps: [
+              {
+                time: "08:30 - 11:30",
+                title: "【晋江金井塘东沙堤（自然奇观）】",
+                desc: "趁中低潮位漫步亚洲唯一 2 公里天然向海延伸的触角沙嘴，体验双向波浪交汇。",
+                tag: "自然奇观",
+                color: "red",
+              },
+              {
+                time: "12:00 - 13:30",
+                title: "晋江海鲜特色午餐",
+                desc: "享用深沪鱼丸与地瓜粉团海蛎汤。",
+                tag: "非遗小吃",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:00",
+                title: "【蟳埔村簪花围与蚵壳厝】",
                 desc: "打造国家级非遗“簪花围”发髻与大裾衫，穿行于宋元生蚝壳“蚵壳厝”古巷留影。",
                 tag: "国家级非遗",
                 color: "red",
               },
               {
-                time: "16:00 - 18:00",
-                title: "【北宋洛阳桥（世界文化遗产）】",
-                desc: "漫步蔡襄主持建造的跨海大石桥，研学“筏形基础”与“种蛎固基”世界首创生态奇迹。",
-                tag: "世界文化遗产",
-                color: "red",
-              },
-              {
-                time: "18:30 - 21:00",
-                title: "泉州西街漫步 & 斯丹姜母鸭",
-                desc: "登有鲤天台俯瞰东西双塔夜景剪影，品尝斯丹姜母鸭(涂门街总店)与侯阿婆肉粽。",
+                time: "18:00 - 20:30",
+                title: "泉州西街漫步与斯丹姜母鸭",
+                desc: "登有鲤天台俯瞰双塔夜景，品尝斯丹姜母鸭(涂门街总店)与侯阿婆肉粽。",
                 tag: "市井古早味",
                 color: "gold",
               },
             ],
           },
           xiamen: {
-            tag: "黄厝日出 · 南普陀素斋",
-            title: "Day 8：黄厝海上日出 · 南普陀祈福素斋 · 演武大桥 · 八市海鲜",
-            subTitle:
-              "黄厝沙滩日出 → 南普陀寺祈福与素斋 → 环岛路演武大桥观景台 → 第八菜市场海鲜排档",
+            tag: "黄厝日出 · 南普陀祈福",
+            title: "Day 7：黄厝海滩海上日出 · 南普陀千年古刹素斋 · 演武大桥栈道",
+            subTitle: "黄厝海滩日出 → 南普陀寺祈福与素斋 → 演武大桥临海栈道 → 第八菜市场海鲜",
             steps: [
               {
                 time: "05:30 - 06:30",
-                title: "【黄厝海滩海上日出】",
-                desc: "在黄厝沙滩静候海平面喷薄而出的金色朝阳日出摄影大片。",
+                title: "【黄厝海滩海上日出摄影】",
+                desc: "在黄厝沙滩静候海平面喷薄而出的金色朝阳日出大片。",
                 tag: "海滨日出",
                 color: "gold",
               },
               {
                 time: "08:30 - 11:30",
                 title: "【南普陀寺 & 五老峰】（祈福研学 3 小时）",
-                desc: "参拜闽南千年古刹，领略大悲殿八角木榫卯，山门免费赠香祈福，品尝非遗素斋与手工素饼。",
+                desc: "参拜闽南千年古刹，大悲殿八角木榫卯，山门免费赠香祈福，品尝非遗素斋与手工素饼。",
                 tag: "千年古刹",
                 color: "red",
               },
               {
-                time: "13:30 - 16:30",
-                title: "【环岛路骑行 & 演武大桥观景台 & 沙坡尾】",
+                time: "12:00 - 13:30",
+                title: "南普陀非遗素斋午餐",
+                desc: "品尝半月沉江、南海金莲等经典非遗素斋。",
+                tag: "非遗素斋",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:00",
+                title: "【演武大桥临海观景台 & 沙坡尾】",
                 desc: "漫步世界最低平临海大桥栈道，探访沙坡尾避风坞老渔港文艺街区。",
-                tag: "海滨漫步",
+                tag: "临海栈道",
                 color: "blue",
               },
               {
-                time: "17:30 - 20:30",
-                title: "【第八菜市场（八市）海鲜大排档】",
+                time: "18:00 - 20:30",
+                title: "第八菜市场（八市）海鲜大排档",
                 desc: "品尝阿杰五香条(八市总店)、朱记手撕鸡与生猛本港海鲜大排档大餐。",
                 tag: "市井烟火",
                 color: "gold",
@@ -1994,9 +4250,651 @@
             ],
           },
         },
+        8: {
+          stage: "coastal",
+          dateStr: "9月12日 (周六 · 人文历史与海景栈道)",
+          beihai: {
+            tag: "百年骑楼 · 海丝首港",
+            title: "Day 8：北海老街中西骑楼研学 · 合浦海丝首港汉风古市集",
+            subTitle: "北海老街珠海路骑楼 → 李姨虾饼 → 合浦海丝首港汉代市集 → 合浦南珠鲍鱼宴",
+            steps: [
+              {
+                time: "09:00 - 11:30",
+                title: "【北海老街（珠海路）中西合璧骑楼群】",
+                desc: "漫步百年骑楼老街，研学近代通商口岸历史建筑与浮雕石刻。",
+                tag: "历史街区",
+                color: "red",
+              },
+              {
+                time: "12:00 - 13:30",
+                title: "老街特色小吃午餐",
+                desc: "品尝李姨虾饼、老街墨鱼丸与水品糖水。",
+                tag: "老街小吃",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:30",
+                title: "【合浦海丝首港汉代古市集全景研学】",
+                desc: "全景复原汉代海上丝绸之路始发港繁华市集，观赏汉风民俗展演。",
+                tag: "海丝首港",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "合浦南珠养生鲍鱼晚宴",
+                desc: "享用合浦南珠炖鲍鱼与北部湾深海海鲜大餐。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          fangchenggang: {
+            tag: "边境一号碑 · 怪石滩红岩",
+            title: "Day 8：东兴一号界碑研学与口岸风情 · 怪石滩平缓海蚀红岩",
+            subTitle: "大清国一号界碑 → 东兴中越风情街 → 怪石滩平缓木栈道 → 清蒸海鲜晚宴",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【大清国一号界碑 & 东兴口岸风情】",
+                desc: "探访清光绪十三年立大清国一号界碑，漫步口岸风情街体验边境风貌。",
+                tag: "边境历史",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "东兴中越特色风味午餐",
+                desc: "品尝越南鸡肉粉、春卷与热带水果拼盘。",
+                tag: "边境风味",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:30",
+                title: "【怪石滩平缓海蚀红岩栈道】",
+                desc: "游览怪石滩天然海蚀红岩地貌，全程平缓观海栈道免登山。",
+                tag: "地质奇观",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "防城港海鲜大排档晚宴",
+                desc: "享用清蒸深海海鱼与海鲜炒米粉。",
+                tag: "生猛海鲜",
+                color: "gold",
+              },
+            ],
+          },
+          qinzhou: {
+            tag: "茅尾海红树林 · 坭兴陶非遗",
+            title: "Day 8：茅尾海红树林纯平观景木栈道 · 钦州坭兴陶非遗研学",
+            subTitle: "茅尾海内海红树林栈道 → 钦州坭兴陶古陶厂拉胚 → 坭兴陶古法瓦煲海鲜晚宴",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【茅尾海红树林纯平观景木栈道】",
+                desc: "漫步中国最大内海红树林纯平木栈道，负氧离子充沛，无台阶极适老。",
+                tag: "红树林生态",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "茅尾海海鲜午宴",
+                desc: "品尝清蒸大蚝与海鲜煲。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:30 - 17:00",
+                title: "【钦州坭兴陶国家非遗拉胚体验】",
+                desc: "在千年古陶厂体验国家级非遗无釉窑变拉胚工艺，制作专属茶具。",
+                tag: "国家级非遗",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "坭兴陶古法瓦煲海鲜大餐",
+                desc: "享用瓦煲生焗大蚝与海鲜砂锅粥。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          zhangzhou: {
+            tag: "铜陵古镇顶街 · 风动石栈道",
+            title: "Day 8：铜陵古镇顶街明清古厝 · 风动石纯平栈道 · 南门湾海堤",
+            subTitle: "顶街明清老街巷 → 风动石无障碍木栈道 → 南门湾彩色海堤茶歇 → 东山海鲜宴",
+            steps: [
+              {
+                time: "09:00 - 11:30",
+                title: "【铜陵古镇顶街明清古街区】",
+                desc: "漫步明清古街巷顶街古厝，探寻古代海岛民居营造技艺。",
+                tag: "明清古街",
+                color: "red",
+              },
+              {
+                time: "12:00 - 13:30",
+                title: "铜陵地道小吃午餐",
+                desc: "品尝肖爷烧腱灵、地瓜粉圆与猫仔粥。",
+                tag: "传统小吃",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 16:30",
+                title: "【风动石风景区纯平观海栈道】",
+                desc: "沿着平缓无障碍海滨木栈道远眺天下第一奇石风动石与铜山古城墙。",
+                tag: "奇石奇观",
+                color: "red",
+              },
+              {
+                time: "17:00 - 18:30",
+                title: "【南门湾彩色民居海堤品茗】",
+                desc: "在彩色海堤茶室品饮东山白芽奇兰茶，静候晚霞染红海湾。",
+                tag: "海滨慢调",
+                color: "blue",
+              },
+              {
+                time: "18:30 - 20:30",
+                title: "东山海鲜盛宴",
+                desc: "享用清蒸石斑鱼与鲜灼海胆饭。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          pingtan: {
+            tag: "北港石头厝 · 海坛古城",
+            title: "Day 8：北港村花岗岩石头厝研学 · 海坛古城品茗 · 本港深海鱼宴",
+            subTitle: "北港文创石屋村落 → 海坛古城平缓古街 → 品饮白芽奇兰茶 → 本港深海鱼晚宴",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【北港村花岗岩防风石屋村落】",
+                desc: "探访海岛防风花岗岩石屋建筑群，研学“石头会唱歌”非遗文化。",
+                tag: "海岛石屋",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "北港村海景午餐",
+                desc: "享用平潭茹粉结与现捞小海鲜。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:00",
+                title: "【海坛古城漫步与白芽奇兰茶歇】",
+                desc: "在海坛古城平缓青石板街道漫步，古茶楼品饮白芽奇兰清茶。",
+                tag: "古城漫步",
+                color: "blue",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "平潭深海鱼宴大餐",
+                desc: "品尝清蒸深海海鱼与平潭特色焖面。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          putian: {
+            tag: "鹅尾神石园 · 妈祖源流博览",
+            title: "Day 8：鹅尾神石园千年海蚀纯平栈道 · 妈祖源流博览馆研学",
+            subTitle: "鹅尾神石园平缓木栈道 → 飞戟洞海蚀奇观 → 妈祖文化博览馆 → 莆田红菇卤面",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【鹅尾神石园千年海蚀地质奇观】",
+                desc: "漫步鹅尾神石园纯平木质栈道，观赏飞戟洞、海龟朝圣等奇岩怪石。",
+                tag: "地质奇观",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "湄洲特色海鲜午餐",
+                desc: "享用现蒸湄洲文蛤与海蛎煎。",
+                tag: "海鲜午餐",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:00",
+                title: "【妈祖源流博物馆研学】",
+                desc: "全景了解海上丝绸之路妈祖庇护史与世界非遗妈祖信俗。",
+                tag: "文化博览",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "莆田红菇海鲜卤面盛宴",
+                desc: "品尝鲜美红菇海鲜卤面、焖豆腐与紫菜焖饭。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          ningde: {
+            tag: "三沙光影小镇 · 东壁日落",
+            title: "Day 8：三沙光影小镇专车观景 · 东壁村纯平悬空栈道赏最美滩涂日落",
+            subTitle: "光影小镇免登山观景台 → 东壁悬空木栈道 → 夕阳染红万亩滩涂 → 鲜美霞浦剑蛏宴",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【三沙光影小镇专车观景台】",
+                desc: "专车直达观景平台免登山，远眺万亩紫菜养殖排架与碧海。",
+                tag: "滩涂光影",
+                color: "blue",
+              },
+              {
+                time: "12:30 - 14:00",
+                title: "三沙特色海鲜午餐",
+                desc: "品尝三沙鱼丸、闽东海鲜鼎与海蛎煎。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "15:00 - 18:30",
+                title: "【东壁日落纯平悬空观海木栈道】",
+                desc: "漫步依山傍海纯平木栈道，守候夕阳金光染红万亩滩涂的世界级盛景。",
+                tag: "最美日落",
+                color: "red",
+              },
+              {
+                time: "19:00 - 21:00",
+                title: "鲜美霞浦剑蛏海鲜晚宴",
+                desc: "享用白灼剑蛏、清蒸大黄鱼与海鲜酸辣汤。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          fuzhou: {
+            tag: "滨海防护绿道 · 东湖茉莉茶",
+            title: "Day 8：滨海新城沿湖森林步道 · 东湖数字小镇品饮福州茉莉花茶",
+            subTitle: "滨海防护林纯平绿道 → 东湖畔茶室茉莉茶歇 → 长乐特色海鲜焖面 → 佰翔海景夜色",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【滨海新城沿湖森林步道漫步】",
+                desc: "漫步纯平无障碍海滨绿道，林荫密布，负氧离子充沛。",
+                tag: "滨海绿道",
+                color: "blue",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "长乐特色海鲜午餐",
+                desc: "品尝鲜蒸海鱼与长乐鱼丸汤。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:00",
+                title: "【东湖数字小镇湖畔茶室品茗】",
+                desc: "在湖畔茶室品饮地道福州茉莉花茶，享受长辈慢调下午茶时光。",
+                tag: "茉莉花茶",
+                color: "gold",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "长乐地道海鲜焖面晚宴",
+                desc: "享用浓郁海鲜焖面与清蒸大红鲟。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+          quanzhou: {
+            tag: "北宋洛阳桥 · 海交馆研学",
+            title: "Day 8：北宋跨海洛阳桥（种蛎固基）· 泉州海外交通史博物馆",
+            subTitle: "北宋洛阳桥蔡襄筏形基础 → 海交馆宋代海船研学 → 涂门街清净寺 → 闽南古早味",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【北宋洛阳桥（世界文化遗产）】",
+                desc: "漫步蔡襄主持建造的跨海大石桥，研学“筏形基础”与“种蛎固基”世界首创生态奇迹。",
+                tag: "世界文化遗产",
+                color: "red",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "洛阳桥畔特色午餐",
+                desc: "品尝现炸海蛎煎与桥头传统面线糊。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:00",
+                title: "【泉州海外交通史博物馆】",
+                desc: "深度瞻礼宋代古沉船残骸、宗教石刻与宋元海上丝绸之路贸易文物。",
+                tag: "文博殿堂",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "涂门街传统闽南家宴",
+                desc: "品尝崇武鱼卷汤、润饼菜与安溪铁观音。",
+                tag: "传统家宴",
+                color: "gold",
+              },
+            ],
+          },
+          xiamen: {
+            tag: "环岛路漫步 · 万石植物园",
+            title: "Day 8：环岛路海边纯平栈道 · 万石植物园热带雨林水雾仙境",
+            subTitle: "环岛路白城海边木栈道 → 万石植物园热带雨林水雾 → 临家闽南菜海鲜宴",
+            steps: [
+              {
+                time: "09:00 - 12:00",
+                title: "【环岛路海边纯平木栈道漫步】",
+                desc: "漫步环岛路木栈道，欣赏一国两制海滩与台湾海峡海景。",
+                tag: "海滨漫步",
+                color: "blue",
+              },
+              {
+                time: "12:30 - 13:30",
+                title: "环岛路特色海鲜午餐",
+                desc: "品尝厦门沙茶面与海鲜馅饼。",
+                tag: "特色午餐",
+                color: "gold",
+              },
+              {
+                time: "14:00 - 17:00",
+                title: "【万石植物园热带雨林水雾区】",
+                desc: "电瓶车直达热带雨林区，漫步于定时喷薄的仙境水雾中，空气清新怡人。",
+                tag: "雨林仙境",
+                color: "red",
+              },
+              {
+                time: "18:00 - 20:30",
+                title: "临家闽南菜高端海鲜晚宴",
+                desc: "品尝原汁土笋冻、酱油水蒸午鱼与手工芋包。",
+                tag: "特色美食",
+                color: "gold",
+              },
+            ],
+          },
+        },
         9: {
-          stage: "fujian",
-          dateStr: "9月13日 (周日 · 结营闭环)",
+          stage: "coastal",
+          dateStr: "9月13日 (周日 · 直达广州南站闭环)",
+          beihai: {
+            tag: "银滩晨韵 · D3714 广州南",
+            title: "Day 9：银滩晨间漫步 · 结营午宴 · D3714 直达广州南站圆满闭环",
+            subTitle:
+              "银滩晨景 → 结营午宴 → 14:15 乘 D3714 直达广州南站 (18:35 抵) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:30 - 11:00",
+                title: "银滩晨韵漫步与从容退房",
+                desc: "酒店享用海景早餐，海滩漫步后从容办理退房手续。",
+                tag: "从容退房",
+                color: "blue",
+              },
+              {
+                time: "11:30 - 13:00",
+                title: "结营海鲜午宴",
+                desc: "享用清蒸北部湾海鲜与疍家特色佳肴。",
+                tag: "结营盛宴",
+                color: "gold",
+              },
+              {
+                time: "14:15 - 18:35",
+                title: "北海站乘直达动车 D3714",
+                desc: "搭乘 D3714 直达动车直抵【广州南站】（4小时20分，二等座¥201.50）。",
+                tag: "直达动车",
+                color: "green",
+              },
+              {
+                time: "18:50 - 19:05",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
+          fangchenggang: {
+            tag: "海景晨韵 · D3714 广州南",
+            title: "Day 9：晨间海景散步 · 结营午宴 · D3714 直达广州南站圆满闭环",
+            subTitle:
+              "晨间散步 → 结营午宴 → 13:50 乘 D3714 直达广州南站 (18:35 抵) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:30 - 11:00",
+                title: "晨间海景散步与从容退房",
+                desc: "酒店享用早餐，整理行李从容办理退房手续。",
+                tag: "从容退房",
+                color: "blue",
+              },
+              {
+                time: "11:30 - 12:45",
+                title: "结营海鲜午宴",
+                desc: "享用富硒海鲜与防城港特色佳肴。",
+                tag: "结营盛宴",
+                color: "gold",
+              },
+              {
+                time: "13:50 - 18:35",
+                title: "防城港北站乘直达动车 D3714",
+                desc: "搭乘 D3714 直达动车直抵【广州南站】（4小时45分，二等座¥228.00）。",
+                tag: "直达动车",
+                color: "green",
+              },
+              {
+                time: "18:50 - 19:05",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
+          qinzhou: {
+            tag: "大蚝名邑 · D3714 广州南",
+            title: "Day 9：晨间悠闲散步 · 结营午宴 · D3714 直达广州南站圆满闭环",
+            subTitle:
+              "晨间休闲 → 结营午宴 → 14:50 乘 D3714 直达广州南站 (18:35 抵) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:30 - 11:30",
+                title: "晨间休闲与从容退房",
+                desc: "酒店享用早餐，从容办理退房手续与清点行李。",
+                tag: "从容退房",
+                color: "blue",
+              },
+              {
+                time: "12:00 - 13:30",
+                title: "结营大蚝午宴",
+                desc: "享用大蚝与钦州传统地道佳肴。",
+                tag: "结营盛宴",
+                color: "gold",
+              },
+              {
+                time: "14:50 - 18:35",
+                title: "钦州东站乘直达动车 D3714",
+                desc: "搭乘 D3714 直达动车直抵【广州南站】（3小时45分，二等座¥178.50）。",
+                tag: "直达动车",
+                color: "green",
+              },
+              {
+                time: "18:50 - 19:05",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
+          zhangzhou: {
+            tag: "海景晨韵 · G1609 广州南",
+            title: "Day 9：金銮湾晨韵 · 结营午宴 · G1609/G1625 直达广州南站圆满闭环",
+            subTitle:
+              "海景散步 → 结营午宴 → 14:32 乘 G1609 直达广州南站 (18:18 抵) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:30 - 11:30",
+                title: "金銮湾晨韵散步与从容退房",
+                desc: "海景早餐后漫步沙滩，从容办理退房手续。",
+                tag: "从容退房",
+                color: "blue",
+              },
+              {
+                time: "12:00 - 13:30",
+                title: "结营海鲜午宴",
+                desc: "享用东山小管与闽南海鲜家宴。",
+                tag: "结营盛宴",
+                color: "gold",
+              },
+              {
+                time: "14:32 - 18:18",
+                title: "云霄站乘直达高铁 G1609",
+                desc: "专车至云霄站搭乘 G1609 高铁直抵【广州南站】（3小时46分，二等座¥204.50）。",
+                tag: "直达高铁",
+                color: "green",
+              },
+              {
+                time: "18:35 - 18:50",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
+          pingtan: {
+            tag: "白金海岸 · G1625 广州南",
+            title: "Day 9：晨韵散步 · 结营午宴 · G1625 经福州南直达广州南站圆满闭环",
+            subTitle:
+              "晨韵散步 → 结营午宴 → 平潭乘动车经福州南乘 G1625 直达广州南站 (19:35 抵) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:30 - 11:00",
+                title: "晨韵散步与从容退房",
+                desc: "享用海景早餐，从容办理退房手续。",
+                tag: "从容退房",
+                color: "blue",
+              },
+              {
+                time: "11:30 - 13:00",
+                title: "结营海鲜午宴",
+                desc: "享用平潭时来运转与生猛海鲜大餐。",
+                tag: "结营盛宴",
+                color: "gold",
+              },
+              {
+                time: "13:30 - 19:35",
+                title: "平潭站乘动车经福州南乘 G1625",
+                desc: "搭乘动车联运至福州南换乘 G1625 直抵【广州南站】（19:35 抵）。",
+                tag: "直达高铁",
+                color: "green",
+              },
+              {
+                time: "19:50 - 20:05",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
+          putian: {
+            tag: "黄金沙滩 · G1625 广州南",
+            title: "Day 9：晨间踏沙 · 从容离岛 · G1625 直达广州南站圆满闭环",
+            subTitle:
+              "晨间踏沙 → 轮渡离岛 → 结营午宴 → 14:08 乘 G1625 直达广州南站 (19:35 抵) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:30 - 11:00",
+                title: "晨间踏沙与平稳退房离岛",
+                desc: "黄金沙滩晨间散步，从容退房乘 15 分钟平稳客船离岛至文甲码头。",
+                tag: "从容离岛",
+                color: "blue",
+              },
+              {
+                time: "11:30 - 13:00",
+                title: "结营海鲜午宴",
+                desc: "品尝莆田红菇卤面与南日鲍鱼宴。",
+                tag: "结营盛宴",
+                color: "gold",
+              },
+              {
+                time: "14:08 - 19:35",
+                title: "莆田站乘直达高铁 G1625",
+                desc: "莆田站搭乘 G1625 直达动车直抵【广州南站】（5小时27分，二等座¥278.00）。",
+                tag: "直达高铁",
+                color: "green",
+              },
+              {
+                time: "19:50 - 20:05",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
+          ningde: {
+            tag: "晨曦海景 · G1609 广州南",
+            title: "Day 9：晨间早餐 · G1609 霞浦站直达广州南站圆满闭环",
+            subTitle:
+              "晨间早餐 → 11:05 霞浦站乘 G1609 直达高铁 (18:18 抵广州南站) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:00 - 10:00",
+                title: "晨间早餐与从容退房",
+                desc: "酒店享用早餐，专车前往霞浦高铁站。",
+                tag: "从容退房",
+                color: "blue",
+              },
+              {
+                time: "11:05 - 18:18",
+                title: "霞浦站乘直达高铁 G1609 直达广州南",
+                desc: "霞浦站搭乘 G1609 直达动车直抵【广州南站】（7小时13分，二等座¥386.00）。",
+                tag: "直达高铁",
+                color: "green",
+              },
+              {
+                time: "18:35 - 18:50",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
+          fuzhou: {
+            tag: "海瀛晨韵 · G1625 广州南",
+            title: "Day 9：海瀛晨韵 · 结营午宴 · G1625 直达广州南站圆满闭环",
+            subTitle:
+              "晨韵散步 → 结营午宴 → 13:28 乘 G1625 直达广州南站 (19:35 抵) → 地铁 2 号线直达海珠区",
+            steps: [
+              {
+                time: "08:30 - 11:00",
+                title: "海瀛晨韵散步与从容退房",
+                desc: "漫步佰翔私家海景园林，从容退房。",
+                tag: "从容退房",
+                color: "blue",
+              },
+              {
+                time: "11:30 - 12:45",
+                title: "结营海鲜午宴",
+                desc: "享用国宴海蚌与长乐传统家宴。",
+                tag: "结营盛宴",
+                color: "gold",
+              },
+              {
+                time: "13:28 - 19:35",
+                title: "福州南站乘直达高铁 G1625",
+                desc: "福州南站搭乘 G1625 直达动车直抵【广州南站】（6小时07分，二等座¥328.00）。",
+                tag: "直达高铁",
+                color: "green",
+              },
+              {
+                time: "19:50 - 20:05",
+                title: "广州地铁 2 号线直达海珠区",
+                desc: "广州南站出站无缝换乘地铁 2 号线，仅需 12~18 分钟直达海珠区南洲/昌岗，圆满闭环！",
+                tag: "归家闭环",
+                color: "green",
+              },
+            ],
+          },
           quanzhou: {
             tag: "开元寺双塔 · G1625 直达南站",
             title: "Day 9：开元寺双塔 · 结营家宴 · G1625 动车直达广州南站闭环",
@@ -2072,102 +4970,39 @@
         },
       };
 
-      // 2. PAGE NAVIGATION FUNCTION
-      function showPage(pageId) {
-        currentActivePage = pageId;
-        document.querySelectorAll(".page-view").forEach((p) => p.classList.add("hidden"));
-        const target = document.getElementById("page-" + pageId);
-        if (target) {
-          target.classList.remove("hidden");
-          // Trigger Cascade Re-animation
-          target
-            .querySelectorAll(".stagger-1, .stagger-2, .stagger-3, .stagger-4")
-            .forEach((el) => {
-              el.style.animation = "none";
-              void el.offsetHeight; /* trigger reflow */
-              el.style.animation = "";
-            });
-        }
-
-        // Update Desktop Tabs
-        document.querySelectorAll(".page-tab-btn").forEach((btn) => {
-          btn.classList.remove("nav-tab-active");
-          btn.classList.add("bg-white", "text-slate-700");
-        });
-        const activeDesktopBtn = document.getElementById("tab-btn-" + pageId);
-        if (activeDesktopBtn) {
-          activeDesktopBtn.classList.add("nav-tab-active");
-          activeDesktopBtn.classList.remove("bg-white", "text-slate-700");
-        }
-
-        // Update Mobile Tabs
-        document.querySelectorAll(".mob-page-tab").forEach((btn) => {
-          btn.classList.remove("nav-tab-active");
-          btn.classList.add("bg-white", "text-slate-700");
-        });
-        const activeMobBtn = document.getElementById("mob-tab-" + pageId);
-        if (activeMobBtn) {
-          activeMobBtn.classList.add("nav-tab-active");
-          activeMobBtn.classList.remove("bg-white", "text-slate-700");
-        }
-
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      // 3. FUJIAN BRANCH TOGGLE FUNCTION
-      function setFujianOption(option) {
-        currentFujianOption = option;
-        if (option === "quanzhou") {
-          document.getElementById("fj-btn-quanzhou").classList.add("branch-tab-active");
-          document
-            .getElementById("fj-btn-quanzhou")
-            .classList.remove("bg-white/90", "text-slate-800");
-          document.getElementById("fj-btn-xiamen").classList.remove("branch-tab-active");
-          document.getElementById("fj-btn-xiamen").classList.add("bg-white/90", "text-slate-800");
-          document.getElementById("panel-quanzhou").classList.remove("hidden");
-          document.getElementById("panel-xiamen").classList.add("hidden");
-        } else {
-          document.getElementById("fj-btn-xiamen").classList.add("branch-tab-active");
-          document
-            .getElementById("fj-btn-xiamen")
-            .classList.remove("bg-white/90", "text-slate-800");
-          document.getElementById("fj-btn-quanzhou").classList.remove("branch-tab-active");
-          document.getElementById("fj-btn-quanzhou").classList.add("bg-white/90", "text-slate-800");
-          document.getElementById("panel-xiamen").classList.remove("hidden");
-          document.getElementById("panel-quanzhou").classList.add("hidden");
-        }
-
-        // Re-render Timeline if in Day 7-9
-        renderTimelineDay(currentTimelineDay);
-      }
-
-      // 4. TIMELINE FILTER FUNCTION
+      // =======================================================================
+      // 4. TIMELINE FILTER & RENDERING FUNCTIONS
+      // =======================================================================
       function filterTimeline(filter) {
         currentTimelineFilter = filter;
-        ["all", "beijing", "fujian"].forEach((f) => {
+        ["all", "beijing", "coastal"].forEach((f) => {
           const btn = document.getElementById("filter-timeline-" + f);
-          if (f === filter) {
-            btn.classList.add("nav-tab-active");
-            btn.classList.remove("bg-white", "text-slate-700");
-          } else {
-            btn.classList.remove("nav-tab-active");
-            btn.classList.add("bg-white", "text-slate-700");
+          if (btn) {
+            if (f === filter) {
+              btn.classList.add("nav-tab-active");
+              btn.classList.remove("bg-white", "text-slate-700");
+            } else {
+              btn.classList.remove("nav-tab-active");
+              btn.classList.add("bg-white", "text-slate-700");
+            }
           }
         });
         renderTimelineDayTabs();
       }
 
-      // 5. RENDER TIMELINE DAY TABS
       function renderTimelineDayTabs() {
         const container = document.getElementById("day-selector-container");
+        if (!container) return;
         let html = "";
         for (let i = 1; i <= 9; i++) {
-          if (currentTimelineFilter === "beijing" && i > 6) continue;
-          if (currentTimelineFilter === "fujian" && i <= 6) continue;
+          if (currentTimelineFilter === "beijing" && i > 5) continue;
+          if (currentTimelineFilter === "coastal" && i < 6) continue;
 
           const isActive = i === currentTimelineDay;
           const dayInfo = masterSchedule[i];
-          const isFujian = i >= 7;
+          const isCoastal = i >= 6;
+
+          let label = isCoastal ? (i === 6 ? "汇合" : i === 9 ? "归穗" : "海滨") : "北京";
 
           html += `
             <button
@@ -2179,7 +5014,7 @@
                   : "bg-white text-slate-700 hover:bg-amber-50 border-slate-200"
               }"
             >
-              Day ${i} · ${isFujian ? "闽海" : "北京"}<br />
+              Day ${i} · ${label}<br />
               <span class="text-[10px] font-normal opacity-85">${dayInfo.dateStr.split(" ")[0]}</span>
             </button>
           `;
@@ -2187,48 +5022,97 @@
         container.innerHTML = html;
       }
 
-      // 6. SELECT & RENDER SPECIFIC TIMELINE DAY
       function selectTimelineDay(dayNum) {
         currentTimelineDay = dayNum;
         renderTimelineDayTabs();
         renderTimelineDay(dayNum);
       }
 
+      function setTimelineCity(cityId) {
+        currentTimelineCity = cityId;
+        renderTimelineDay(currentTimelineDay);
+      }
+
       function renderTimelineDay(dayNum) {
         const container = document.getElementById("active-day-content");
+        if (!container) return;
         let d = masterSchedule[dayNum];
+        if (!d) return;
         let title, subTitle, steps, tag;
+        const isCoastal = dayNum >= 6;
 
-        if (dayNum <= 6) {
+        if (!isCoastal) {
           title = d.title;
           subTitle = d.subTitle;
           steps = d.steps;
           tag = d.tag;
         } else {
-          const branchData = d[currentFujianOption];
-          title = branchData.title;
-          subTitle = branchData.subTitle;
-          steps = branchData.steps;
-          tag = branchData.tag;
+          const cityData = d[currentTimelineCity] || d["beihai"] || d["quanzhou"];
+          title = cityData.title;
+          subTitle = cityData.subTitle;
+          steps = cityData.steps;
+          tag = cityData.tag;
         }
 
-        const isFujian = dayNum >= 7;
+        const cityNames = {
+          beihai: "广西北海 (银滩)",
+          fangchenggang: "广西防城港 (白浪滩)",
+          qinzhou: "广西钦州 (三娘湾)",
+          zhangzhou: "漳州东山 (金銮湾)",
+          pingtan: "福建平潭 (坛南湾)",
+          putian: "莆田湄洲 (黄金沙滩)",
+          ningde: "宁德霞浦 (大京沙滩)",
+          fuzhou: "福州长乐 (下沙沙滩)",
+          quanzhou: "泉州惠安 (崇武沙滩)",
+          xiamen: "厦门鼓浪 (黄厝海滩)",
+        };
+
+        let citySelectorHtml = "";
+        if (isCoastal) {
+          citySelectorHtml = `
+            <div class="p-3 bg-sky-50 rounded-xl border border-sky-200 flex flex-wrap items-center justify-between gap-2 mb-4">
+              <span class="text-xs font-bold text-sky-900 flex items-center gap-1">
+                <span>🌊</span> 查看 10 大海滨城市 Day ${dayNum} 专属行事历：
+              </span>
+              <div class="flex flex-wrap gap-1.5 text-xs">
+                ${Object.keys(cityNames)
+                  .map(
+                    (k) => `
+                  <button
+                    onclick="setTimelineCity('${k}')"
+                    class="px-2 py-1 rounded-lg text-xs transition-all ${
+                      currentTimelineCity === k
+                        ? "bg-sky-600 text-white font-bold shadow-xs"
+                        : "bg-white text-slate-700 hover:bg-sky-100 border border-slate-200"
+                    }"
+                  >
+                    ${cityNames[k].split(" ")[1] ? cityNames[k].split(" ")[0] : cityNames[k]}
+                  </button>
+                `
+                  )
+                  .join("")}
+              </div>
+            </div>
+          `;
+        }
 
         let html = `
           <div class="space-y-6">
-            <!-- TIMELINE DAY HEADER (CLEAN & ACCENTED) -->
+            ${citySelectorHtml}
+
+            <!-- TIMELINE DAY HEADER -->
             <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-amber-200 pb-3 gap-2">
               <div>
                 <div class="flex items-center gap-2">
-                  <span class="${isFujian ? "badge-blue" : "badge-red"} px-2.5 py-0.5 rounded text-xs font-bold">
-                    ${isFujian ? "第二赛段 · " + (currentFujianOption === "quanzhou" ? "泉州海丝线" : "厦门琴岛线") : "第一赛段 · 北京帝都文脉"}
+                  <span class="${isCoastal ? "badge-blue" : "badge-red"} px-2.5 py-0.5 rounded text-xs font-bold">
+                    ${isCoastal ? "第二赛段 · " + (cityNames[currentTimelineCity] || "纯省外海滨") : "第一赛段 · 北京帝都文脉"}
                   </span>
                   <span class="badge-gold px-2 py-0.5 rounded text-[10px] font-semibold">${tag}</span>
                 </div>
                 <h3 class="text-base sm:text-xl font-bold text-slate-900 font-serif-sc mt-1.5">${title}</h3>
                 <p class="text-xs text-slate-500 mt-0.5">${subTitle}</p>
               </div>
-              <span class="text-xs font-mono text-amber-900 bg-amber-100/70 px-3 py-1 rounded-lg border border-amber-300 self-start sm:self-auto font-bold">
+              <span class="text-xs font-mono text-amber-900 bg-amber-100/70 px-3 py-1 rounded-lg border border-amber-300 self-start sm:self-auto font-bold whitespace-nowrap">
                 Day ${dayNum} of 9 · ${d.dateStr}
               </span>
             </div>
@@ -2263,7 +5147,9 @@
         container.innerHTML = html;
       }
 
-      // INITIALIZATION
+      // =======================================================================
+      // 5. DOM INITIALIZATION
+      // =======================================================================
       document.addEventListener("DOMContentLoaded", () => {
         renderTimelineDayTabs();
         renderTimelineDay(1);

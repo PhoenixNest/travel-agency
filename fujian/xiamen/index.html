@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -397,7 +397,7 @@
             id="btn-day-1"
             class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap tab-active border text-left sm:text-center"
           >
-            Day 1 · 9.11 (五)<br /><span class="text-[10px] font-normal opacity-90"
+            Day 1 · 9.10 (四)<br /><span class="text-[10px] font-normal opacity-90"
               >直飞鹭岛 · 鼓浪琴岛漫步 · 海悦山庄</span
             >
           </button>
@@ -406,7 +406,7 @@
             id="btn-day-2"
             class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-teal-50 border border-gray-200 text-left sm:text-center"
           >
-            Day 2 · 9.12 (六)<br /><span class="text-[10px] font-normal opacity-80"
+            Day 2 · 9.11 (五)<br /><span class="text-[10px] font-normal opacity-80"
               >黄厝日出 · 南普陀祈福 · 八市海鲜</span
             >
           </button>
@@ -415,7 +415,16 @@
             id="btn-day-3"
             class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-teal-50 border border-gray-200 text-left sm:text-center"
           >
-            Day 3 · 9.13 (日)<br /><span class="text-[10px] font-normal text-emerald-700 font-bold"
+            Day 3 · 9.12 (六)<br /><span class="text-[10px] font-normal opacity-80"
+              >环岛绿道 · 植物园仙境 · 中山路</span
+            >
+          </button>
+          <button
+            onclick="switchDay(4)"
+            id="btn-day-4"
+            class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-teal-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 4 · 9.13 (日)<br /><span class="text-[10px] font-normal text-emerald-700 font-bold"
               >集美学村 · 嘉庚鳌园 · 高铁返穗</span
             >
           </button>
@@ -903,56 +912,43 @@
       // 1. DATA: Day by Day Itinerary Data
       const dayData = {
         1: {
-          title: "Day 1：9月11日（周五）· 飞抵鹭岛 · 世遗琴岛漫步 · 山海园林",
-          subtitle: "北京直飞高崎机场 → 邮轮中心厦鼓码头 → 鼓浪屿日光岩与菽庄花园 → 入住海悦山庄",
+          title: "Day 1：9月10日（周四）· 双端启程汇合 · 鼓浪屿万国建筑博览",
+          subtitle:
+            "北京直飞高崎 + 广州高铁直达 → 邮轮中心登岛 → 鼓浪屿日光岩与菽庄花园 → 入住海景房",
           steps: [
             {
               time: "06:25 - 09:25",
-              title: "大交通直飞厦门高崎",
-              desc: "北京首都机场乘国航 CA1831 航班直飞厦门高崎国际机场 XMN（或 07:10 大兴机场乘厦航 MF8168 直飞，09:55 落地）。",
-              tag: "民航早班",
+              title: "用户大交通直飞高崎",
+              desc: "北京首都机场乘国航 CA1831 航班直飞厦门高崎国际机场 XMN（或厦航 MF8168），专车接驳赴邮轮中心码头。",
+              tag: "用户直飞",
               color: "blue",
             },
             {
-              time: "10:15 - 10:55",
-              title: "专车赴邮轮中心码头登岛",
-              desc: "机场专车直达【邮轮中心厦鼓码头】，搭乘 11:10 渡轮（20分钟）直达鼓浪屿【三丘田码头】。",
-              tag: "渡轮接驳",
-              color: "teal",
+              time: "08:30 - 13:30",
+              title: "长辈广州高铁直达",
+              desc: "广州南站搭乘直达动车 G1609（08:30-13:30 直达厦门北站，二等座¥254.50），专车接站赴码头汇合。",
+              tag: "长辈高铁",
+              color: "blue",
             },
             {
-              time: "11:30 - 13:00",
-              title: "午餐 · 龙头路特色小吃",
-              desc: "品尝沈家闽南肠粉、叶氏麻糍与林氏鱼丸。",
-              tag: "老字号美食",
-              color: "gold",
-            },
-            {
-              time: "13:00 - 17:00",
-              title: "【鼓浪屿世界文化遗产深度研学】（游玩 4 小时）",
-              desc: "漫步万国建筑博览街区 → 八卦楼（管风琴博物馆） → 登临【日光岩】顶峰 → 探访【菽庄花园】（十二洞天与钢琴博物馆） → 港仔后沙滩踏浪。",
+              time: "14:00 - 17:30",
+              title: "【鼓浪屿世界文化遗产深度研学】（游玩 3.5 小时）",
+              desc: "搭乘渡轮登岛，漫步万国建筑博览街区，登临【日光岩】顶峰俯瞰全岛，探访【菽庄花园】（十二洞天与钢琴博物馆），港仔后沙滩踏浪。",
               tag: "世界文化遗产",
               color: "red",
             },
             {
-              time: "17:20 - 18:00",
-              title: "乘船离岛并入住海景酒店",
-              desc: "三丘田码头乘船返回本岛，专车入住【桔子酒店(厦门国际会展中心高雄路店) · 环岛路海景房 (¥259~299/晚)】（50万㎡私家皇家园林）。",
-              tag: "高端入驻",
-              color: "blue",
-            },
-            {
-              time: "18:30 - 20:30",
-              title: "临家闽南菜海景晚宴",
-              desc: "享用正宗翔安传统姜母鸭、原汁土笋冻与鲜美黄鱼酱油水。",
+              time: "18:00 - 20:30",
+              title: "入住酒店与临家闽南菜晚宴",
+              desc: "专车入住【桔子酒店(厦门国际会展中心高雄路店) · 环岛路海景房 (¥259~299/晚)】，品尝正宗翔安传统姜母鸭与鲜美黄鱼酱油水。",
               tag: "生猛海鲜",
               color: "gold",
             },
           ],
         },
         2: {
-          title: "Day 2：9月12日（周六）· 黄金海岸 · 禅意古刹 · 八市市井烟火",
-          subtitle: "黄厝沙滩日出 → 南普陀寺祈福 → 环岛路骑行与演武大桥 → 第八菜市场海鲜盛宴",
+          title: "Day 2：9月11日（周五）· 黄金海岸 · 禅意古刹 · 八市市井烟火",
+          subtitle: "黄厝沙滩日出 → 南普陀寺祈福 → 演武大桥观景台与沙坡尾 → 第八菜市场海鲜盛宴",
           steps: [
             {
               time: "05:30 - 06:30",
@@ -962,28 +958,28 @@
               color: "gold",
             },
             {
-              time: "08:30 - 11:00",
-              title: "【南普陀寺 & 五老峰】（祈福 2.5 小时）",
-              desc: "参拜闽南千年古刹，领略大悲殿八角木榫卯斗拱，登后山观摩万石摩崖石刻，品尝现烤南普陀素饼。",
+              time: "08:30 - 11:30",
+              title: "【南普陀寺 & 五老峰】（祈福 3 小时）",
+              desc: "参拜闽南千年古刹，领略大悲殿八角木榫卯斗拱，登后山观摩万石摩崖石刻，品尝现烤南普陀素饼与非遗素斋。",
               tag: "千年古刹",
               color: "red",
             },
             {
-              time: "11:30 - 13:00",
+              time: "12:00 - 13:30",
               title: "午餐 · 南普陀素菜馆",
               desc: "享用非遗名菜“半月沉江”与香泥藏珍。",
               tag: "非遗素斋",
               color: "teal",
             },
             {
-              time: "13:30 - 16:30",
-              title: "【环岛路骑行 & 演武大桥观景台 & 沙坡尾】（游玩 3 小时）",
-              desc: "漫步演武大桥临海观景台，探访沙坡尾避风坞老渔港与艺术文创街区。",
+              time: "14:00 - 17:00",
+              title: "【演武大桥临海观景台 & 沙坡尾】（游玩 3 小时）",
+              desc: "漫步世界最低平临海大桥栈道，探访沙坡尾避风坞老渔港文艺街区。",
               tag: "海滨漫步",
               color: "blue",
             },
             {
-              time: "17:30 - 20:30",
+              time: "18:00 - 20:30",
               title: "第八菜市场（八市）海鲜大排档",
               desc: "品尝阿杰五香、现开生蚝、椒盐皮皮虾与白灼本港管鱿，感受最地道厦门市井烟火。",
               tag: "市井烟火",
@@ -992,44 +988,71 @@
           ],
         },
         3: {
-          title: "Day 3：9月13日（周日）· 华侨风骨 · 直达动车 · 返抵广州海珠",
+          title: "Day 3：9月12日（周六）· 环岛绿道 · 植物园仙境与中山路老街",
+          subtitle: "环岛路海边木栈道 → 万石植物园热带雨林水雾 → 中山路步行街与烧肉粽",
+          steps: [
+            {
+              time: "09:00 - 12:00",
+              title: "【环岛路纯平海边木栈道】（慢步 3 小时）",
+              desc: "漫步纯平无障碍海滨木栈道，远眺海天一色，享受海风轻拂。",
+              tag: "海滨漫步",
+              color: "blue",
+            },
+            {
+              time: "12:30 - 13:30",
+              title: "特色海鲜午餐",
+              desc: "品尝同安封肉与本港海鲜砂锅粥。",
+              tag: "在地午餐",
+              color: "gold",
+            },
+            {
+              time: "14:00 - 17:00",
+              title: "【万石植物园热带雨林水雾】（游玩 3 小时）",
+              desc: "电瓶车直达热带雨林景区，观赏仙气飘渺的定时水雾喷淋奇观与巨型多肉仙人掌世界。",
+              tag: "自然生态",
+              color: "teal",
+            },
+            {
+              time: "18:00 - 20:30",
+              title: "中山路老街漫步",
+              desc: "品尝 1980 烧肉粽、黄则和花生汤与土笋冻。",
+              tag: "传统小吃",
+              color: "gold",
+            },
+          ],
+        },
+        4: {
+          title: "Day 4：9月13日（周日）· 嘉庚风骨 · 结营午宴 · 直达动车返广州南站",
           subtitle:
             "集美学村 → 嘉庚鳌园 → 结营午宴 → 直达动车 G1625 直达广州南站 → 地铁2号线直达海珠",
           steps: [
             {
-              time: "08:30 - 11:00",
-              title: "【集美学村 & 鳌园】（研学 2.5 小时）",
+              time: "08:30 - 11:30",
+              title: "【集美学村 & 鳌园】（研学 3 小时）",
               desc: "探访陈嘉庚先生故居、归来堂与鳌园，细品“穿西装戴斗笠”的嘉庚建筑风格与华侨风骨。",
               tag: "嘉庚建筑",
               color: "red",
             },
             {
-              time: "11:30 - 13:00",
+              time: "12:00 - 13:30",
               title: "结营午宴 · 闽南传统家宴",
               desc: "品尝乌糖沙茶面、同安封肉与地道海蛎煎。",
               tag: "结营盛宴",
               color: "gold",
             },
             {
-              time: "13:30 - 14:15",
+              time: "14:00 - 14:40",
               title: "专车前往厦门北站",
-              desc: "专车直达厦门北站高铁候车区。",
+              desc: "专车直达厦门北站高铁候车区，办理进站。",
               tag: "交通接驳",
               color: "blue",
             },
             {
               time: "15:08 - 19:35",
-              title: "【方案 A：直达动车 G1625 直达广州南站】",
-              desc: "厦门北站乘 G1625 动车直达广州南站（4小时27分，二等座¥254.50），出站搭乘广州地铁 2 号线 12~18 分钟直达海珠区南洲/昌岗！",
+              title: "【直达动车 G1625 直达广州南站】",
+              desc: "厦门北站乘 G1625 动车直达广州南站（4小时27分，二等座¥254.50），出站搭乘广州地铁 2 号线 12~18 分钟直达海珠区南洲/昌岗家中！",
               tag: "返穗闭环",
               color: "green",
-            },
-            {
-              time: "18:35 - 21:25",
-              title: "【方案 B：民航直飞返京备选】",
-              desc: "前往厦门高崎机场搭乘厦门航空 MF8117 航班直飞北京大兴机场。",
-              tag: "返京备选",
-              color: "blue",
             },
           ],
         },

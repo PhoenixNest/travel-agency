@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -478,6 +478,15 @@
             >
           </button>
           <button
+            onclick="switchGuideDay(6, null, true)"
+            id="guide-day-btn-6"
+            class="guide-day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 text-left sm:text-center shadow-xs"
+          >
+            Day 6 · 9.10 (四)<br /><span class="text-[10px] font-normal opacity-80"
+              >✈️ 离京/转场交通指引</span
+            >
+          </button>
+          <button
             onclick="switchGuideDay('universal', null, false)"
             id="guide-day-btn-universal"
             class="guide-day-tab-btn snap-item min-w-[135px] sm:min-w-0 flex-1 px-3 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-gradient-to-r from-red-50 to-amber-50 text-red-900 hover:bg-red-100 border border-red-300 text-left sm:text-center shadow-xs"
@@ -547,28 +556,28 @@
                 Day 1 & Day 2 已成功锁定，持二代身份证原件直接过闸
               </p>
             </div>
-            <div class="bg-white/90 p-2.5 rounded-lg border border-red-200 text-gray-800">
-              <div class="font-bold text-red-700 flex items-center gap-1">
-                <span>⏰</span> 8月30日 20:00 待办
-              </div>
-              <p class="text-[11px] text-gray-600 mt-0.5">
-                <strong>恭王府博物馆</strong> (提前10天秒杀抢订 Day 5 门票)
-              </p>
-            </div>
-            <div class="bg-white/90 p-2.5 rounded-lg border border-amber-200 text-gray-800">
-              <div class="font-bold text-amber-800 flex items-center gap-1">
-                <span>⏰</span> 8月31日 20:00 待办
-              </div>
-              <p class="text-[11px] text-gray-600 mt-0.5">
-                <strong>八达岭长城+高铁</strong> (提前7天抢订 Day 3 门票与动车)
-              </p>
-            </div>
-            <div class="bg-white/90 p-2.5 rounded-lg border border-emerald-300 text-gray-800">
+            <div class="bg-emerald-50/80 p-2.5 rounded-lg border border-emerald-200 text-emerald-950">
               <div class="font-bold text-emerald-800 flex items-center gap-1">
-                <span>✅</span> 颐和园与圆明园已订票
+                <span>✅</span> 八达岭长城门票已订
               </div>
-              <p class="text-[11px] text-gray-600 mt-0.5">
+              <p class="text-[11px] text-emerald-900 mt-0.5">
+                <strong>八达岭长城门票已出票</strong> (Day 3 全天门票已锁定)
+              </p>
+            </div>
+            <div class="bg-emerald-50/80 p-2.5 rounded-lg border border-emerald-200 text-emerald-950">
+              <div class="font-bold text-emerald-800 flex items-center gap-1">
+                <span>✅</span> 颐和园与圆明园已订
+              </div>
+              <p class="text-[11px] text-emerald-900 mt-0.5">
                 <strong>颐和园联票+圆明园通票</strong> (Day 4 门票已全部锁定出票)
+              </p>
+            </div>
+            <div class="bg-emerald-50/80 p-2.5 rounded-lg border border-emerald-200 text-emerald-950">
+              <div class="font-bold text-emerald-800 flex items-center gap-1">
+                <span>✅</span> 恭王府门票已订
+              </div>
+              <p class="text-[11px] text-emerald-900 mt-0.5">
+                <strong>恭王府博物馆门票已出票</strong> (Day 5 上午门票已锁定)
               </p>
             </div>
           </div>
@@ -682,42 +691,46 @@
           </div>
 
           <!-- Ticket Card 5: Prince Kung's Mansion -->
-          <div class="bg-white rounded-xl p-3.5 border border-red-300 shadow-sm space-y-1.5">
+          <div
+            class="bg-emerald-50/30 rounded-xl p-3.5 border border-emerald-300 shadow-sm space-y-1.5"
+          >
             <div class="flex justify-between items-start">
               <div class="font-bold text-sm text-gray-900 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-red-600"></span>恭王府博物馆
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>恭王府博物馆
               </div>
-              <span class="badge-red px-2 py-0.5 rounded text-[11px] font-bold"
-                >⏰ 8.30 20:00 待办</span
+              <span class="badge-green px-2 py-0.5 rounded text-[11px] font-bold"
+                >✅ 已出票锁定</span
               >
             </div>
             <div class="flex justify-between text-xs">
-              <span class="text-gray-500">门票价格</span>
-              <span class="font-bold text-gray-900">¥40 (提前10天抢订)</span>
+              <span class="text-gray-500">门票状态</span>
+              <span class="font-bold text-emerald-800">门票 ¥40 (已购锁定)</span>
             </div>
-            <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-              <span class="text-gray-500">预约平台</span>
-              <span class="text-blue-700 font-medium">微信“恭王府”官方小程序</span>
+            <div class="flex justify-between text-xs pt-1 border-t border-emerald-200 text-[11px]">
+              <span class="text-gray-500">入馆方式</span>
+              <span class="text-emerald-900 font-medium">凭二代身份证原件直接刷闸入馆</span>
             </div>
           </div>
 
           <!-- Ticket Card 6: Badaling Great Wall -->
-          <div class="bg-white rounded-xl p-3.5 border border-amber-300 shadow-sm space-y-1.5">
+          <div
+            class="bg-emerald-50/30 rounded-xl p-3.5 border border-emerald-300 shadow-sm space-y-1.5"
+          >
             <div class="flex justify-between items-start">
               <div class="font-bold text-sm text-gray-900 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-amber-600"></span>八达岭长城 + 高铁
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>八达岭长城 (门票)
               </div>
-              <span class="badge-gold px-2 py-0.5 rounded text-[11px] font-bold"
-                >⏰ 8.31 20:00 待办</span
+              <span class="badge-green px-2 py-0.5 rounded text-[11px] font-bold"
+                >✅ 已出票锁定</span
               >
             </div>
             <div class="flex justify-between text-xs">
-              <span class="text-gray-500">门票及动车</span>
-              <span class="font-bold text-gray-900">门票¥40 + 双程缆车¥140 + D6705/D6708</span>
+              <span class="text-gray-500">门票状态</span>
+              <span class="font-bold text-emerald-800">门票 ¥40 (已购锁定)</span>
             </div>
-            <div class="flex justify-between text-xs pt-1 border-t border-gray-100 text-[11px]">
-              <span class="text-gray-500">预约平台</span>
-              <span class="text-blue-700 font-medium">微信“八达岭长城” / 12306 高铁</span>
+            <div class="flex justify-between text-xs pt-1 border-t border-emerald-200 text-[11px]">
+              <span class="text-gray-500">入园方式</span>
+              <span class="text-emerald-900 font-medium">凭二代身份证直接过闸入园登城</span>
             </div>
           </div>
 
@@ -747,11 +760,11 @@
           >
             <div class="font-bold text-gray-900">后续其他场馆预约说明：</div>
             <div class="text-gray-600 leading-relaxed text-[11px]">
-              • <strong>中国国家博物馆</strong>：免费实名 (提前7天 8.30 17:00 准点秒杀)<br />
-              • <strong>故宫博物院</strong>：通票¥80 (提前7天 8.30 20:00 准点秒杀)<br />
-              • <strong>恭王府博物馆</strong>：¥40 (提前10天 8.30 20:00 抢票)<br />
-              • <strong>北京钟鼓楼</strong>：联票¥30 (提前3天 9.6 线上锁定)<br />
-              • <strong>圆明园通票/景山/环球(备选)</strong>：随时线上购买
+              • <strong>中国国家博物馆</strong>：免费实名 (已锁定出票)<br />
+              • <strong>故宫博物院</strong>：通票¥80 (已锁定出票)<br />
+              • <strong>天坛 / 颐和园 / 圆明园 / 恭王府 / 八达岭门票</strong>：✅ 全部已订票锁定<br />
+              • <strong>京张高铁 D6705/D6708 动车票</strong>：8.31 20:00 提前7天 12306 购买<br />
+              • <strong>北京钟鼓楼</strong>：联票¥30 (提前3天 9.6 线上锁定)
             </div>
           </div>
         </div>
@@ -1092,37 +1105,36 @@
                   </td>
                 </tr>
 
-                <!-- PENDING ALARMS: TO BE BOOKED -->
-                <tr class="hover:bg-amber-50/50 bg-red-50/30">
-                  <td class="py-2.5 px-3 font-bold text-red-700 whitespace-nowrap">
-                    ⏰ 8月30日 19:55
-                  </td>
-                  <td class="py-2.5 px-3 font-bold text-red-600 whitespace-nowrap">
-                    20:00 准点秒杀
-                  </td>
-                  <td class="py-2.5 px-3 font-bold text-[#8e1c14]">恭王府博物馆 (门票¥40)</td>
-                  <td class="py-2.5 px-3 text-gray-600 whitespace-nowrap">Day 5 (9.9 周三)</td>
-                  <td class="py-2.5 px-3 text-blue-700 font-medium whitespace-nowrap">
-                    小程序“恭王府”
-                  </td>
-                  <td class="py-2.5 px-3 text-red-700 text-xs">
-                    <strong>提前10天放票！</strong>抢订 9月9日 上午场门票，提前预录好同行人身份证。
-                  </td>
-                </tr>
-                <tr class="hover:bg-amber-50/50 bg-emerald-50/20">
-                  <td class="py-2.5 px-3 font-bold text-red-700 whitespace-nowrap">
-                    ⏰ 8月31日 19:55
+                <tr class="hover:bg-emerald-50/50 bg-emerald-50/20">
+                  <td class="py-2.5 px-3 font-bold text-emerald-700 whitespace-nowrap">
+                    ✅ 已成功订票
                   </td>
                   <td class="py-2.5 px-3 font-bold text-gray-900 whitespace-nowrap">
-                    20:00 准点抢订
+                    门票已出票锁定
                   </td>
-                  <td class="py-2.5 px-3 font-bold text-emerald-900">八达岭长城 (门票+缆车)</td>
-                  <td class="py-2.5 px-3 text-gray-600 whitespace-nowrap">Day 3 (9.7 周一)</td>
+                  <td class="py-2.5 px-3 font-bold text-emerald-900">八达岭长城 (门票)</td>
+                  <td class="py-2.5 px-3 text-emerald-800 whitespace-nowrap">Day 3 (9.7 周一)</td>
                   <td class="py-2.5 px-3 text-emerald-800 font-medium whitespace-nowrap">
-                    公众号“八达岭长城” / 12306
+                    公众号“八达岭长城”
                   </td>
-                  <td class="py-2.5 px-3 text-gray-600">
-                    提前 7 天 20:00 放票！提前预录同行人身份证信息，同步买好京张高铁车票。
+                  <td class="py-2.5 px-3 text-emerald-900 text-xs">
+                    <strong>✅ 已出票锁定！</strong>凭二代身份证直接过闸入园登城；京张高铁 D6705 动车票待 8.31 购票。
+                  </td>
+                </tr>
+                <tr class="hover:bg-emerald-50/50 bg-emerald-50/20">
+                  <td class="py-2.5 px-3 font-bold text-emerald-700 whitespace-nowrap">
+                    ✅ 已成功订票
+                  </td>
+                  <td class="py-2.5 px-3 font-bold text-gray-900 whitespace-nowrap">
+                    门票已出票锁定
+                  </td>
+                  <td class="py-2.5 px-3 font-bold text-emerald-900">恭王府博物馆 (门票¥40)</td>
+                  <td class="py-2.5 px-3 text-emerald-800 whitespace-nowrap">Day 5 (9.9 周三)</td>
+                  <td class="py-2.5 px-3 text-emerald-800 font-medium whitespace-nowrap">
+                    小程序“恭王府”
+                  </td>
+                  <td class="py-2.5 px-3 text-emerald-900 text-xs">
+                    <strong>✅ 已出票锁定！</strong>凭二代身份证原件直接刷闸入馆，直奔银安殿、锡晋斋与秘云洞福字碑。
                   </td>
                 </tr>
                 <tr class="hover:bg-emerald-50/50 bg-emerald-50/20">
@@ -3025,6 +3037,128 @@
           expertTips:
             "<strong>卫国强导游</strong>：如启用环球备选，强烈建议置换 <strong>Day 4（周二）</strong> 或 <strong>Day 6（周四）</strong>，工作日客流仅为周末的 40%~60%，配合顺时针动线与单人通道，无需高价买优速通也能 1 天刷完 10 大王牌！<br/><strong>摄影机位</strong>：霍格莫德村特快列车站台；好莱坞大道中心旋转地球雕塑；19:45 霍格沃茨城堡灯光秀草坪正位。",
         },
+        departure_pkx: {
+          name: "北京大兴国际机场 (PKX) 离京/转场枢纽",
+          badge: "Day 6 晨间 · 航站楼立体接驳与智能出港",
+          address: "北京市大兴区榆垡镇、礼贤镇与河北省廊坊市广阳区交界",
+          entranceRoute: {
+            title: "最佳抵场与值机动线（大兴机场线直达 B1 层）",
+            desc: "<strong>地铁快轨</strong>：由草桥站搭乘<strong>大兴机场线</strong>（19 分钟直达航站楼 B1 层，票价 35 元）；<br/><strong>值机办理</strong>：中联航（KN5967 直飞泉州晋江）及南航、东航、厦航国内出发位于 3 层 / 4 层值机大厅；草桥站亦支持提前值机行李托运；<br/><strong>安检与登机</strong>：中央安检通道人脸识别过检，步行至最远登机口不超过 8 分钟（五指廊放射状构型）。",
+          },
+          tourRoute: [
+            {
+              step: "01",
+              title: "酒店退房与行李整理",
+              desc: "确认随身贵重物品、二代身份证件及文创伴手礼收纳无误，前台办理快速退房。",
+            },
+            {
+              step: "02",
+              title: "大兴机场快轨直达",
+              desc: "地铁 19 号线 / 10 号线转乘大兴机场线，19 分钟极速直达航站楼地下换乘中心。",
+            },
+            {
+              step: "03",
+              title: "自助值机与智能行李托运",
+              desc: "3 层国内值机大厅使用自助机打印登机牌或电子登机牌过检，托运行李全流程 RFID 追踪。",
+            },
+            {
+              step: "04",
+              title: "智能高效安全检查",
+              desc: "刷二代身份证件通过毫米波安全门，充电宝、笔记本电脑提前取出。",
+            },
+            {
+              step: "05",
+              title: "指廊景观候机与准点起飞",
+              desc: "欣赏扎哈·哈迪德流线型穹顶建筑与‘C型柱’采光奇迹，搭乘 KN5967（08:20 起飞）顺利启程赴闽！",
+            },
+          ],
+          amenities: {
+            toilets:
+              "<strong>全候机区五星级洗手间</strong>：<br/>航站楼各指廊密集配置第三卫生间、无障碍洗手间与高标准恒温母婴室。",
+            rests:
+              "<strong>航站楼休闲与餐饮</strong>：<br/>• <strong>中国园林庭院</strong>：五条指廊末端分别建有‘丝园、茶园、瓷园、田园、中国园’露天庭院；<br/>• <strong>同城同质同价餐饮</strong>：全聚德、老舍茶馆、庆丰包子铺、星巴克等品牌云集。",
+            water:
+              "<strong>免费冷温开水直饮点</strong>：安检内外每隔 50 米均配置免费纯净直饮水机。",
+            services:
+              "<strong>便民服务</strong>：航站楼提供免费行李手推车、电瓶观光车爱心接送（老弱优先）、急救医疗室及顺丰快递服务。",
+          },
+          expertTips:
+            "<strong>程若曦架构师</strong>：KN5967 为 08:20 晨班机，建议 06:20 前由市区出发；大兴机场国内航班截载时间为起飞前 40 分钟，请务必预留充裕时间。",
+        },
+        departure_bjw: {
+          name: "北京西站 (Beijing West) 京广高铁出港",
+          badge: "Day 6 晨间/午间 · 京广复兴号标杆车始发",
+          address: "北京市丰台区莲花池东路118号",
+          entranceRoute: {
+            title: "地铁直通地下进站口（免出站日晒雨淋）",
+            desc: "<strong>地铁直达</strong>：搭乘地铁 7 号线或 9 号线直达<strong>北京西站</strong>，由地下出站大厅直接沿指示牌进入‘地下快速进站口’；<br/><strong>地面进站</strong>：南北广场均设有高架实名制验票进站口，凭二代身份证原件刷脸快速过闸。",
+          },
+          tourRoute: [
+            {
+              step: "01",
+              title: "地铁无缝直达北京西站",
+              desc: "由市区搭乘地铁 7/9 号线直抵北京西站地下换乘大厅。",
+            },
+            {
+              step: "02",
+              title: "实名制安检与刷脸进站",
+              desc: "刷身份证原件过闸，严禁携带违禁品，大件行李过机安检。",
+            },
+            {
+              step: "03",
+              title: "高架候车大厅候车",
+              desc: "根据车票信息前往对应候车室（如 G77/G79 标杆车候车区），老人可使用爱心候车区软座。",
+            },
+            {
+              step: "04",
+              title: "复兴号平稳直达广州南站",
+              desc: "检票进站登乘时速 350km/h 复兴号智能动车组，7.5 小时舒适直抵羊城。",
+            },
+          ],
+          amenities: {
+            toilets: "各候车室均配有无障碍卫生间与母婴哺乳室。",
+            rests: "二楼中央候车区设有大型餐饮休闲区（护国寺小吃、肯德基、茶饮）。",
+            water: "各候车室入口均设有开水与温水供应处。",
+            services:
+              "‘京铁爱心’服务台提供轮椅接送、重点旅客绿色通道预约服务（12306 官方 App 可预约）。",
+          },
+          expertTips:
+            "<strong>卫国强导游</strong>：北京西站客流量较大，建议开车前 45~60 分钟抵达车站；进站后注意电子大屏核对检票口（通常于发车前 15~20 分钟开始检票，发车前 5 分钟停止检票）。",
+        },
+        departure_pek: {
+          name: "北京首都国际机场 (PEK) 离京出港",
+          badge: "Day 6 备选航线 · 国航/海航首都始发出港",
+          address: "北京市朝阳区顺义区机场西路",
+          entranceRoute: {
+            title: "首都机场线快速接驳（东直门/三元桥直达）",
+            desc: "搭乘<strong>首都机场线</strong>（东直门/三元桥站始发，票价 25 元），20~30 分钟分别抵达 T2 / T3 航站楼。",
+          },
+          tourRoute: [
+            {
+              step: "01",
+              title: "首都机场线直达航站楼",
+              desc: "搭乘机场快线直达对应航站楼（T2 为海航/川航等，T3 为国航/深航/山航等）。",
+            },
+            {
+              step: "02",
+              title: "自助值机与行李托运",
+              desc: "航站楼 4 层出发大厅自助办理值机与托运手续。",
+            },
+            {
+              step: "03",
+              title: "安全检查与指廊登机",
+              desc: "完成安检后前往对应登机口候机，准点离京返程。",
+            },
+          ],
+          amenities: {
+            toilets: "各指廊配备五星级洗手间与第三卫生间。",
+            rests: "配有各类中西式餐饮、星巴克与免税文创名店。",
+            water: "全候机区提供免费冷温纯净水直饮机。",
+            services: "提供爱心电瓶车、轮椅便民服务与母婴室。",
+          },
+          expertTips:
+            "<strong>程若曦架构师</strong>：T3 航站楼面积巨大，通过安检后如登机口在 C/D/E 远端指廊，需预留 15~20 分钟小火车捷运或步行时间。",
+        },
       };
 
       const dayData = {
@@ -3109,7 +3243,7 @@
           date: "2026年9月7日 (周一)",
           theme: "万里雄关 · 八达岭长城天下第一雄关与双奥之光",
           morningAlert:
-            "🚆 锁定 D6705 动车组 (北京北 11:47 &rarr; 八达岭长城 12:24)，午后黄金错峰登临 (8.31 20:00 抢票)",
+            "🚆 八达岭长城门票已出票锁定 · 乘 D6705 动车组 (北京北 11:47 &rarr; 八达岭长城 12:24)，午后黄金错峰登临",
           intensity: "中高强度 (长城关隘午后科考登临)",
           timeline: [
             {
@@ -3138,10 +3272,10 @@
             },
             {
               time: "13:15 - 16:30",
-              title: "八达岭长城午后科考登临 · 黄金错峰登顶",
+              title: "八达岭长城午后科考登临 · 黄金错峰登顶（✅ 门票已订）",
               duration: "预计 3.5 小时",
               desc: "乘坐滚天沟空中缆车（双程¥140）直达北七楼 &rarr; 登临北八楼‘好汉坡’（海拔888米制高点） &rarr; 顺光俯瞰万里长城依山蜿蜒雄姿 &rarr; 沿城墙漫步至关城东门，考察‘北门锁钥’石额与詹天佑青龙桥古迹。",
-              highlight: "午后登城完美避开上午旅行团大客流，光线顺光通透，摄影视野绝佳！",
+              highlight: "门票已出票，刷二代身份证直接过闸！午后登城避开早团客流，顺光摄影视野绝佳！",
             },
             {
               time: "16:45 - 17:15",
@@ -3183,8 +3317,6 @@
               duration: "预计 2.5 小时",
               desc: "通票已成功出票，刷身份证入园。绮春园宫门 &rarr; 长春园西洋楼遗址区 &rarr; 远瀛观与大水法残垣 &rarr; 海晏堂喷泉基址。",
             },
-              desc: "探访长春园西洋楼遗址区、大水法、远瀛观残石断柱与海晏堂十二生肖喷泉基址。",
-            },
             {
               time: "17:00 - 18:30",
               title: "清华大学 / 北京大学周边",
@@ -3199,14 +3331,14 @@
           date: "2026年9月9日 (周三)",
           theme: "清史烟云 · 恭王府与什刹海胡同慢调",
           morningAlert:
-            "🏮 感受‘一座恭王府，半部清代史’与老北京胡同生活 (8.30 20:00 提前10天抢恭王府门票)",
+            "🏮 恭王府门票已出票锁定 · 感受‘一座恭王府，半部清代史’与老北京胡同生活",
           intensity: "舒适慢游",
           timeline: [
             {
               time: "09:00 - 11:30",
-              title: "恭王府",
+              title: "恭王府博物馆（✅ 门票已订）",
               duration: "预计 2.5 小时",
-              desc: "银安殿 &rarr; 锡晋斋（楠木违制建筑） &rarr; 后罩楼（99间半藏宝楼） &rarr; 大戏楼 &rarr; 秘云洞摸康熙御笔‘福’字碑。",
+              desc: "门票已成功出票，刷二代身份证直接入馆。银安殿 &rarr; 锡晋斋（楠木违制建筑） &rarr; 后罩楼（99间半藏宝楼） &rarr; 大戏楼 &rarr; 秘云洞摸康熙御笔‘福’字碑。",
             },
             {
               time: "12:00 - 14:30",
@@ -3278,6 +3410,11 @@
         5: [
           { id: "gongwangfu", name: "🏮 恭王府博物馆 (Day 5 上午)" },
           { id: "zhonggulou", name: "🔔 什刹海与钟鼓楼 (Day 5 下午)" },
+        ],
+        6: [
+          { id: "departure_pkx", name: "✈️ 大兴机场出港 (KN5967直飞泉州)" },
+          { id: "departure_bjw", name: "🚄 北京西站出港 (G77/G79直达广州)" },
+          { id: "departure_pek", name: "✈️ 首都机场出港 (国航/海航直飞)" },
         ],
         universal: [{ id: "universal", name: "🎢 北京环球度假区 (弹性备选全天)" }],
       };

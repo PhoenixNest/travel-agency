@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -396,7 +396,7 @@
             id="btn-day-1"
             class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap tab-active border text-left sm:text-center"
           >
-            Day 1 · 9.11 (五)<br /><span class="text-[10px] font-normal opacity-90"
+            Day 1 · 9.10 (四)<br /><span class="text-[10px] font-normal opacity-90"
               >直飞晋江 · 崇武抗倭石城 · 西沙踏浪</span
             >
           </button>
@@ -405,8 +405,8 @@
             id="btn-day-2"
             class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-sky-50 border border-gray-200 text-left sm:text-center"
           >
-            Day 2 · 9.12 (六)<br /><span class="text-[10px] font-normal opacity-80"
-              >塘东沙堤 · 蟳埔簪花 · 宋代洛阳桥</span
+            Day 2 · 9.11 (五)<br /><span class="text-[10px] font-normal opacity-80"
+              >塘东沙堤 · 蟳埔簪花 · 西街天台</span
             >
           </button>
           <button
@@ -414,8 +414,17 @@
             id="btn-day-3"
             class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-sky-50 border border-gray-200 text-left sm:text-center"
           >
-            Day 3 · 9.13 (日)<br /><span class="text-[10px] font-normal text-emerald-700 font-bold"
-              >开元寺双塔 · 府文庙 · 高铁返穗</span
+            Day 3 · 9.12 (六)<br /><span class="text-[10px] font-normal opacity-80"
+              >北宋洛阳桥 · 海交馆研学 · 府文庙</span
+            >
+          </button>
+          <button
+            onclick="switchDay(4)"
+            id="btn-day-4"
+            class="day-tab-btn snap-item min-w-[140px] sm:min-w-0 flex-1 px-3 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all whitespace-nowrap bg-white text-gray-700 hover:bg-sky-50 border border-gray-200 text-left sm:text-center"
+          >
+            Day 4 · 9.13 (日)<br /><span class="text-[10px] font-normal text-emerald-700 font-bold"
+              >开元寺双塔 · 结营午宴 · 高铁返穗</span
             >
           </button>
         </div>
@@ -925,33 +934,34 @@
       // 1. DATA: Day by Day Itinerary Data
       const dayData = {
         1: {
-          title: "Day 1：9月11日（周五）· 极速直达 · 崇武海防石城与西沙踏浪",
-          subtitle: "北京直飞晋江国际机场 → 崇武西沙湾假日酒店 → 崇武抗倭古城 → 西沙湾海鲜晚宴",
+          title: "Day 1：9月10日（周四）· 双端启程汇合 · 崇武海防石城与西沙踏浪",
+          subtitle:
+            "北京直飞晋江 + 广州高铁直达 → 崇武酒店汇合入住 → 崇武抗倭古城 → 西沙湾海鲜晚宴",
           steps: [
             {
               time: "08:20 - 11:00",
-              title: "大交通出港直飞",
-              desc: "北京大兴机场搭乘中国联合航空 KN5967 航班直飞泉州晋江国际机场 JJN（或 07:15 首都机场乘深航 ZH9187 直飞，10:15 落地）。",
-              tag: "民航早班",
+              title: "用户大交通出港直飞",
+              desc: "北京大兴机场搭乘中国联合航空 KN5967 航班直飞泉州晋江国际机场 JJN（机票已自购出票），专车接驳前往惠安崇武半岛。",
+              tag: "用户直飞",
               color: "blue",
             },
             {
-              time: "11:00 - 11:45",
-              title: "机场专车直达惠安崇武",
-              desc: "机场取车或专属接送，沿泉州环城高速直达惠安崇武半岛，办理【汉庭酒店(泉州惠安崇武店) · 西沙湾海景房 (¥189~249/晚)】入住。",
+              time: "08:30 - 13:30",
+              title: "长辈广州高铁直达",
+              desc: "广州南站搭乘直达动车 G1609（08:30-13:30 直达泉州站，二等座¥285.50），专车接站赴崇武酒店汇合。",
+              tag: "长辈高铁",
+              color: "blue",
+            },
+            {
+              time: "14:00 - 15:00",
+              title: "酒店安顿与休整",
+              desc: "办理【汉庭酒店(泉州惠安崇武店) · 西沙湾海景房 (¥189~249/晚)】入住，午休恢复体能。",
               tag: "地面接驳",
               color: "blue",
             },
             {
-              time: "12:00 - 13:30",
-              title: "午餐 · 崇武地道海味",
-              desc: "品尝非遗【瑞芳崇武现炸鱼卷】、【地瓜粉团海蛎汤】与清蒸午鱼。",
-              tag: "老字号美食",
-              color: "gold",
-            },
-            {
-              time: "14:00 - 17:30",
-              title: "【崇武古城风景区 & 中华石雕园】（游玩 3.5 小时）",
+              time: "15:30 - 17:30",
+              title: "【崇武古城风景区 & 中华石雕园】（游玩 2 小时）",
               desc: "登临明洪武二十年（1387年）花岗岩抗倭古城墙，俯瞰惊涛拍岸；漫步西沙湾金沙滩踏浪戏水。",
               tag: "国家4A / 全国文保",
               color: "red",
@@ -959,15 +969,15 @@
             {
               time: "18:00 - 20:30",
               title: "西沙湾海滩海鲜盛宴",
-              desc: "享用酱油水蒸红鲟、椒盐皮皮虾与葱油小象拔蚌，漫步海滨沙滩听涛赏月。",
+              desc: "品尝现炸瑞芳鱼卷、地瓜粉团海蛎汤与酱油水鲜鱼，漫步海滨沙滩听涛赏月。",
               tag: "生猛海鲜",
               color: "gold",
             },
           ],
         },
         2: {
-          title: "Day 2：9月12日（周六）· 沙堤奇观 · 蟳埔簪花与世界遗产名桥",
-          subtitle: "西沙湾日出 → 晋江塘东2km沙堤 → 蟳埔渔村簪花围 → 北宋洛阳桥 → 泉州西街夜市",
+          title: "Day 2：9月11日（周五）· 沙堤奇观 · 蟳埔簪花与世界遗产名桥",
+          subtitle: "西沙湾日出 → 晋江塘东2km沙堤 → 蟳埔渔村簪花围 → 泉州西街夜市",
           steps: [
             {
               time: "06:00 - 06:45",
@@ -977,35 +987,28 @@
               color: "gold",
             },
             {
-              time: "08:30 - 11:00",
+              time: "08:30 - 11:30",
               title: "【晋江金井塘东沙堤】（自然奇观 2.5 小时）",
               desc: "趁中低潮位漫步亚洲唯一 2 公里天然向海延伸的触角状白沙嘴，体验双向海浪交汇。",
               tag: "自然奇观",
               color: "blue",
             },
             {
-              time: "11:30 - 12:45",
+              time: "12:00 - 13:30",
               title: "金井围头湾海鲜午宴",
               desc: "品尝野生紫菜蛋花汤、鲜蚵煎与海鱼酱油水。",
               tag: "在地午餐",
               color: "gold",
             },
             {
-              time: "13:30 - 15:30",
+              time: "14:00 - 17:00",
               title: "【蟳埔民俗文化村（簪花围与蚵壳厝）】（非遗体验 2 小时）",
               desc: "非遗名师打造传统“簪花围”发髻与大裾衫，穿行于宋元古商船压舱生蚝壳“蚵壳厝”古巷留影。",
               tag: "国家级非遗",
               color: "red",
             },
             {
-              time: "16:00 - 18:00",
-              title: "【北宋洛阳桥（世界文化遗产）】（研学 2 小时）",
-              desc: "漫步北宋蔡襄主持建造的古代四大名桥，聆听梁思涵博士讲解“伐石架桥、种蛎固基”世界首创生态奇迹。",
-              tag: "世界遗产",
-              color: "red",
-            },
-            {
-              time: "18:30 - 21:00",
+              time: "18:00 - 20:30",
               title: "泉州古城西街漫步 & 美食探秘",
               desc: "登临有鲤天台俯瞰开元寺双塔夜景剪影；品尝斯丹姜母鸭、侯阿婆肉粽与亚佛润饼菜。",
               tag: "市井古早味",
@@ -1014,43 +1017,70 @@
           ],
         },
         3: {
-          title: "Day 3：9月13日（周日）· 古刹钟声 · 满载海丝记忆双向归程",
+          title: "Day 3：9月12日（周六）· 宋元名桥 · 海交馆研学与文庙祈福",
+          subtitle: "北宋洛阳桥 → 桥头特色午餐 → 泉州海外交通史博物馆 → 涂门街传统家宴",
+          steps: [
+            {
+              time: "09:00 - 12:00",
+              title: "【北宋洛阳桥（世界文化遗产）】（研学 2 小时）",
+              desc: "漫步北宋蔡襄主持建造的古代四大名桥，聆听梁思涵博士讲解“伐石架桥、种蛎固基”世界首创生态奇迹。",
+              tag: "世界遗产",
+              color: "red",
+            },
+            {
+              time: "12:30 - 13:30",
+              title: "洛阳桥头传统午餐",
+              desc: "品尝洛阳桥传统海鲜炒面、海蛎煎与现炸五香卷。",
+              tag: "特色午餐",
+              color: "gold",
+            },
+            {
+              time: "14:00 - 17:00",
+              title: "【泉州海外交通史博物馆】（研学 2.5 小时）",
+              desc: "深度研学宋代古沉船、宋元泉州海外交通史与宗教石刻艺术。",
+              tag: "国家一级博物馆",
+              color: "red",
+            },
+            {
+              time: "18:00 - 20:30",
+              title: "涂门街传统家宴",
+              desc: "品尝闽南特色姜母鸭、牛肉羹配咸饭。",
+              tag: "市井风味",
+              color: "gold",
+            },
+          ],
+        },
+        4: {
+          title: "Day 4：9月13日（周日）· 世遗双塔朝圣 · 结营午宴 · 直达高铁返穗闭环",
           subtitle: "泉州开元寺 → 泉州府文庙 → 结营午宴 → 直达动车直达广州南站 → 地铁2号线直达海珠",
           steps: [
             {
-              time: "08:30 - 11:00",
+              time: "08:30 - 11:30",
               title: "【泉州开元寺 & 府文庙】（游玩 2.5 小时）",
               desc: "瞻礼宋代东西双塔（镇国塔/仁寿塔），品鉴百柱殿 24 尊飞天乐伎斗拱与印度教浮雕；顺道参访府文庙与清净寺。",
               tag: "世界遗产核心",
               color: "red",
             },
             {
-              time: "11:30 - 13:00",
+              time: "12:00 - 13:30",
               title: "结营午宴 · 闽南传统家宴",
               desc: "品尝水门国仔面线糊配油条、五香卷、醋肉与安溪手工铁观音茗茶。",
               tag: "结营盛宴",
               color: "gold",
             },
             {
-              time: "13:15 - 13:45",
-              title: "还车与枢纽转场",
-              desc: "办理还车手续，专车前往泉州站或晋江机场。",
+              time: "13:45 - 14:15",
+              title: "枢纽转场至泉州站",
+              desc: "专车前往泉州站，办理进站候车手续。",
               tag: "交通接驳",
               color: "blue",
             },
             {
               time: "14:38 - 19:35",
-              title: "【方案 A：直达动车 G1625 直达广州南站】",
-              desc: "泉州站乘 G1625 直达动车直抵广州南站（4小时57分，二等座¥285.50），出站搭乘广州地铁 2 号线 12~18 分钟直达海珠区南洲/昌岗！",
+              title: "【直达动车 G1625 直达广州南站】",
+              desc: "泉州站乘 G1625 直达动车直抵广州南站（4小时57分，二等座¥285.50），出站搭乘广州地铁 2 号线 12~18 分钟直达海珠区南洲/昌岗家中！",
               tag: "返穗闭环",
               color: "green",
-            },
-            {
-              time: "19:40 - 22:45",
-              title: "【方案 B：民航直飞返京备选】",
-              desc: "前往晋江机场搭乘厦门航空 MF8131 航班直飞北京大兴机场。",
-              tag: "返京备选",
-              color: "blue",
             },
           ],
         },
